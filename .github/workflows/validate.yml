@@ -32,19 +32,49 @@ jobs:
         run: pip install rdflib pyshacl
 
       - name: Validate TTL syntax (dataset)
-        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/lod/voicevox.ttl', format='turtle'); print(f'Dataset OK: {len(g)} triples')"
+        run: |
+          python -c "
+          from rdflib import Graph
+          g = Graph()
+          g.parse('docs/lod/voicevox.ttl', format='turtle')
+          print('Dataset OK: %d triples' % len(g))
+          "
 
       - name: Validate TTL syntax (ontology)
-        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/ns/voicevox.ttl', format='turtle'); print(f'Ontology OK: {len(g)} triples')"
+        run: |
+          python -c "
+          from rdflib import Graph
+          g = Graph()
+          g.parse('docs/ns/voicevox.ttl', format='turtle')
+          print('Ontology OK: %d triples' % len(g))
+          "
 
       - name: Validate TTL syntax (VoID)
-        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/lod/void.ttl', format='turtle'); print(f'VoID OK: {len(g)} triples')"
+        run: |
+          python -c "
+          from rdflib import Graph
+          g = Graph()
+          g.parse('docs/lod/void.ttl', format='turtle')
+          print('VoID OK: %d triples' % len(g))
+          "
 
       - name: Validate TTL syntax (DCAT)
-        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/lod/dcat.ttl', format='turtle'); print(f'DCAT OK: {len(g)} triples')"
+        run: |
+          python -c "
+          from rdflib import Graph
+          g = Graph()
+          g.parse('docs/lod/dcat.ttl', format='turtle')
+          print('DCAT OK: %d triples' % len(g))
+          "
 
       - name: Validate TTL syntax (SHACL)
-        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/lod/voicevox-shacl.ttl', format='turtle'); print(f'SHACL OK: {len(g)} triples')"
+        run: |
+          python -c "
+          from rdflib import Graph
+          g = Graph()
+          g.parse('docs/lod/voicevox-shacl.ttl', format='turtle')
+          print('SHACL OK: %d triples' % len(g))
+          "
 
       - name: SHACL validation
         run: |
@@ -63,15 +93,13 @@ jobs:
           )
           print(results_text)
           if not conforms:
-              # Warnings are OK, only fail on violations
-              from rdflib.namespace import SH
               SH_NS = 'http://www.w3.org/ns/shacl#'
               violations = [r for r in results_graph.subjects()
                            if (r, None, None) in results_graph
                            and any(str(o) == SH_NS + 'Violation'
                                   for o in results_graph.objects(r))]
               if violations:
-                  print(f'SHACL FAILED: {len(violations)} violations')
+                  print('SHACL FAILED: %d violations' % len(violations))
                   exit(1)
               else:
                   print('SHACL: warnings only, passing')
