@@ -1,0 +1,238 @@
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <http://xmlns.com/foaf/0.1/nick> "Usagi"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://schema.org/image> <https://voicevox.hiroshiba.jp/product/tohoku_kiritan/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <http://www.w3.org/2000/01/rdf-schema#label> "Usagi x Sora"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <http://www.w3.org/2000/01/rdf-schema#label> "Tsumugi x Kiritan"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> "#ce93d8" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/> .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/isBasedOn> <https://voicevox.hiroshiba.jp/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <https://twitter.com/sakamoto_ahr> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/name> "VOICEVOX"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "なるほど〜！"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://schema.org/name> "東北きりたん"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://schema.org/description> "明るくギャルっぽい口調のキャラクター。「〜じゃん」「マジ？」を多用。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> "冷静でクールな口調。「〜です」「〜ですね」「つまり〜ということです」を使う"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/operatingSystem> "Windows, macOS, Linux" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/Q106428182> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://schema.org/description> "A shy, reserved character who uses hesitant speech patterns."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://schema.org/description> "An intellectual character with a calm speaking style."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/Q113476218> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://schema.org/name> "Shikoku Metan"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/author> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/Q113476220> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://schema.org/license> <https://zunko.jp/guideline.html> .
+<https://twitter.com/sakamoto_ahr> <https://schema.org/description> "VOICEVOX公式キャラクターの立ち絵素材を制作"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/product/kasukabe_tsumugi/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://schema.org/name> "Kyushu Sora"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <https://twitter.com/sakamoto_ahr> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "説明するわね"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <http://purl.org/dc/terms/description> "Classic pair. Zundamon asks naive questions while Metan explains politely."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/Q55634043> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <https://seiga.nicovideo.jp/seiga/im10849150> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "〜って何なのだ？"@ja .
+<https://twitter.com/sakamoto_ahr> <https://schema.org/name> "坂本アヒル"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "つまり〜ということです"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <http://purl.org/dc/terms/description> "控えめ×おっとり。うさぎがおどおど質問し、そらが優しく解説。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://schema.org/description> "おっとりした丁寧な口調のキャラクター。「〜ですね」「〜かしら」を使う。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <https://seiga.nicovideo.jp/seiga/im10934660> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <https://seiga.nicovideo.jp/seiga/im10924061> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/product/tohoku_kiritan/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <https://twitter.com/sakamoto_ahr> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://schema.org/description> "A polite character who explains things clearly. Characterized by feminine speech patterns."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "〜ではないでしょうか"@ja .
+<https://twitter.com/sakamoto_ahr> <http://xmlns.com/foaf/0.1/name> "坂本アヒル"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://schema.org/description> "A bright, gyaru-style character. Frequently uses casual expressions like 'Maji?' (Really?)"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://schema.org/description> "丁寧で分かりやすく説明するキャラクター。「〜よ」「〜わ」語尾が特徴。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <http://www.w3.org/2002/07/owl#sameAs> <http://www.wikidata.org/entity/Q113476219> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://schema.org/description> "An energetic character with a lively speaking style. A nursing student."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <http://xmlns.com/foaf/0.1/nick> "Sora"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <https://twitter.com/sakamoto_ahr> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/applicationCategory> "Multimedia"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> "#ea80fc" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://schema.org/license> <https://zunko.jp/guideline.html> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> "16"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "簡単に説明するね"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> "おどおどした控えめな口調。「〜かな…」「えっと…」「すごい…！」を使う"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://schema.org/description> "おどおどした控えめな口調のキャラクター。「〜かな…」「えっと…」を使う。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "えー、マジ？"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "ポイントはここだよ"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://schema.org/image> <https://voicevox.hiroshiba.jp/product/chugoku_usagi/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://schema.org/name> "WhiteCUL"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <https://seiga.nicovideo.jp/seiga/im10849149> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba> <https://schema.org/name> "ヒホ（廣芝和之）"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "へぇ〜！すごいのだ！"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/description> "VOICEVOXテキスト音声合成エンジンのキャラクター・口調・対話ペアを記述するLinked Open Dataデータセット。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> "#e53935" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <http://xmlns.com/foaf/0.1/nick> "Metan"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <https://seiga.nicovideo.jp/seiga/im10849150> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <https://twitter.com/sakamoto_ahr> .
+<https://twitter.com/sakamoto_ahr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://schema.org/name> "九州そら"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "それやばくない？"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> "61"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "なるほどなのだ！"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://schema.org/license> <https://zunko.jp/guideline.html> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "わぁ、すごいね！"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://schema.org/name> "WhiteCUL"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <http://purl.org/dc/terms/description> "元気ナース×知的。はうがハキハキ質問し、WhiteCULが知的に解説。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://schema.org/license> <https://tsumugi-official.studio.site/rule> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://schema.org/image> <https://voicevox.hiroshiba.jp/product/amehare_hau/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "〜のよ"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <http://purl.org/dc/terms/description> "定番ペア。ずんだもんが素朴に質問し、めたんが丁寧に解説。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> "#4dd0e1" .
+<https://twitter.com/sakamoto_ahr> <https://schema.org/name> "Sakamoto Ahiru"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <http://xmlns.com/foaf/0.1/nick> "はう"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://schema.org/license> <https://zunko.jp/guideline.html> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> "#1e88e5" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://schema.org/image> <https://voicevox.hiroshiba.jp/product/zundamon/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> "知的で落ち着いた口調。「〜だよ」「〜だね」「〜かな」を使う"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://schema.org/name> "Chugoku Usagi"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/product/chugoku_usagi/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <http://www.w3.org/2000/01/rdf-schema#label> "Hau x WhiteCUL"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba> <http://xmlns.com/foaf/0.1/name> "ヒホ"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/product/shikoku_metan/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://schema.org/image> <https://voicevox.hiroshiba.jp/product/kyushu_sora/> .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/name> "VOICEVOX キャラクター LOD"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> "#ff6d00" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <http://purl.org/dc/terms/description> "ギャル×クール。つむぎがカジュアルに質問し、きりたんが冷静に解説。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> "#ffab40" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://schema.org/description> "元気でハキハキした口調のキャラクター。看護学生。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/dateCreated> "2026-03-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <http://xmlns.com/foaf/0.1/nick> "Kiritan"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://schema.org/name> "中国うさぎ"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <http://xmlns.com/foaf/0.1/nick> "Hau"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://schema.org/name> "雨晴はう"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/url> <https://nakamura196.github.io/voicevox-character-lod/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> "#00acc1" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://schema.org/name> "Kasukabe Tsumugi"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "す、すごい…！"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <https://twitter.com/sakamoto_ahr> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://schema.org/name> "Amehare Hau"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> "おっとりした丁寧な口調。「〜ですね」「〜でしょう」「〜かしら」を使う"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/product/zundamon/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> "23"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/product/amehare_hau/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "それはね"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "そのとおりよ！"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> "#90caf9" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> "#ef9a9a" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/description> "Free text-to-speech and singing voice synthesis software. Available for both commercial and non-commercial use."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://schema.org/image> <https://voicevox.hiroshiba.jp/product/whitecul/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "えっと…それって何かな…？"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> "#c51162" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://schema.org/image> <https://voicevox.hiroshiba.jp/product/shikoku_metan/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/description> "無料で使えるテキスト読み上げ・歌声合成ソフトウェア。商用・非商用問わず利用可能。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/dateModified> "2026-03-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <http://www.w3.org/2000/01/rdf-schema#label> "ずんだもん × めたん"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> "明るくギャルっぽい口調。「〜じゃん」「マジ？」「やばくない？」を使う"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/applicationCategory> "マルチメディア"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <https://seiga.nicovideo.jp/seiga/im11023586> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <http://xmlns.com/foaf/0.1/nick> "そら"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/SoftwareApplication> .
+<https://twitter.com/sakamoto_ahr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <https://twitter.com/sakamoto_ahr> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <http://xmlns.com/foaf/0.1/nick> "Zundamon"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> "#69f0ae" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> "#00c853" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <http://xmlns.com/foaf/0.1/nick> "きりたん"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <http://www.w3.org/2000/01/rdf-schema#label> "つむぎ × きりたん"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://schema.org/description> "A curious character who asks naive questions. Characterized by the '~noda' speech pattern."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://schema.org/description> "知的で落ち着いた口調のキャラクター。「〜だよ」「〜だね」を使う。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/license> <https://github.com/VOICEVOX/voicevox/blob/main/LICENSE> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/url> <https://voicevox.hiroshiba.jp/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "そうですね"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://schema.org/description> "A gentle character with a polite speaking style."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://schema.org/name> "Zundamon"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://schema.org/description> "好奇心旺盛で素朴な質問をするキャラクター。「〜のだ」「〜なのだ」語尾が特徴。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://schema.org/name> "四国めたん"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://schema.org/description> "冷静でクールな口調のキャラクター。「つまり〜ということです」を使う。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://schema.org/description> "A calm, cool character with a composed speaking style."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <http://www.w3.org/2000/01/rdf-schema#label> "Zundamon x Metan"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba> <http://xmlns.com/foaf/0.1/homepage> <https://hiroshiba.jp/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <http://xmlns.com/foaf/0.1/nick> "WhiteCUL"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://schema.org/name> "春日部つむぎ"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> "#aa00ff" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "理解しました"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <http://xmlns.com/foaf/0.1/nick> "うさぎ"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <http://www.w3.org/2000/01/rdf-schema#label> "はう × WhiteCUL"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/creator> <https://github.com/nakamura196> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <http://xmlns.com/foaf/0.1/nick> "ずんだもん"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <https://twitter.com/sakamoto_ahr> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "そうですね"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> "#ff4081" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <http://www.w3.org/2000/01/rdf-schema#label> "うさぎ × そら"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <http://xmlns.com/foaf/0.1/nick> "Tsumugi"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> "108"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba> <https://schema.org/name> "Hiho (Kazuyuki Hiroshiba)"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba> <http://www.w3.org/2002/07/owl#sameAs> <https://github.com/Hiroshiba> .
+<https://twitter.com/sakamoto_ahr> <http://xmlns.com/foaf/0.1/homepage> <https://twitter.com/sakamoto_ahr> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://schema.org/name> "ずんだもん"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> "「〜よ」「〜わ」語尾。丁寧で分かりやすく説明する"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "えっと、それって何？"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <http://xmlns.com/foaf/0.1/nick> "WhiteCUL"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan> <http://purl.org/dc/terms/description> "Gyaru x Cool. Tsumugi asks casually while Kiritan explains calmly."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <http://xmlns.com/foaf/0.1/nick> "つむぎ"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/product/kyushu_sora/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <http://xmlns.com/foaf/0.1/nick> "めたん"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/description> "Linked Open Data dataset describing characters, speech styles, and dialogue pairs of the VOICEVOX text-to-speech engine."@en .
+<https://twitter.com/sakamoto_ahr> <https://schema.org/description> "Creator of standing image illustrations for official VOICEVOX characters"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul> <http://purl.org/dc/terms/description> "Energetic x Intellectual. Hau asks briskly while WhiteCUL explains thoughtfully."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> <https://schema.org/name> "VOICEVOX"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "なるほどね〜！"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "な、なるほど…！"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> "「〜のだ」「〜なのだ」語尾。好奇心旺盛で素朴な質問をする"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <https://seiga.nicovideo.jp/seiga/im10849148> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> "#ab47bc" .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan> <https://schema.org/name> "Tohoku Kiritan"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi> <https://schema.org/image> <https://voicevox.hiroshiba.jp/product/kasukabe_tsumugi/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> "素敵ですね"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul> <http://xmlns.com/foaf/0.1/homepage> <https://voicevox.hiroshiba.jp/product/whitecul/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <https://seiga.nicovideo.jp/seiga/im10913655> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> "元気でハキハキした口調。「〜だよ！」「えっと〜」「がんばろう！」を使う"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <http://purl.org/dc/terms/description> "Shy x Gentle. Usagi asks timidly while Sora explains kindly."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> .
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> <https://schema.org/name> "VOICEVOX Character LOD"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora> <https://schema.org/license> <https://zunko.jp/guideline.html> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon> .

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VOICEVOX Character LOD</title>
+  <meta name="description" content="VOICEVOXキャラクターのLinked Open Dataデータセット">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "VOICEVOX Character Linked Open Data",
+    "description": "Linked Open Data dataset describing characters, speech styles, and dialogue pairs of the VOICEVOX text-to-speech engine.",
+    "url": "https://nakamura196.github.io/voicevox-character-lod/",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "creator": { "@type": "Person", "name": "Nakamura", "url": "https://github.com/nakamura196" },
+    "dateCreated": "2026-03-10",
+    "distribution": [
+      { "@type": "DataDownload", "encodingFormat": "text/turtle", "contentUrl": "https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.ttl" },
+      { "@type": "DataDownload", "encodingFormat": "application/ld+json", "contentUrl": "https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.jsonld" },
+      { "@type": "DataDownload", "encodingFormat": "application/n-triples", "contentUrl": "https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.nt" },
+      { "@type": "DataDownload", "encodingFormat": "application/rdf+xml", "contentUrl": "https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.rdf" }
+    ],
+    "isBasedOn": "https://voicevox.hiroshiba.jp/"
+  }
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/@triply/yasgui/build/yasgui.min.css">
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #1a1a2e; --accent: #1976d2; --accent2: #7c4dff;
+      --border: #e0e0e0; --entry: #f5f7fa; --secondary: #666;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a2e; --fg: #e0e0e0; --accent: #64b5f6; --accent2: #b388ff;
+        --border: #333; --entry: #252540; --secondary: #aaa;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; background: var(--bg); color: var(--fg); line-height: 1.7; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Lang toggle */
+    .lang-toggle { position: fixed; top: 1rem; right: 1.5rem; z-index: 100; }
+    .lang-toggle button { background: var(--entry); border: 1px solid var(--border); color: var(--fg); padding: 0.3rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+    .lang-toggle button:hover { border-color: var(--accent); }
+    .lang-toggle button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* Hero */
+    .hero { text-align: center; padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p { color: var(--secondary); font-size: 1.05rem; margin-bottom: 1rem; }
+    .badges { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+    .badges img { height: 22px; }
+
+    /* Sections */
+    section { margin-bottom: 2.5rem; }
+    section h2 { font-size: 1.4rem; margin-bottom: 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--accent); }
+    section h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
+    .stat-card { background: var(--entry); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem; text-align: center; }
+    .stat-number { display: block; font-size: 2rem; font-weight: 700; color: var(--accent); }
+    .stat-label { display: block; font-size: 0.85rem; color: var(--secondary); margin-top: 0.2rem; }
+
+    /* Downloads */
+    .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.8rem; }
+    .dl-card { display: flex; flex-direction: column; align-items: center; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--accent); background: var(--entry); transition: border-color 0.2s, box-shadow 0.2s; }
+    .dl-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .dl-card strong { font-size: 0.95rem; }
+    .dl-card span { font-size: 0.75rem; color: var(--secondary); margin-top: 0.2rem; }
+
+    /* Table */
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 0.5rem 0; }
+    th, td { padding: 0.5rem 0.7rem; border: 1px solid var(--border); text-align: left; }
+    th { background: var(--entry); font-weight: 600; }
+    code { background: var(--entry); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85rem; }
+    pre { background: var(--entry); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; overflow-x: auto; font-size: 0.85rem; margin: 0.5rem 0; }
+    pre code { background: none; padding: 0; }
+
+    /* Character cards */
+    .characters { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem; }
+    .char-card { background: var(--entry); border-radius: 6px; padding: 0.8rem 1rem; border: 1px solid var(--border); display: flex; gap: 0.8rem; align-items: center; }
+    .char-img { width: 60px; height: 80px; object-fit: contain; flex-shrink: 0; }
+    .char-info { flex: 1; min-width: 0; }
+    .char-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem; }
+    .char-header code { font-size: 0.8rem; color: var(--secondary); }
+    .char-meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--secondary); flex-wrap: wrap; }
+    .char-meta a { color: var(--accent); }
+
+    /* Graph */
+    #graph-container { width: 100%; min-height: 500px; border: 1px solid var(--border); border-radius: 8px; background: var(--entry); overflow: hidden; }
+
+    /* YASGUI */
+    #yasgui { margin-top: 1rem; border-radius: 8px; overflow: hidden; }
+
+    /* License */
+    .license-section { padding: 1.5rem; background: var(--entry); border-radius: 8px; border: 1px solid var(--border); }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem 0; color: var(--secondary); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    footer a { color: var(--accent); }
+
+    /* i18n */
+    [data-lang="en"] { display: none; }
+    body.lang-en [data-lang="en"] { display: unset; }
+    body.lang-en [data-lang="ja"] { display: none; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.5rem; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .downloads { grid-template-columns: repeat(2, 1fr); }
+      .characters { grid-template-columns: 1fr; }
+      #graph-container { min-height: 350px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <button id="btn-ja" class="active" onclick="setLang('ja')">JA</button>
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="container">
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>
+      <span data-lang="ja">VOICEVOX キャラクター LOD</span>
+      <span data-lang="en">VOICEVOX Character LOD</span>
+    </h1>
+    <p>
+      <span data-lang="ja">VOICEVOXキャラクターのLinked Open Dataデータセット — 8キャラクター・4対話ペアの構造化データをCC BY 4.0で公開</span>
+      <span data-lang="en">Linked Open Data dataset for VOICEVOX characters — 8 characters and 4 dialogue pairs as structured data, published under CC BY 4.0</span>
+    </p>
+    <div class="badges">
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="CC BY 4.0"></a>
+      <img src="https://img.shields.io/badge/LOD-5%20Star-gold.svg" alt="5-Star LOD">
+      <img src="https://img.shields.io/badge/Format-RDF%2FOWL-blue.svg" alt="RDF/OWL">
+    </div>
+  </header>
+
+  <!-- Stats -->
+  <section>
+    <h2>
+      <span data-lang="ja">データ概要</span>
+      <span data-lang="en">Dataset Overview</span>
+    </h2>
+    <div class="stats">
+      <div class="stat-card"><span class="stat-number">8</span><span class="stat-label"><span data-lang="ja">キャラクター</span><span data-lang="en">Characters</span></span></div>
+      <div class="stat-card"><span class="stat-number">4</span><span class="stat-label"><span data-lang="ja">対話ペア</span><span data-lang="en">Dialogue Pairs</span></span></div>
+      <div class="stat-card"><span class="stat-number" id="triple-count">-</span><span class="stat-label"><span data-lang="ja">トリプル数</span><span data-lang="en">Triples</span></span></div>
+      <div class="stat-card"><span class="stat-number">5</span><span class="stat-label"><span data-lang="ja">Wikidata連携</span><span data-lang="en">Wikidata Links</span></span></div>
+    </div>
+  </section>
+
+  <!-- Downloads -->
+  <section>
+    <h2>
+      <span data-lang="ja">ダウンロード</span>
+      <span data-lang="en">Downloads</span>
+    </h2>
+    <div class="downloads">
+      <a class="dl-card" href="lod/voicevox.ttl"><strong>Turtle</strong><span>.ttl</span></a>
+      <a class="dl-card" href="lod/voicevox.jsonld"><strong>JSON-LD</strong><span>.jsonld</span></a>
+      <a class="dl-card" href="lod/voicevox.nt"><strong>N-Triples</strong><span>.nt</span></a>
+      <a class="dl-card" href="lod/voicevox.rdf"><strong>RDF/XML</strong><span>.rdf</span></a>
+      <a class="dl-card" href="lod/void.ttl"><strong>VoID</strong><span><span data-lang="ja">メタデータ</span><span data-lang="en">Metadata</span></span></a>
+      <a class="dl-card" href="ns/voicevox.ttl"><strong><span data-lang="ja">オントロジー</span><span data-lang="en">Ontology</span></strong><span>vvox:</span></a>
+    </div>
+  </section>
+
+  <!-- Ontology -->
+  <section>
+    <h2>
+      <span data-lang="ja">オントロジー設計</span>
+      <span data-lang="en">Ontology Design</span>
+    </h2>
+    <p>
+      <span data-lang="ja">名前空間</span><span data-lang="en">Namespace</span>:
+      <code>https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#</code>
+      &nbsp;|&nbsp;
+      <a href="ns/voicevox/">
+        <span data-lang="ja">詳細ドキュメント</span>
+        <span data-lang="en">Full documentation</span>
+      </a>
+    </p>
+    <table>
+      <thead><tr>
+        <th><span data-lang="ja">クラス / プロパティ</span><span data-lang="en">Class / Property</span></th>
+        <th><span data-lang="ja">型</span><span data-lang="en">Type</span></th>
+        <th><span data-lang="ja">説明</span><span data-lang="en">Description</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><code>vvox:Character</code></td><td>owl:Class</td><td><span data-lang="ja">VOICEVOXキャラクター</span><span data-lang="en">VOICEVOX character</span></td></tr>
+        <tr><td><code>vvox:CharacterPair</code></td><td>owl:Class</td><td><span data-lang="ja">対話用キャラクターペア</span><span data-lang="en">Dialogue character pair</span></td></tr>
+        <tr><td><code>vvox:TTSEngine</code></td><td>owl:Class</td><td><span data-lang="ja">音声合成エンジン</span><span data-lang="en">Text-to-speech engine</span></td></tr>
+        <tr><td><code>vvox:speakerId</code></td><td>owl:DatatypeProperty</td><td><span data-lang="ja">VOICEVOX話者ID</span><span data-lang="en">VOICEVOX speaker ID</span></td></tr>
+        <tr><td><code>vvox:speechStyle</code></td><td>owl:DatatypeProperty</td><td><span data-lang="ja">口調の説明</span><span data-lang="en">Speech style description</span></td></tr>
+        <tr><td><code>vvox:questioner</code></td><td>owl:ObjectProperty</td><td><span data-lang="ja">質問役</span><span data-lang="en">Questioner role</span></td></tr>
+        <tr><td><code>vvox:explainer</code></td><td>owl:ObjectProperty</td><td><span data-lang="ja">解説役</span><span data-lang="en">Explainer role</span></td></tr>
+        <tr><td><code>vvox:hasEngine</code></td><td>owl:ObjectProperty</td><td><span data-lang="ja">対応エンジン</span><span data-lang="en">Associated engine</span></td></tr>
+        <tr><td><code>vvox:hasMember</code></td><td>owl:ObjectProperty</td><td><span data-lang="ja">ペアのメンバー</span><span data-lang="en">Pair member</span></td></tr>
+        <tr><td><code>vvox:displayColor</code></td><td>owl:DatatypeProperty</td><td><span data-lang="ja">テーマカラー</span><span data-lang="en">Theme color</span></td></tr>
+        <tr><td><code>vvox:sampleLine</code></td><td>owl:DatatypeProperty</td><td><span data-lang="ja">口調サンプル</span><span data-lang="en">Sample dialogue line</span></td></tr>
+      </tbody>
+    </table>
+    <p>
+      <span data-lang="ja">外部語彙</span><span data-lang="en">External vocabularies</span>:
+      <code>schema:</code> <code>foaf:</code> <code>dcterms:</code> <code>owl:</code> <code>skos:</code>
+    </p>
+  </section>
+
+  <!-- Characters -->
+  <section>
+    <h2>
+      <span data-lang="ja">キャラクター一覧</span>
+      <span data-lang="en">Characters</span>
+    </h2>
+    <div class="characters" id="char-list"></div>
+  </section>
+
+  <!-- Graph -->
+  <section>
+    <h2>
+      <span data-lang="ja">関係グラフ</span>
+      <span data-lang="en">Relationship Graph</span>
+    </h2>
+    <p>
+      <span data-lang="ja">キャラクターとペアの関係をインタラクティブに可視化</span>
+      <span data-lang="en">Interactive visualization of character and pair relationships</span>
+    </p>
+    <div id="graph-container"></div>
+  </section>
+
+  <!-- SPARQL Examples -->
+  <section>
+    <h2>
+      <span data-lang="ja">SPARQLクエリ例</span>
+      <span data-lang="en">SPARQL Query Examples</span>
+    </h2>
+    <h3>
+      <span data-lang="ja">全キャラクター一覧</span>
+      <span data-lang="en">List all characters</span>
+    </h3>
+    <pre><code>PREFIX vvox: &lt;https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#&gt;
+PREFIX schema: &lt;https://schema.org/&gt;
+
+SELECT ?char ?name ?speakerId WHERE {
+  ?char a vvox:Character ;
+        schema:name ?name ;
+        vvox:speakerId ?speakerId .
+  FILTER(lang(?name) = "ja")
+}
+ORDER BY ?speakerId</code></pre>
+    <h3>
+      <span data-lang="ja">対話ペアと役割</span>
+      <span data-lang="en">Dialogue pairs with roles</span>
+    </h3>
+    <pre><code>PREFIX vvox: &lt;https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#&gt;
+PREFIX schema: &lt;https://schema.org/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?pairLabel ?questionerName ?explainerName WHERE {
+  ?pair a vvox:CharacterPair ;
+        rdfs:label ?pairLabel ;
+        vvox:questioner/schema:name ?questionerName ;
+        vvox:explainer/schema:name ?explainerName .
+  FILTER(lang(?pairLabel) = "ja")
+  FILTER(lang(?questionerName) = "ja")
+  FILTER(lang(?explainerName) = "ja")
+}</code></pre>
+    <h3>
+      <span data-lang="ja">Wikidataリンク</span>
+      <span data-lang="en">Wikidata links</span>
+    </h3>
+    <pre><code>PREFIX vvox: &lt;https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#&gt;
+PREFIX schema: &lt;https://schema.org/&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT ?name ?wikidataUri WHERE {
+  ?char a vvox:Character ;
+        schema:name ?name ;
+        owl:sameAs ?wikidataUri .
+  FILTER(lang(?name) = "ja")
+  FILTER(STRSTARTS(STR(?wikidataUri), "http://www.wikidata.org/"))
+}</code></pre>
+  </section>
+
+  <!-- SPARQL Endpoint -->
+  <section>
+    <h2>
+      <span data-lang="ja">SPARQLエンドポイント</span>
+      <span data-lang="en">SPARQL Endpoint</span>
+    </h2>
+    <p>
+      <span data-lang="ja">ローカルでFusekiを起動してクエリを実行できます:</span>
+      <span data-lang="en">Run Fuseki locally to execute queries:</span>
+    </p>
+    <pre><code>docker compose up -d
+curl -X POST 'http://localhost:3030/voicevox/data' \
+  -H 'Content-Type: text/turtle' \
+  -T docs/lod/voicevox.ttl</code></pre>
+    <div id="yasgui"></div>
+  </section>
+
+  <!-- License -->
+  <section class="license-section">
+    <h2>
+      <span data-lang="ja">ライセンス</span>
+      <span data-lang="en">License</span>
+    </h2>
+    <p>
+      <span data-lang="ja">本データセットは</span>
+      <span data-lang="en">This dataset is licensed under</span>
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>
+      <span data-lang="ja">ライセンスで提供されています。</span>
+      <span data-lang="en">.</span>
+    </p>
+    <p>
+      <span data-lang="ja">各キャラクターの利用規約は、それぞれの公式ガイドラインに従ってください。</span>
+      <span data-lang="en">Please follow each character's official guidelines for usage terms.</span>
+    </p>
+    <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--secondary)">
+      <span data-lang="ja">立ち絵素材: 坂本アヒル氏 | VOICEVOX:ずんだもん, 四国めたん, 春日部つむぎ, 雨晴はう, 九州そら, WhiteCUL, 中国うさぎ, 東北きりたん</span>
+      <span data-lang="en">Standing illustrations: Sakamoto Ahiru | VOICEVOX: Zundamon, Shikoku Metan, Kasukabe Tsumugi, Amehare Hau, Kyushu Sora, WhiteCUL, Chugoku Usagi, Tohoku Kiritan</span>
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <a href="https://github.com/nakamura196/voicevox-character-lod">GitHub</a> |
+    <a href="https://voicevox.hiroshiba.jp/">VOICEVOX</a> |
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+  </div>
+</footer>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/@triply/yasgui/build/yasgui.min.js"></script>
+<script>
+// --- i18n ---
+let currentLang = "ja";
+function setLang(lang) {
+  currentLang = lang;
+  document.body.classList.toggle("lang-en", lang === "en");
+  document.getElementById("btn-ja").classList.toggle("active", lang === "ja");
+  document.getElementById("btn-en").classList.toggle("active", lang === "en");
+  renderCharacters();
+}
+
+// --- Stats ---
+fetch("lod/stats.json")
+  .then(r => r.json())
+  .then(s => { document.getElementById("triple-count").textContent = s.triples; })
+  .catch(() => {});
+
+// --- Characters ---
+const CHARS = [
+  { key: "zundamon", ja: "ずんだもん", en: "Zundamon", color: "#69f0ae", id: 3, wd: "Q113476219" },
+  { key: "metan", ja: "四国めたん", en: "Shikoku Metan", color: "#ff4081", id: 2, wd: "Q113476218" },
+  { key: "tsumugi", ja: "春日部つむぎ", en: "Kasukabe Tsumugi", color: "#ffab40", id: 8, wd: "Q113476220" },
+  { key: "hau", ja: "雨晴はう", en: "Amehare Hau", color: "#4dd0e1", id: 10, wd: "" },
+  { key: "sora", ja: "九州そら", en: "Kyushu Sora", color: "#ea80fc", id: 16, wd: "" },
+  { key: "whitecul", ja: "WhiteCUL", en: "WhiteCUL", color: "#90caf9", id: 23, wd: "" },
+  { key: "usagi", ja: "中国うさぎ", en: "Chugoku Usagi", color: "#ef9a9a", id: 61, wd: "" },
+  { key: "kiritan", ja: "東北きりたん", en: "Tohoku Kiritan", color: "#ce93d8", id: 108, wd: "Q55634043" },
+];
+
+function renderCharacters() {
+  const el = document.getElementById("char-list");
+  el.innerHTML = CHARS.map(c => `
+    <div class="char-card" style="border-left:4px solid ${c.color}">
+      <img class="char-img" src="images/characters/${c.key}.png" alt="${c.ja}" loading="lazy">
+      <div class="char-info">
+        <div class="char-header">
+          <strong>${currentLang === "ja" ? c.ja : c.en}</strong>
+          <code>vvox:${c.key}</code>
+        </div>
+        <div class="char-meta">
+          <span>Speaker ID: ${c.id}</span>
+          ${c.wd ? `<a href="https://www.wikidata.org/entity/${c.wd}" target="_blank" rel="noopener">Wikidata: ${c.wd}</a>` : ""}
+        </div>
+      </div>
+    </div>`).join("");
+}
+renderCharacters();
+
+// --- YASGUI ---
+(function() {
+  const el = document.getElementById("yasgui");
+  if (!el || typeof Yasgui === "undefined") return;
+  new Yasgui(el, {
+    requestConfig: { endpoint: "http://localhost:3030/voicevox/sparql" },
+    yasqe: {
+      value: `PREFIX vvox: <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?char ?name ?speakerId WHERE {\n  ?char a vvox:Character ;\n        schema:name ?name ;\n        vvox:speakerId ?speakerId .\n  FILTER(lang(?name) = "ja")\n}\nORDER BY ?speakerId`
+    }
+  });
+})();
+
+// --- D3 Graph ---
+(function() {
+  const container = document.getElementById("graph-container");
+  if (!container) return;
+  const width = container.clientWidth || 800;
+  const height = 500;
+
+  const nodes = [
+    { id: "voicevox", label: "VOICEVOX", type: "engine", color: "#ffd54f" },
+    { id: "zundamon", label: "ずんだもん", labelEn: "Zundamon", type: "char", color: "#69f0ae" },
+    { id: "metan", label: "四国めたん", labelEn: "Metan", type: "char", color: "#ff4081" },
+    { id: "tsumugi", label: "春日部つむぎ", labelEn: "Tsumugi", type: "char", color: "#ffab40" },
+    { id: "hau", label: "雨晴はう", labelEn: "Hau", type: "char", color: "#4dd0e1" },
+    { id: "sora", label: "九州そら", labelEn: "Sora", type: "char", color: "#ea80fc" },
+    { id: "whitecul", label: "WhiteCUL", labelEn: "WhiteCUL", type: "char", color: "#90caf9" },
+    { id: "usagi", label: "中国うさぎ", labelEn: "Usagi", type: "char", color: "#ef9a9a" },
+    { id: "kiritan", label: "東北きりたん", labelEn: "Kiritan", type: "char", color: "#ce93d8" },
+    { id: "pair1", label: "ペア1", labelEn: "Pair1", type: "pair", color: "#b0bec5" },
+    { id: "pair2", label: "ペア2", labelEn: "Pair2", type: "pair", color: "#b0bec5" },
+    { id: "pair3", label: "ペア3", labelEn: "Pair3", type: "pair", color: "#b0bec5" },
+    { id: "pair4", label: "ペア4", labelEn: "Pair4", type: "pair", color: "#b0bec5" },
+  ];
+
+  const links = [
+    { source: "zundamon", target: "voicevox", label: "hasEngine" },
+    { source: "metan", target: "voicevox", label: "hasEngine" },
+    { source: "tsumugi", target: "voicevox", label: "hasEngine" },
+    { source: "hau", target: "voicevox", label: "hasEngine" },
+    { source: "sora", target: "voicevox", label: "hasEngine" },
+    { source: "whitecul", target: "voicevox", label: "hasEngine" },
+    { source: "usagi", target: "voicevox", label: "hasEngine" },
+    { source: "kiritan", target: "voicevox", label: "hasEngine" },
+    { source: "pair1", target: "zundamon", label: "questioner", dashed: true },
+    { source: "pair1", target: "metan", label: "explainer" },
+    { source: "pair2", target: "tsumugi", label: "questioner", dashed: true },
+    { source: "pair2", target: "kiritan", label: "explainer" },
+    { source: "pair3", target: "usagi", label: "questioner", dashed: true },
+    { source: "pair3", target: "sora", label: "explainer" },
+    { source: "pair4", target: "hau", label: "questioner", dashed: true },
+    { source: "pair4", target: "whitecul", label: "explainer" },
+  ];
+
+  const svg = d3.select(container).append("svg")
+    .attr("viewBox", [0, 0, width, height]).attr("width", "100%").attr("height", height);
+
+  svg.append("defs").append("marker")
+    .attr("id", "arrow").attr("viewBox", "0 -5 10 10")
+    .attr("refX", 22).attr("refY", 0).attr("markerWidth", 6).attr("markerHeight", 6).attr("orient", "auto")
+    .append("path").attr("d", "M0,-5L10,0L0,5").attr("fill", "#999");
+
+  const simulation = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(100))
+    .force("charge", d3.forceManyBody().strength(-400))
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    .force("collision", d3.forceCollide().radius(30));
+
+  const link = svg.append("g").selectAll("line").data(links).enter().append("line")
+    .attr("stroke", "#999").attr("stroke-width", 1.5)
+    .attr("stroke-dasharray", d => d.dashed ? "5,5" : "").attr("marker-end", "url(#arrow)");
+
+  const linkLabel = svg.append("g").selectAll("text").data(links).enter().append("text")
+    .text(d => d.label).attr("font-size", 9).attr("fill", "#888").attr("text-anchor", "middle");
+
+  const node = svg.append("g").selectAll("g").data(nodes).enter().append("g")
+    .call(d3.drag()
+      .on("start", (e, d) => { if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on("drag", (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on("end", (e, d) => { if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; })
+    );
+
+  node.append("circle")
+    .attr("r", d => d.type === "engine" ? 18 : d.type === "pair" ? 10 : 14)
+    .attr("fill", d => d.color).attr("stroke", "#fff").attr("stroke-width", 2);
+
+  node.append("text")
+    .text(d => d.label).attr("dy", d => d.type === "engine" ? 30 : 24)
+    .attr("text-anchor", "middle").attr("font-size", 11).attr("fill", "var(--fg)");
+
+  simulation.on("tick", () => {
+    link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+    linkLabel.attr("x", d => (d.source.x + d.target.x) / 2).attr("y", d => (d.source.y + d.target.y) / 2);
+    node.attr("transform", d => `translate(${d.x},${d.y})`);
+  });
+})();
+</script>
+
+</body>
+</html>

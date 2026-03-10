@@ -1,0 +1,118 @@
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://purl.org/dc/terms/created> "2026-03-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://purl.org/dc/terms/description> "An OWL ontology describing characters, speech styles, and dialogue pairs available in the VOICEVOX text-to-speech engine."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> <http://www.w3.org/2000/01/rdf-schema#comment> "A software application that converts text into synthesized speech."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> <http://www.w3.org/2000/01/rdf-schema#label> "表示カラー（ダーク）"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> <http://www.w3.org/2000/01/rdf-schema#comment> "キャラクターのテーマカラー（CSS hex値）。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> <http://www.w3.org/2000/01/rdf-schema#comment> "対話コンテンツにおいて質問役・解説役を担うキャラクターのペア。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <http://www.w3.org/2000/01/rdf-schema#label> "解説役"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> <http://www.w3.org/2000/01/rdf-schema#label> "口調"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <http://www.w3.org/2000/01/rdf-schema#label> "has member"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <http://www.w3.org/2000/01/rdf-schema#label> "立ち絵作者"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <http://www.w3.org/2000/01/rdf-schema#label> "has engine"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> <http://www.w3.org/2000/01/rdf-schema#label> "VOICEVOX Speaker ID"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <http://www.w3.org/2000/01/rdf-schema#label> "対応エンジン"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Person> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> <http://www.w3.org/2000/01/rdf-schema#label> "VOICEVOX Character"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of free-to-use standing image illustration for the character."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> <http://www.w3.org/2000/01/rdf-schema#comment> "VOICEVOX APIで使用される数値の話者識別子。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> <http://www.w3.org/2000/01/rdf-schema#comment> "The numeric speaker identifier used by the VOICEVOX API."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> <http://www.w3.org/2000/01/rdf-schema#label> "Text-to-Speech Engine"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://purl.org/dc/terms/modified> "2026-03-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "このペアに属するキャラクター（役割問わず）。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <http://www.w3.org/2000/01/rdf-schema#label> "質問役"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "キャラクターの口調と典型的な表現の説明。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> <http://www.w3.org/2000/01/rdf-schema#comment> "ダークモード用のテーマカラー。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/SoftwareApplication> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "A character belonging to this pair (regardless of role)."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <http://www.w3.org/2000/01/rdf-schema#comment> "キャラクターの立ち絵素材のURL。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> <http://www.w3.org/2000/01/rdf-schema#comment> "テキストを合成音声に変換するソフトウェア。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Line"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <http://www.w3.org/2000/01/rdf-schema#comment> "The TTS engine that synthesizes this character's voice."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <http://www.w3.org/2000/01/rdf-schema#label> "Questioner"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <http://www.w3.org/2000/01/rdf-schema#range> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://purl.org/dc/terms/description> "VOICEVOXテキスト音声合成エンジンで利用可能なキャラクター・口調・対話ペアを記述するOWLオントロジー。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <http://www.w3.org/2000/01/rdf-schema#comment> "立ち絵イラストの制作者。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> <http://www.w3.org/2000/01/rdf-schema#label> "Character Pair"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> <http://www.w3.org/2000/01/rdf-schema#label> "表示カラー"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> <http://www.w3.org/2000/01/rdf-schema#comment> "The character's theme color for dark mode."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Speech Style"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> <http://www.w3.org/2000/01/rdf-schema#label> "VOICEVOX話者ID"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <http://www.w3.org/2000/01/rdf-schema#range> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://purl.org/dc/terms/creator> <https://github.com/nakamura196> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://purl.org/dc/terms/title> "VOICEVOX Character Ontology"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <http://www.w3.org/2000/01/rdf-schema#range> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <http://www.w3.org/2000/01/rdf-schema#comment> "The character who plays the questioner role in a pair."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <http://www.w3.org/2000/01/rdf-schema#label> "Explainer"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <http://www.w3.org/2000/01/rdf-schema#label> "Standing Image"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://voicevox.hiroshiba.jp/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <http://www.w3.org/2000/01/rdf-schema#comment> "The person who created the standing image illustration."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> <http://www.w3.org/2000/01/rdf-schema#comment> "An example line demonstrating the character's speech style."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> <http://www.w3.org/2000/01/rdf-schema#label> "Display Color (Dark)"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> <http://www.w3.org/2000/01/rdf-schema#comment> "A virtual character whose voice is synthesized by the VOICEVOX engine."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine> <http://www.w3.org/2000/01/rdf-schema#label> "音声合成エンジン"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of the character's speech style and typical expressions."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <http://www.w3.org/2000/01/rdf-schema#label> "メンバー"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <http://www.w3.org/2000/01/rdf-schema#comment> "The character who plays the explainer role in a pair."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> <http://www.w3.org/2000/01/rdf-schema#label> "口調サンプル"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage> <http://www.w3.org/2000/01/rdf-schema#label> "立ち絵素材"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://purl.org/dc/terms/title> "VOICEVOX キャラクターオントロジー"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> <http://www.w3.org/2000/01/rdf-schema#label> "Display Color"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner> <http://www.w3.org/2000/01/rdf-schema#comment> "ペアにおいて質問役を担うキャラクター。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> <http://www.w3.org/2000/01/rdf-schema#label> "キャラクターペア"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer> <http://www.w3.org/2000/01/rdf-schema#comment> "ペアにおいて解説役を担うキャラクター。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <http://www.w3.org/2000/01/rdf-schema#comment> "このキャラクターの音声を合成するTTSエンジン。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair> <http://www.w3.org/2000/01/rdf-schema#comment> "A pair of characters assigned questioner/explainer roles for dialogue-style content."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> <http://www.w3.org/2000/01/rdf-schema#label> "VOICEVOXキャラクター"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator> <http://www.w3.org/2000/01/rdf-schema#label> "Image Creator"@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor> <http://www.w3.org/2000/01/rdf-schema#comment> "The character's theme color as a CSS hex value."@en .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> <http://www.w3.org/2000/01/rdf-schema#comment> "VOICEVOXエンジンで音声合成されるバーチャルキャラクター。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine> <http://www.w3.org/2000/01/rdf-schema#comment> "キャラクターの口調を示すサンプル台詞。"@ja .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VOICEVOX Character Ontology (vvox:)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { --bg: #fff; --fg: #222; --accent: #1976d2; --border: #e0e0e0; --entry: #f5f5f5; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1a1a2e; --fg: #e0e0e0; --accent: #64b5f6; --border: #333; --entry: #252540; }
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 860px; margin: 0 auto; padding: 2rem 1rem; background: var(--bg); color: var(--fg); line-height: 1.6; }
+    h1 { border-bottom: 2px solid var(--accent); padding-bottom: 0.3rem; }
+    h2 { margin-top: 2rem; color: var(--accent); }
+    a { color: var(--accent); }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid var(--border); padding: 0.5rem 0.8rem; text-align: left; }
+    th { background: var(--entry); }
+    code { background: var(--entry); padding: 0.15rem 0.3rem; border-radius: 3px; font-size: 0.9rem; }
+    .formats { display: flex; gap: 0.8rem; flex-wrap: wrap; margin: 1rem 0; }
+    .formats a { padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; }
+    .formats a:hover { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<h1>VOICEVOX Character Ontology</h1>
+<p>
+  Namespace: <code>https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#</code><br>
+  Preferred prefix: <code>vvox:</code><br>
+  Version: 1.0.0 | License: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</p>
+
+<h2>Download</h2>
+<div class="formats">
+  <a href="../voicevox.ttl">Turtle (.ttl)</a>
+  <a href="../voicevox.jsonld">JSON-LD (.jsonld)</a>
+  <a href="../voicevox.rdf">RDF/XML (.rdf)</a>
+</div>
+
+<h2>Classes</h2>
+<table>
+  <thead><tr><th>Class</th><th>Label (en)</th><th>Label (ja)</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td><code>vvox:Character</code></td><td>VOICEVOX Character</td><td>VOICEVOXキャラクター</td><td>A virtual character whose voice is synthesized by the VOICEVOX engine. Subclass of schema:Person.</td></tr>
+    <tr><td><code>vvox:CharacterPair</code></td><td>Character Pair</td><td>キャラクターペア</td><td>A pair of characters assigned questioner/explainer roles for dialogue-style content.</td></tr>
+    <tr><td><code>vvox:TTSEngine</code></td><td>Text-to-Speech Engine</td><td>音声合成エンジン</td><td>A software application that converts text into synthesized speech. Subclass of schema:SoftwareApplication.</td></tr>
+  </tbody>
+</table>
+
+<h2>Object Properties</h2>
+<table>
+  <thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td><code>vvox:questioner</code></td><td>CharacterPair</td><td>Character</td><td>The character who plays the questioner role in a pair.</td></tr>
+    <tr><td><code>vvox:explainer</code></td><td>CharacterPair</td><td>Character</td><td>The character who plays the explainer role in a pair.</td></tr>
+    <tr><td><code>vvox:hasMember</code></td><td>CharacterPair</td><td>Character</td><td>A character belonging to this pair (regardless of role).</td></tr>
+    <tr><td><code>vvox:hasEngine</code></td><td>Character</td><td>TTSEngine</td><td>The TTS engine that synthesizes this character's voice.</td></tr>
+    <tr><td><code>vvox:imageCreator</code></td><td>Character</td><td>foaf:Person</td><td>The person who created the standing image illustration.</td></tr>
+  </tbody>
+</table>
+
+<h2>Datatype Properties</h2>
+<table>
+  <thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td><code>vvox:speakerId</code></td><td>Character</td><td>xsd:integer</td><td>The numeric speaker identifier used by the VOICEVOX API.</td></tr>
+    <tr><td><code>vvox:speechStyle</code></td><td>Character</td><td>xsd:string</td><td>A description of the character's speech style and typical expressions.</td></tr>
+    <tr><td><code>vvox:displayColor</code></td><td>Character</td><td>xsd:string</td><td>The character's theme color as a CSS hex value.</td></tr>
+    <tr><td><code>vvox:displayColorDark</code></td><td>Character</td><td>xsd:string</td><td>The character's theme color for dark mode.</td></tr>
+    <tr><td><code>vvox:standingImage</code></td><td>Character</td><td>-</td><td>URL of free-to-use standing image illustration for the character.</td></tr>
+    <tr><td><code>vvox:sampleLine</code></td><td>Character</td><td>xsd:string</td><td>An example line demonstrating the character's speech style.</td></tr>
+  </tbody>
+</table>
+
+<h2>See Also</h2>
+<ul>
+  <li><a href="../../">VOICEVOX Character LOD Dataset</a></li>
+  <li><a href="https://voicevox.hiroshiba.jp/">VOICEVOX Official Website</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema:  <https://schema.org/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix vvox:    <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#> .
+
+# =============================================================================
+# VOICEVOX Character Ontology  —  OWL vocabulary
+# =============================================================================
+
+<https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> a owl:Ontology ;
+    owl:versionInfo "1.0.0" ;
+    dcterms:title "VOICEVOX Character Ontology"@en ,
+                  "VOICEVOX キャラクターオントロジー"@ja ;
+    dcterms:description
+        "An OWL ontology describing characters, speech styles, and dialogue pairs available in the VOICEVOX text-to-speech engine."@en ,
+        "VOICEVOXテキスト音声合成エンジンで利用可能なキャラクター・口調・対話ペアを記述するOWLオントロジー。"@ja ;
+    dcterms:creator <https://github.com/nakamura196> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:created "2026-03-10"^^xsd:date ;
+    dcterms:modified "2026-03-10"^^xsd:date ;
+    rdfs:seeAlso <https://voicevox.hiroshiba.jp/> .
+
+# ---------------------------------------------------------------------------
+# Classes
+# ---------------------------------------------------------------------------
+
+vvox:Character a owl:Class ;
+    rdfs:label "VOICEVOX Character"@en ,
+               "VOICEVOXキャラクター"@ja ;
+    rdfs:comment "A virtual character whose voice is synthesized by the VOICEVOX engine."@en ,
+                 "VOICEVOXエンジンで音声合成されるバーチャルキャラクター。"@ja ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:CharacterPair a owl:Class ;
+    rdfs:label "Character Pair"@en ,
+               "キャラクターペア"@ja ;
+    rdfs:comment "A pair of characters assigned questioner/explainer roles for dialogue-style content."@en ,
+                 "対話コンテンツにおいて質問役・解説役を担うキャラクターのペア。"@ja ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:TTSEngine a owl:Class ;
+    rdfs:label "Text-to-Speech Engine"@en ,
+               "音声合成エンジン"@ja ;
+    rdfs:comment "A software application that converts text into synthesized speech."@en ,
+                 "テキストを合成音声に変換するソフトウェア。"@ja ;
+    rdfs:subClassOf schema:SoftwareApplication ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+# ---------------------------------------------------------------------------
+# Object Properties
+# ---------------------------------------------------------------------------
+
+vvox:questioner a owl:ObjectProperty ;
+    rdfs:label "Questioner"@en , "質問役"@ja ;
+    rdfs:comment "The character who plays the questioner role in a pair."@en ,
+                 "ペアにおいて質問役を担うキャラクター。"@ja ;
+    rdfs:domain vvox:CharacterPair ;
+    rdfs:range  vvox:Character ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:explainer a owl:ObjectProperty ;
+    rdfs:label "Explainer"@en , "解説役"@ja ;
+    rdfs:comment "The character who plays the explainer role in a pair."@en ,
+                 "ペアにおいて解説役を担うキャラクター。"@ja ;
+    rdfs:domain vvox:CharacterPair ;
+    rdfs:range  vvox:Character ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:hasMember a owl:ObjectProperty ;
+    rdfs:label "has member"@en , "メンバー"@ja ;
+    rdfs:comment "A character belonging to this pair (regardless of role)."@en ,
+                 "このペアに属するキャラクター（役割問わず）。"@ja ;
+    rdfs:domain vvox:CharacterPair ;
+    rdfs:range  vvox:Character ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:hasEngine a owl:ObjectProperty ;
+    rdfs:label "has engine"@en , "対応エンジン"@ja ;
+    rdfs:comment "The TTS engine that synthesizes this character's voice."@en ,
+                 "このキャラクターの音声を合成するTTSエンジン。"@ja ;
+    rdfs:domain vvox:Character ;
+    rdfs:range  vvox:TTSEngine ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:imageCreator a owl:ObjectProperty ;
+    rdfs:label "Image Creator"@en , "立ち絵作者"@ja ;
+    rdfs:comment "The person who created the standing image illustration."@en ,
+                 "立ち絵イラストの制作者。"@ja ;
+    rdfs:domain vvox:Character ;
+    rdfs:range  foaf:Person ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+# ---------------------------------------------------------------------------
+# Datatype Properties
+# ---------------------------------------------------------------------------
+
+vvox:speakerId a owl:DatatypeProperty ;
+    rdfs:label "VOICEVOX Speaker ID"@en , "VOICEVOX話者ID"@ja ;
+    rdfs:comment "The numeric speaker identifier used by the VOICEVOX API."@en ,
+                 "VOICEVOX APIで使用される数値の話者識別子。"@ja ;
+    rdfs:domain vvox:Character ;
+    rdfs:range  xsd:integer ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:speechStyle a owl:DatatypeProperty ;
+    rdfs:label "Speech Style"@en , "口調"@ja ;
+    rdfs:comment "A description of the character's speech style and typical expressions."@en ,
+                 "キャラクターの口調と典型的な表現の説明。"@ja ;
+    rdfs:domain vvox:Character ;
+    rdfs:range  xsd:string ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:displayColor a owl:DatatypeProperty ;
+    rdfs:label "Display Color"@en , "表示カラー"@ja ;
+    rdfs:comment "The character's theme color as a CSS hex value."@en ,
+                 "キャラクターのテーマカラー（CSS hex値）。"@ja ;
+    rdfs:domain vvox:Character ;
+    rdfs:range  xsd:string ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:displayColorDark a owl:DatatypeProperty ;
+    rdfs:label "Display Color (Dark)"@en , "表示カラー（ダーク）"@ja ;
+    rdfs:comment "The character's theme color for dark mode."@en ,
+                 "ダークモード用のテーマカラー。"@ja ;
+    rdfs:domain vvox:Character ;
+    rdfs:range  xsd:string ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:standingImage a owl:DatatypeProperty ;
+    rdfs:label "Standing Image"@en , "立ち絵素材"@ja ;
+    rdfs:comment "URL of free-to-use standing image illustration for the character."@en ,
+                 "キャラクターの立ち絵素材のURL。"@ja ;
+    rdfs:domain vvox:Character ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .
+
+vvox:sampleLine a owl:DatatypeProperty ;
+    rdfs:label "Sample Line"@en , "口調サンプル"@ja ;
+    rdfs:comment "An example line demonstrating the character's speech style."@en ,
+                 "キャラクターの口調を示すサンプル台詞。"@ja ;
+    rdfs:domain vvox:Character ;
+    rdfs:range  xsd:string ;
+    rdfs:isDefinedBy <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox> .

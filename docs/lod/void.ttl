@@ -1,0 +1,86 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix schema:  <https://schema.org/> .
+@prefix vvox:    <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#> .
+
+# =============================================================================
+# VoID — Vocabulary of Interlinked Datasets
+# VOICEVOX Character LOD Dataset Description
+# =============================================================================
+
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox>
+    a void:Dataset ;
+
+    # --- Identity ---
+    dcterms:title
+        "VOICEVOX Character Linked Open Data"@en ,
+        "VOICEVOX キャラクター Linked Open Data"@ja ;
+    dcterms:description
+        "A Linked Open Data dataset describing characters, speech styles, and dialogue pairs available in the VOICEVOX text-to-speech engine. Includes links to Wikidata and Schema.org vocabulary."@en ,
+        "VOICEVOXテキスト音声合成エンジンで利用可能なキャラクター・口調・対話ペアを記述するLinked Open Dataデータセット。Wikidataおよびschema.org語彙へのリンクを含む。"@ja ;
+
+    # --- Provenance ---
+    dcterms:creator [
+        a foaf:Person ;
+        foaf:name "Nakamura" ;
+        foaf:homepage <https://github.com/nakamura196>
+    ] ;
+    dcterms:created  "2026-03-10"^^xsd:date ;
+    dcterms:modified "2026-03-10"^^xsd:date ;
+    dcterms:source   <https://voicevox.hiroshiba.jp/> ;
+
+    # --- License ---
+    dcterms:license  <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights   "This dataset is licensed under CC BY 4.0."@en ;
+
+    # --- Access ---
+    foaf:homepage    <https://nakamura196.github.io/voicevox-character-lod/> ;
+    void:uriSpace    "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#" ;
+
+    # --- Data Dumps (multiple serialisations) ---
+    void:dataDump
+        <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.ttl> ,
+        <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.jsonld> ,
+        <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.nt> ,
+        <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.rdf> ;
+
+    # --- SPARQL endpoint (local development) ---
+    void:sparqlEndpoint <http://localhost:3030/voicevox/sparql> ;
+
+    # --- Statistics (auto-updated by generate_lod.py) ---
+    void:triples     "238"^^xsd:integer ;
+    void:entities    "16"^^xsd:integer ;
+    void:classes     "3"^^xsd:integer ;
+    void:properties  "30"^^xsd:integer ;
+
+    # --- Vocabularies used ---
+    void:vocabulary
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+        <http://www.w3.org/2000/01/rdf-schema#> ,
+        <http://www.w3.org/2002/07/owl#> ,
+        <http://purl.org/dc/terms/> ,
+        <https://schema.org/> ,
+        <http://xmlns.com/foaf/0.1/> ,
+        <http://www.w3.org/2004/02/skos/core#> ,
+        <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#> ;
+
+    # --- Example resources ---
+    void:exampleResource
+        vvox:zundamon ,
+        vvox:metan ,
+        vvox:pair_zundamon_metan ,
+        vvox:voicevox ;
+
+    # --- Linksets ---
+    void:subset [
+        a void:Linkset ;
+        void:subjectsTarget <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> ;
+        void:objectsTarget  <https://www.wikidata.org/> ;
+        void:linkPredicate  owl:sameAs ;
+        void:triples        "5"^^xsd:integer
+    ] .

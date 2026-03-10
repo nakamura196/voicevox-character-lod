@@ -1,0 +1,257 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema:  <https://schema.org/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd:      <http://www.wikidata.org/entity/> .
+@prefix vvox:    <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#> .
+
+# =============================================================================
+# VOICEVOX Character Linked Open Data
+# Version 1.0.0  |  License: CC BY 4.0
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Dataset Metadata (inline)
+# ---------------------------------------------------------------------------
+
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox>
+    a schema:Dataset ;
+    schema:name "VOICEVOX Character LOD"@en ,
+                "VOICEVOX キャラクター LOD"@ja ;
+    schema:description
+        "Linked Open Data dataset describing characters, speech styles, and dialogue pairs of the VOICEVOX text-to-speech engine."@en ,
+        "VOICEVOXテキスト音声合成エンジンのキャラクター・口調・対話ペアを記述するLinked Open Dataデータセット。"@ja ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
+    schema:creator <https://github.com/nakamura196> ;
+    schema:dateCreated "2026-03-10"^^xsd:date ;
+    schema:dateModified "2026-03-10"^^xsd:date ;
+    schema:url <https://nakamura196.github.io/voicevox-character-lod/> ;
+    schema:isBasedOn <https://voicevox.hiroshiba.jp/> .
+
+# ---------------------------------------------------------------------------
+# TTS Engine
+# ---------------------------------------------------------------------------
+
+vvox:voicevox a vvox:TTSEngine , schema:SoftwareApplication ;
+    schema:name "VOICEVOX"@ja , "VOICEVOX"@en ;
+    schema:description
+        "無料で使えるテキスト読み上げ・歌声合成ソフトウェア。商用・非商用問わず利用可能。"@ja ,
+        "Free text-to-speech and singing voice synthesis software. Available for both commercial and non-commercial use."@en ;
+    schema:url <https://voicevox.hiroshiba.jp/> ;
+    schema:license <https://github.com/VOICEVOX/voicevox/blob/main/LICENSE> ;
+    schema:author vvox:hiroshiba ;
+    schema:applicationCategory "Multimedia"@en , "マルチメディア"@ja ;
+    schema:operatingSystem "Windows, macOS, Linux" ;
+    owl:sameAs wd:Q106428182 ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/> .
+
+# ---------------------------------------------------------------------------
+# Persons
+# ---------------------------------------------------------------------------
+
+vvox:hiroshiba a foaf:Person , schema:Person ;
+    schema:name "ヒホ（廣芝和之）"@ja , "Hiho (Kazuyuki Hiroshiba)"@en ;
+    foaf:name "ヒホ"@ja ;
+    foaf:homepage <https://hiroshiba.jp/> ;
+    owl:sameAs <https://github.com/Hiroshiba> .
+
+<https://twitter.com/sakamoto_ahr> a foaf:Person , schema:Person ;
+    schema:name "坂本アヒル"@ja , "Sakamoto Ahiru"@en ;
+    foaf:name "坂本アヒル"@ja ;
+    foaf:homepage <https://twitter.com/sakamoto_ahr> ;
+    schema:description "VOICEVOX公式キャラクターの立ち絵素材を制作"@ja ,
+                       "Creator of standing image illustrations for official VOICEVOX characters"@en .
+
+# ---------------------------------------------------------------------------
+# Characters
+# ---------------------------------------------------------------------------
+
+vvox:zundamon a vvox:Character ;
+    schema:name "ずんだもん"@ja , "Zundamon"@en ;
+    foaf:nick "ずんだもん"@ja , "Zundamon"@en ;
+    schema:description
+        "好奇心旺盛で素朴な質問をするキャラクター。「〜のだ」「〜なのだ」語尾が特徴。"@ja ,
+        "A curious character who asks naive questions. Characterized by the '~noda' speech pattern."@en ;
+    vvox:speakerId 3 ;
+    vvox:speechStyle "「〜のだ」「〜なのだ」語尾。好奇心旺盛で素朴な質問をする"@ja ;
+    vvox:sampleLine "〜って何なのだ？"@ja , "へぇ〜！すごいのだ！"@ja , "なるほどなのだ！"@ja ;
+    vvox:displayColor "#69f0ae" ;
+    vvox:displayColorDark "#00c853" ;
+    vvox:standingImage <https://seiga.nicovideo.jp/seiga/im10849148> ;
+    vvox:imageCreator <https://twitter.com/sakamoto_ahr> ;
+    vvox:hasEngine vvox:voicevox ;
+    schema:license <https://zunko.jp/guideline.html> ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/zundamon/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/zundamon/> ;
+    owl:sameAs wd:Q113476219 .
+
+vvox:metan a vvox:Character ;
+    schema:name "四国めたん"@ja , "Shikoku Metan"@en ;
+    foaf:nick "めたん"@ja , "Metan"@en ;
+    schema:description
+        "丁寧で分かりやすく説明するキャラクター。「〜よ」「〜わ」語尾が特徴。"@ja ,
+        "A polite character who explains things clearly. Characterized by feminine speech patterns."@en ;
+    vvox:speakerId 2 ;
+    vvox:speechStyle "「〜よ」「〜わ」語尾。丁寧で分かりやすく説明する"@ja ;
+    vvox:sampleLine "説明するわね"@ja , "〜のよ"@ja , "そのとおりよ！"@ja ;
+    vvox:displayColor "#ff4081" ;
+    vvox:displayColorDark "#c51162" ;
+    vvox:standingImage <https://seiga.nicovideo.jp/seiga/im10849150> ;
+    vvox:imageCreator <https://twitter.com/sakamoto_ahr> ;
+    vvox:hasEngine vvox:voicevox ;
+    schema:license <https://zunko.jp/guideline.html> ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/shikoku_metan/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/shikoku_metan/> ;
+    owl:sameAs wd:Q113476218 .
+
+vvox:tsumugi a vvox:Character ;
+    schema:name "春日部つむぎ"@ja , "Kasukabe Tsumugi"@en ;
+    foaf:nick "つむぎ"@ja , "Tsumugi"@en ;
+    schema:description
+        "明るくギャルっぽい口調のキャラクター。「〜じゃん」「マジ？」を多用。"@ja ,
+        "A bright, gyaru-style character. Frequently uses casual expressions like 'Maji?' (Really?)"@en ;
+    vvox:speakerId 8 ;
+    vvox:speechStyle "明るくギャルっぽい口調。「〜じゃん」「マジ？」「やばくない？」を使う"@ja ;
+    vvox:sampleLine "えー、マジ？"@ja , "それやばくない？"@ja , "なるほどね〜！"@ja ;
+    vvox:displayColor "#ffab40" ;
+    vvox:displayColorDark "#ff6d00" ;
+    vvox:standingImage <https://seiga.nicovideo.jp/seiga/im10849150> ;
+    vvox:imageCreator <https://twitter.com/sakamoto_ahr> ;
+    vvox:hasEngine vvox:voicevox ;
+    schema:license <https://tsumugi-official.studio.site/rule> ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/kasukabe_tsumugi/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/kasukabe_tsumugi/> ;
+    owl:sameAs wd:Q113476220 .
+
+vvox:hau a vvox:Character ;
+    schema:name "雨晴はう"@ja , "Amehare Hau"@en ;
+    foaf:nick "はう"@ja , "Hau"@en ;
+    schema:description
+        "元気でハキハキした口調のキャラクター。看護学生。"@ja ,
+        "An energetic character with a lively speaking style. A nursing student."@en ;
+    vvox:speakerId 10 ;
+    vvox:speechStyle "元気でハキハキした口調。「〜だよ！」「えっと〜」「がんばろう！」を使う"@ja ;
+    vvox:sampleLine "えっと、それって何？"@ja , "わぁ、すごいね！"@ja , "なるほど〜！"@ja ;
+    vvox:displayColor "#4dd0e1" ;
+    vvox:displayColorDark "#00acc1" ;
+    vvox:standingImage <https://seiga.nicovideo.jp/seiga/im10913655> ;
+    vvox:imageCreator <https://twitter.com/sakamoto_ahr> ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/amehare_hau/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/amehare_hau/> .
+
+vvox:sora a vvox:Character ;
+    schema:name "九州そら"@ja , "Kyushu Sora"@en ;
+    foaf:nick "そら"@ja , "Sora"@en ;
+    schema:description
+        "おっとりした丁寧な口調のキャラクター。「〜ですね」「〜かしら」を使う。"@ja ,
+        "A gentle character with a polite speaking style."@en ;
+    vvox:speakerId 16 ;
+    vvox:speechStyle "おっとりした丁寧な口調。「〜ですね」「〜でしょう」「〜かしら」を使う"@ja ;
+    vvox:sampleLine "そうですね"@ja , "〜ではないでしょうか"@ja , "素敵ですね"@ja ;
+    vvox:displayColor "#ea80fc" ;
+    vvox:displayColorDark "#aa00ff" ;
+    vvox:standingImage <https://seiga.nicovideo.jp/seiga/im10924061> ;
+    vvox:imageCreator <https://twitter.com/sakamoto_ahr> ;
+    vvox:hasEngine vvox:voicevox ;
+    schema:license <https://zunko.jp/guideline.html> ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/kyushu_sora/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/kyushu_sora/> .
+
+vvox:whitecul a vvox:Character ;
+    schema:name "WhiteCUL"@ja , "WhiteCUL"@en ;
+    foaf:nick "WhiteCUL"@ja , "WhiteCUL"@en ;
+    schema:description
+        "知的で落ち着いた口調のキャラクター。「〜だよ」「〜だね」を使う。"@ja ,
+        "An intellectual character with a calm speaking style."@en ;
+    vvox:speakerId 23 ;
+    vvox:speechStyle "知的で落ち着いた口調。「〜だよ」「〜だね」「〜かな」を使う"@ja ;
+    vvox:sampleLine "それはね"@ja , "ポイントはここだよ"@ja , "簡単に説明するね"@ja ;
+    vvox:displayColor "#90caf9" ;
+    vvox:displayColorDark "#1e88e5" ;
+    vvox:standingImage <https://seiga.nicovideo.jp/seiga/im10934660> ;
+    vvox:imageCreator <https://twitter.com/sakamoto_ahr> ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/whitecul/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/whitecul/> .
+
+vvox:usagi a vvox:Character ;
+    schema:name "中国うさぎ"@ja , "Chugoku Usagi"@en ;
+    foaf:nick "うさぎ"@ja , "Usagi"@en ;
+    schema:description
+        "おどおどした控えめな口調のキャラクター。「〜かな…」「えっと…」を使う。"@ja ,
+        "A shy, reserved character who uses hesitant speech patterns."@en ;
+    vvox:speakerId 61 ;
+    vvox:speechStyle "おどおどした控えめな口調。「〜かな…」「えっと…」「すごい…！」を使う"@ja ;
+    vvox:sampleLine "えっと…それって何かな…？"@ja , "す、すごい…！"@ja , "な、なるほど…！"@ja ;
+    vvox:displayColor "#ef9a9a" ;
+    vvox:displayColorDark "#e53935" ;
+    vvox:standingImage <https://seiga.nicovideo.jp/seiga/im11023586> ;
+    vvox:imageCreator <https://twitter.com/sakamoto_ahr> ;
+    vvox:hasEngine vvox:voicevox ;
+    schema:license <https://zunko.jp/guideline.html> ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/chugoku_usagi/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/chugoku_usagi/> .
+
+vvox:kiritan a vvox:Character ;
+    schema:name "東北きりたん"@ja , "Tohoku Kiritan"@en ;
+    foaf:nick "きりたん"@ja , "Kiritan"@en ;
+    schema:description
+        "冷静でクールな口調のキャラクター。「つまり〜ということです」を使う。"@ja ,
+        "A calm, cool character with a composed speaking style."@en ;
+    vvox:speakerId 108 ;
+    vvox:speechStyle "冷静でクールな口調。「〜です」「〜ですね」「つまり〜ということです」を使う"@ja ;
+    vvox:sampleLine "そうですね"@ja , "つまり〜ということです"@ja , "理解しました"@ja ;
+    vvox:displayColor "#ce93d8" ;
+    vvox:displayColorDark "#ab47bc" ;
+    vvox:standingImage <https://seiga.nicovideo.jp/seiga/im10849149> ;
+    vvox:imageCreator <https://twitter.com/sakamoto_ahr> ;
+    vvox:hasEngine vvox:voicevox ;
+    schema:license <https://zunko.jp/guideline.html> ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/tohoku_kiritan/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/tohoku_kiritan/> ;
+    owl:sameAs wd:Q55634043 .
+
+# ---------------------------------------------------------------------------
+# Character Pairs
+# ---------------------------------------------------------------------------
+
+vvox:pair_zundamon_metan a vvox:CharacterPair ;
+    rdfs:label "ずんだもん × めたん"@ja , "Zundamon x Metan"@en ;
+    dcterms:description
+        "定番ペア。ずんだもんが素朴に質問し、めたんが丁寧に解説。"@ja ,
+        "Classic pair. Zundamon asks naive questions while Metan explains politely."@en ;
+    vvox:questioner vvox:zundamon ;
+    vvox:explainer  vvox:metan ;
+    vvox:hasMember  vvox:zundamon , vvox:metan .
+
+vvox:pair_tsumugi_kiritan a vvox:CharacterPair ;
+    rdfs:label "つむぎ × きりたん"@ja , "Tsumugi x Kiritan"@en ;
+    dcterms:description
+        "ギャル×クール。つむぎがカジュアルに質問し、きりたんが冷静に解説。"@ja ,
+        "Gyaru x Cool. Tsumugi asks casually while Kiritan explains calmly."@en ;
+    vvox:questioner vvox:tsumugi ;
+    vvox:explainer  vvox:kiritan ;
+    vvox:hasMember  vvox:tsumugi , vvox:kiritan .
+
+vvox:pair_usagi_sora a vvox:CharacterPair ;
+    rdfs:label "うさぎ × そら"@ja , "Usagi x Sora"@en ;
+    dcterms:description
+        "控えめ×おっとり。うさぎがおどおど質問し、そらが優しく解説。"@ja ,
+        "Shy x Gentle. Usagi asks timidly while Sora explains kindly."@en ;
+    vvox:questioner vvox:usagi ;
+    vvox:explainer  vvox:sora ;
+    vvox:hasMember  vvox:usagi , vvox:sora .
+
+vvox:pair_hau_whitecul a vvox:CharacterPair ;
+    rdfs:label "はう × WhiteCUL"@ja , "Hau x WhiteCUL"@en ;
+    dcterms:description
+        "元気ナース×知的。はうがハキハキ質問し、WhiteCULが知的に解説。"@ja ,
+        "Energetic x Intellectual. Hau asks briskly while WhiteCUL explains thoughtfully."@en ;
+    vvox:questioner vvox:hau ;
+    vvox:explainer  vvox:whitecul ;
+    vvox:hasMember  vvox:hau , vvox:whitecul .
