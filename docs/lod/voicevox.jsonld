@@ -14,6 +14,2090 @@
   },
   "@graph": [
     {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#maron",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/kurita_maron/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "まろん"
+        },
+        {
+          "@language": "en",
+          "@value": "Maron"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#bcaaa4"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#5d4037"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "あら、そうですの"
+        },
+        {
+          "@language": "ja",
+          "@value": "素敵ですわ"
+        },
+        {
+          "@language": "ja",
+          "@value": "ごきげんよう"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 67
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "優しく丁寧な口調。「〜ですわ」「〜ですの」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "おっとりした女性キャラクター。優しく丁寧な口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A gentle female character with a kind, polite speaking style."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/kurita_maron/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "栗田まろん"
+        },
+        {
+          "@language": "en",
+          "@value": "Kurita Maron"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zunko_itako",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@language": "ja",
+          "@value": "東北姉妹。ずん子が元気に質問し、イタコが落ち着いて解説。"
+        },
+        {
+          "@language": "en",
+          "@value": "Tohoku sisters. Zunko asks cheerfully while Itako explains calmly."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "ja",
+          "@value": "ずん子 × イタコ"
+        },
+        {
+          "@language": "en",
+          "@value": "Zunko x Itako"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#itako"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zunko"
+        },
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#itako"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zunko"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_nekoaru_nekobii",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@language": "ja",
+          "@value": "猫使ペア。アルが気まぐれに質問し、ビィが控えめに解説。"
+        },
+        {
+          "@language": "en",
+          "@value": "Cat-user pair. Aru asks capriciously while Bii explains quietly."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "ja",
+          "@value": "アル × ビィ"
+        },
+        {
+          "@language": "en",
+          "@value": "Aru x Bii"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekobii"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekoaru"
+        },
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekobii"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekoaru"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#himari",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/meimei_himari/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "ひまり"
+        },
+        {
+          "@language": "en",
+          "@value": "Himari"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#f8bbd0"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#c2185b"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "うん、そうだよ〜"
+        },
+        {
+          "@language": "ja",
+          "@value": "へぇ〜、おもしろいね〜"
+        },
+        {
+          "@language": "ja",
+          "@value": "わかった〜"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 14
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "おっとりのんびりした口調。「〜だよ〜」「〜なの〜」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "おっとりした癒し系の声のキャラクター。のんびりとした口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A soothing, gentle-voiced character with a relaxed speaking style."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/meimei_himari/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "冥鳴ひまり"
+        },
+        {
+          "@language": "en",
+          "@value": "Meimei Himari"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/whitecul/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "WhiteCUL"
+        },
+        {
+          "@language": "en",
+          "@value": "WhiteCUL"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#90caf9"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#1e88e5"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
+        {
+          "@id": "https://twitter.com/sakamoto_ahr"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "それはね"
+        },
+        {
+          "@language": "ja",
+          "@value": "ポイントはここだよ"
+        },
+        {
+          "@language": "ja",
+          "@value": "簡単に説明するね"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 23
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "知的で落ち着いた口調。「〜だよ」「〜だね」「〜かな」を使う"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
+        {
+          "@id": "https://seiga.nicovideo.jp/seiga/im10934660"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "知的で落ち着いた口調のキャラクター。「〜だよ」「〜だね」を使う。"
+        },
+        {
+          "@language": "en",
+          "@value": "An intellectual character with a calm speaking style."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/whitecul/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "WhiteCUL"
+        },
+        {
+          "@language": "en",
+          "@value": "WhiteCUL"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekoaru",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/nekotsukai_aru/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "アル"
+        },
+        {
+          "@language": "en",
+          "@value": "Aru"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#fff59d"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#f57f17"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "にゃるほど"
+        },
+        {
+          "@language": "ja",
+          "@value": "おもしろそう"
+        },
+        {
+          "@language": "ja",
+          "@value": "まぁいいか"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 55
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "気まぐれで自由な口調。「〜にゃ」「〜かも」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "猫をモチーフにしたキャラクター。気まぐれで自由な口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A cat-themed character with a capricious, free-spirited tone."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/nekotsukai_aru/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "猫使アル"
+        },
+        {
+          "@language": "en",
+          "@value": "Nekotsukai Aru"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@language": "ja",
+          "@value": "控えめ×おっとり。うさぎがおどおど質問し、そらが優しく解説。"
+        },
+        {
+          "@language": "en",
+          "@value": "Shy x Gentle. Usagi asks timidly while Sora explains kindly."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "ja",
+          "@value": "うさぎ × そら"
+        },
+        {
+          "@language": "en",
+          "@value": "Usagi x Sora"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi"
+        },
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#ritsu",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/namine_ritsu/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "リツ"
+        },
+        {
+          "@language": "en",
+          "@value": "Ritsu"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#fff176"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#f9a825"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "なるほどね"
+        },
+        {
+          "@language": "ja",
+          "@value": "それでいいんじゃない？"
+        },
+        {
+          "@language": "ja",
+          "@value": "はっきり言うけどさ"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 9
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "力強くストレートな口調。はっきりした物言い"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "力強くハスキーな声のキャラクター。UTAU発のキャラクターとしても有名。"
+        },
+        {
+          "@language": "en",
+          "@value": "A powerful, husky-voiced character. Also famous as an UTAU-originated character."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/namine_ritsu/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "波音リツ"
+        },
+        {
+          "@language": "en",
+          "@value": "Namine Ritsu"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/kyushu_sora/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "そら"
+        },
+        {
+          "@language": "en",
+          "@value": "Sora"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#ea80fc"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#aa00ff"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
+        {
+          "@id": "https://twitter.com/sakamoto_ahr"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "そうですね"
+        },
+        {
+          "@language": "ja",
+          "@value": "〜ではないでしょうか"
+        },
+        {
+          "@language": "ja",
+          "@value": "素敵ですね"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 16
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "おっとりした丁寧な口調。「〜ですね」「〜でしょう」「〜かしら」を使う"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
+        {
+          "@id": "https://seiga.nicovideo.jp/seiga/im10924061"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "おっとりした丁寧な口調のキャラクター。「〜ですね」「〜かしら」を使う。"
+        },
+        {
+          "@language": "en",
+          "@value": "A gentle character with a polite speaking style."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/kyushu_sora/"
+        }
+      ],
+      "https://schema.org/license": [
+        {
+          "@id": "https://zunko.jp/guideline.html"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "九州そら"
+        },
+        {
+          "@language": "en",
+          "@value": "Kyushu Sora"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#mochiko",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/mochiko/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "もち子"
+        },
+        {
+          "@language": "en",
+          "@value": "Mochiko"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#b39ddb"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#673ab7"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "はい、そうです"
+        },
+        {
+          "@language": "ja",
+          "@value": "えへへ"
+        },
+        {
+          "@language": "ja",
+          "@value": "がんばります！"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 20
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "やわらかくかわいい口調。「〜です」「〜ですよ」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "やわらかくかわいい声のキャラクター。おっとりした口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A soft, cute-voiced character with a gentle speaking style."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/mochiko/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "もち子さん"
+        },
+        {
+          "@language": "en",
+          "@value": "Mochiko-san"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#takehiro",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/genno_takehiro/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "武宏"
+        },
+        {
+          "@language": "en",
+          "@value": "Takehiro"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#a5d6a7"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#388e3c"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "なるほど、そういうことですか"
+        },
+        {
+          "@language": "ja",
+          "@value": "確かにそうですね"
+        },
+        {
+          "@language": "ja",
+          "@value": "説明しましょう"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 11
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "落ち着いた丁寧な男性口調。「〜ですね」「〜でしょうか」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "落ち着いた青年の声のキャラクター。サラリーマン風の丁寧な口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A calm young man's voice character with a polite, business-like tone."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/genno_takehiro/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "玄野武宏"
+        },
+        {
+          "@language": "en",
+          "@value": "Genno Takehiro"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_kotaro_ryusei",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@language": "ja",
+          "@value": "少年×大人。虎太郎が元気に質問し、龍星が渋く解説。"
+        },
+        {
+          "@language": "en",
+          "@value": "Boy x Man. Kotaro asks energetically while Ryusei explains in a deep tone."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "ja",
+          "@value": "虎太郎 × 龍星"
+        },
+        {
+          "@language": "en",
+          "@value": "Kotaro x Ryusei"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#ryusei"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kotaro"
+        },
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#ryusei"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kotaro"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sayo",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/sayo/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "小夜"
+        },
+        {
+          "@language": "en",
+          "@value": "SAYO"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#e0e0e0"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#757575"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "そう…"
+        },
+        {
+          "@language": "ja",
+          "@value": "不思議ね"
+        },
+        {
+          "@language": "ja",
+          "@value": "なるほど…そういうこと"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 46
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "静かで落ち着いた口調。「〜ね」「〜かしら」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "静かで落ち着いた声のキャラクター。ミステリアスな雰囲気。"
+        },
+        {
+          "@language": "en",
+          "@value": "A quiet, calm-voiced character with a mysterious atmosphere."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/sayo/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "小夜/SAYO"
+        },
+        {
+          "@language": "en",
+          "@value": "SAYO"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kenzaki",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/kenzaki_mesuo/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "雌雄"
+        },
+        {
+          "@language": "en",
+          "@value": "Mesuo"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#80cbc4"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#00897b"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "ふーん、そうなんだ"
+        },
+        {
+          "@language": "ja",
+          "@value": "なかなか面白いね"
+        },
+        {
+          "@language": "ja",
+          "@value": "そういうことか"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 21
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "クールで中性的な口調。「〜だね」「〜かな」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "中性的な声のキャラクター。クールで知的な口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "An androgynous-voiced character with a cool, intellectual tone."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/kenzaki_mesuo/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "剣崎雌雄"
+        },
+        {
+          "@language": "en",
+          "@value": "Kenzaki Mesuo"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@language": "ja",
+          "@value": "ギャル×クール。つむぎがカジュアルに質問し、きりたんが冷静に解説。"
+        },
+        {
+          "@language": "en",
+          "@value": "Gyaru x Cool. Tsumugi asks casually while Kiritan explains calmly."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "ja",
+          "@value": "つむぎ × きりたん"
+        },
+        {
+          "@language": "en",
+          "@value": "Tsumugi x Kiritan"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi"
+        },
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/chugoku_usagi/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "うさぎ"
+        },
+        {
+          "@language": "en",
+          "@value": "Usagi"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#ef9a9a"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#e53935"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
+        {
+          "@id": "https://twitter.com/sakamoto_ahr"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "えっと…それって何かな…？"
+        },
+        {
+          "@language": "ja",
+          "@value": "す、すごい…！"
+        },
+        {
+          "@language": "ja",
+          "@value": "な、なるほど…！"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 61
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "おどおどした控えめな口調。「〜かな…」「えっと…」「すごい…！」を使う"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
+        {
+          "@id": "https://seiga.nicovideo.jp/seiga/im11023586"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "おどおどした控えめな口調のキャラクター。「〜かな…」「えっと…」を使う。"
+        },
+        {
+          "@language": "en",
+          "@value": "A shy, reserved character who uses hesitant speech patterns."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/chugoku_usagi/"
+        }
+      ],
+      "https://schema.org/license": [
+        {
+          "@id": "https://zunko.jp/guideline.html"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "中国うさぎ"
+        },
+        {
+          "@language": "en",
+          "@value": "Chugoku Usagi"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine",
+        "https://schema.org/SoftwareApplication"
+      ],
+      "http://www.w3.org/2002/07/owl#sameAs": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q106428182"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/"
+        }
+      ],
+      "https://schema.org/applicationCategory": [
+        {
+          "@language": "en",
+          "@value": "Multimedia"
+        },
+        {
+          "@language": "ja",
+          "@value": "マルチメディア"
+        }
+      ],
+      "https://schema.org/author": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "無料で使えるテキスト読み上げ・歌声合成ソフトウェア。商用・非商用問わず利用可能。"
+        },
+        {
+          "@language": "en",
+          "@value": "Free text-to-speech and singing voice synthesis software. Available for both commercial and non-commercial use."
+        }
+      ],
+      "https://schema.org/license": [
+        {
+          "@id": "https://github.com/VOICEVOX/voicevox/blob/main/LICENSE"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "VOICEVOX"
+        },
+        {
+          "@language": "en",
+          "@value": "VOICEVOX"
+        }
+      ],
+      "https://schema.org/operatingSystem": [
+        {
+          "@value": "Windows, macOS, Linux"
+        }
+      ],
+      "https://schema.org/url": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/amehare_hau/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "はう"
+        },
+        {
+          "@language": "en",
+          "@value": "Hau"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#4dd0e1"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#00acc1"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
+        {
+          "@id": "https://twitter.com/sakamoto_ahr"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "えっと、それって何？"
+        },
+        {
+          "@language": "ja",
+          "@value": "わぁ、すごいね！"
+        },
+        {
+          "@language": "ja",
+          "@value": "なるほど〜！"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 10
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "元気でハキハキした口調。「〜だよ！」「えっと〜」「がんばろう！」を使う"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
+        {
+          "@id": "https://seiga.nicovideo.jp/seiga/im10913655"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "元気でハキハキした口調のキャラクター。看護学生。"
+        },
+        {
+          "@language": "en",
+          "@value": "An energetic character with a lively speaking style. A nursing student."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/amehare_hau/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "雨晴はう"
+        },
+        {
+          "@language": "en",
+          "@value": "Amehare Hau"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#chibijii",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/chibishiki_jii/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "ちび式じい"
+        },
+        {
+          "@language": "en",
+          "@value": "Chibi Jii"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#d7ccc8"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#795548"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "ほっほっほ"
+        },
+        {
+          "@language": "ja",
+          "@value": "なるほどのう"
+        },
+        {
+          "@language": "ja",
+          "@value": "それはよいことじゃ"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 42
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "穏やかなおじいさん口調。「〜じゃのう」「〜かのう」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "おじいさんキャラクター。穏やかで味わい深い口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "An elderly character with a gentle and flavorful speaking style."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/chibishiki_jii/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "ちび式じい"
+        },
+        {
+          "@language": "en",
+          "@value": "Chibishiki Jii"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@language": "ja",
+          "@value": "定番ペア。ずんだもんが素朴に質問し、めたんが丁寧に解説。"
+        },
+        {
+          "@language": "en",
+          "@value": "Classic pair. Zundamon asks naive questions while Metan explains politely."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "ja",
+          "@value": "ずんだもん × めたん"
+        },
+        {
+          "@language": "en",
+          "@value": "Zundamon x Metan"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon"
+        },
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/lod/voicevox",
+      "@type": [
+        "https://schema.org/Dataset"
+      ],
+      "https://schema.org/creator": [
+        {
+          "@id": "https://github.com/nakamura196"
+        }
+      ],
+      "https://schema.org/dateCreated": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#date",
+          "@value": "2026-03-10"
+        }
+      ],
+      "https://schema.org/dateModified": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#date",
+          "@value": "2026-03-11"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "en",
+          "@value": "Linked Open Data dataset describing characters, speech styles, and dialogue pairs of the VOICEVOX text-to-speech engine."
+        },
+        {
+          "@language": "ja",
+          "@value": "VOICEVOXテキスト音声合成エンジンのキャラクター・口調・対話ペアを記述するLinked Open Dataデータセット。"
+        }
+      ],
+      "https://schema.org/isBasedOn": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/"
+        }
+      ],
+      "https://schema.org/license": [
+        {
+          "@id": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "en",
+          "@value": "VOICEVOX Character LOD"
+        },
+        {
+          "@language": "ja",
+          "@value": "VOICEVOX キャラクター LOD"
+        }
+      ],
+      "https://schema.org/url": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kotaro",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/shirakami_kotaro/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "虎太郎"
+        },
+        {
+          "@language": "en",
+          "@value": "Kotaro"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#80deea"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#00838f"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "すげー！"
+        },
+        {
+          "@language": "ja",
+          "@value": "それってどういうこと？"
+        },
+        {
+          "@language": "ja",
+          "@value": "おもしれー！"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 12
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "元気で活発な少年口調。「〜だよ！」「すげー！」「やった！」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "元気いっぱいの少年キャラクター。明るく活発な口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "An energetic boy character with a bright and lively tone."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/shirakami_kotaro/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "白上虎太郎"
+        },
+        {
+          "@language": "en",
+          "@value": "Shirakami Kotaro"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+      ],
+      "http://purl.org/dc/terms/description": [
+        {
+          "@language": "ja",
+          "@value": "元気ナース×知的。はうがハキハキ質問し、WhiteCULが知的に解説。"
+        },
+        {
+          "@language": "en",
+          "@value": "Energetic x Intellectual. Hau asks briskly while WhiteCUL explains thoughtfully."
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "ja",
+          "@value": "はう × WhiteCUL"
+        },
+        {
+          "@language": "en",
+          "@value": "Hau x WhiteCUL"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau"
+        },
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zunko",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://www.w3.org/2002/07/owl#sameAs": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q11526103"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/tohoku_zunko/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "ずん子"
+        },
+        {
+          "@language": "en",
+          "@value": "Zunko"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#81c784"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#2e7d32"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "えへへ、そうだよ！"
+        },
+        {
+          "@language": "ja",
+          "@value": "がんばろうね！"
+        },
+        {
+          "@language": "ja",
+          "@value": "楽しいね！"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 107
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "明るく元気な口調。「〜だよ」「〜ね」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "東北応援キャラクター。ずんだもんの姉的存在。明るく元気な口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A character supporting Tohoku region. An elder-sister figure to Zundamon with a bright, cheerful tone."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/tohoku_zunko/"
+        }
+      ],
+      "https://schema.org/license": [
+        {
+          "@id": "https://zunko.jp/guideline.html"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "東北ずん子"
+        },
+        {
+          "@language": "en",
+          "@value": "Tohoku Zunko"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://www.w3.org/2002/07/owl#sameAs": [
+        {
+          "@id": "http://www.wikidata.org/entity/Q113476219"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/zundamon/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "ずんだもん"
+        },
+        {
+          "@language": "en",
+          "@value": "Zundamon"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#69f0ae"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#00c853"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
+        {
+          "@id": "https://twitter.com/sakamoto_ahr"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "〜って何なのだ？"
+        },
+        {
+          "@language": "ja",
+          "@value": "へぇ〜！すごいのだ！"
+        },
+        {
+          "@language": "ja",
+          "@value": "なるほどなのだ！"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 3
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "「〜のだ」「〜なのだ」語尾。好奇心旺盛で素朴な質問をする"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
+        {
+          "@id": "https://seiga.nicovideo.jp/seiga/im10849148"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "好奇心旺盛で素朴な質問をするキャラクター。「〜のだ」「〜なのだ」語尾が特徴。"
+        },
+        {
+          "@language": "en",
+          "@value": "A curious character who asks naive questions. Characterized by the '~noda' speech pattern."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/zundamon/"
+        }
+      ],
+      "https://schema.org/license": [
+        {
+          "@id": "https://zunko.jp/guideline.html"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "ずんだもん"
+        },
+        {
+          "@language": "en",
+          "@value": "Zundamon"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#no7",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/no7/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "No.7"
+        },
+        {
+          "@language": "en",
+          "@value": "No.7"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#b0bec5"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#607d8b"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "了解しました"
+        },
+        {
+          "@language": "ja",
+          "@value": "報告します"
+        },
+        {
+          "@language": "ja",
+          "@value": "データを確認します"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 29
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "無機質で淡々とした口調。「〜です」「〜ます」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "ロボット風の無機質な声のキャラクター。アナウンス・読み上げスタイルを持つ。"
+        },
+        {
+          "@language": "en",
+          "@value": "A robotic, inorganic-voiced character with announcement and reading styles."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/no7/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "No.7"
+        },
+        {
+          "@language": "en",
+          "@value": "No.7"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#itako",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/tohoku_itako/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "イタコ"
+        },
+        {
+          "@language": "en",
+          "@value": "Itako"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#ce93d8"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#7b1fa2"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "ええ、そうですわ"
+        },
+        {
+          "@language": "ja",
+          "@value": "おもしろいですわね"
+        },
+        {
+          "@language": "ja",
+          "@value": "なるほどですわ"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 109
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "落ち着いた大人の女性口調。「〜ですわ」「〜ですね」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "東北応援キャラクター。落ち着いた大人の女性の口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A character supporting Tohoku region with a calm, mature female tone."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/tohoku_itako/"
+        }
+      ],
+      "https://schema.org/license": [
+        {
+          "@id": "https://zunko.jp/guideline.html"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "東北イタコ"
+        },
+        {
+          "@language": "en",
+          "@value": "Tohoku Itako"
+        }
+      ]
+    },
+    {
       "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan",
       "@type": [
         "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
@@ -228,82 +2312,33 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora",
-      "@type": [
-        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
-      ],
-      "http://purl.org/dc/terms/description": [
-        {
-          "@language": "ja",
-          "@value": "控えめ×おっとり。うさぎがおどおど質問し、そらが優しく解説。"
-        },
-        {
-          "@language": "en",
-          "@value": "Shy x Gentle. Usagi asks timidly while Sora explains kindly."
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "ja",
-          "@value": "うさぎ × そら"
-        },
-        {
-          "@language": "en",
-          "@value": "Usagi x Sora"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi"
-        },
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon",
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#miko",
       "@type": [
         "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
       ],
-      "http://www.w3.org/2002/07/owl#sameAs": [
-        {
-          "@id": "http://www.wikidata.org/entity/Q113476219"
-        }
-      ],
       "http://xmlns.com/foaf/0.1/homepage": [
         {
-          "@id": "https://voicevox.hiroshiba.jp/product/zundamon/"
+          "@id": "https://voicevox.hiroshiba.jp/product/ouka_miko/"
         }
       ],
       "http://xmlns.com/foaf/0.1/nick": [
         {
           "@language": "ja",
-          "@value": "ずんだもん"
+          "@value": "ミコ"
         },
         {
           "@language": "en",
-          "@value": "Zundamon"
+          "@value": "Miko"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
         {
-          "@value": "#69f0ae"
+          "@value": "#ffab91"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
         {
-          "@value": "#00c853"
+          "@value": "#e64a19"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
@@ -311,141 +2346,55 @@
           "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
         }
       ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
-        {
-          "@id": "https://twitter.com/sakamoto_ahr"
-        }
-      ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
         {
           "@language": "ja",
-          "@value": "〜って何なのだ？"
+          "@value": "やっほー！"
         },
         {
           "@language": "ja",
-          "@value": "へぇ〜！すごいのだ！"
+          "@value": "それいいね！"
         },
         {
           "@language": "ja",
-          "@value": "なるほどなのだ！"
+          "@value": "がんばるよ！"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
         {
           "@type": "http://www.w3.org/2001/XMLSchema#integer",
-          "@value": 3
+          "@value": 43
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
         {
           "@language": "ja",
-          "@value": "「〜のだ」「〜なのだ」語尾。好奇心旺盛で素朴な質問をする"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
-        {
-          "@id": "https://seiga.nicovideo.jp/seiga/im10849148"
+          "@value": "明るく元気な口調。「〜だよ！」「〜ね！」を使う"
         }
       ],
       "https://schema.org/description": [
         {
           "@language": "ja",
-          "@value": "好奇心旺盛で素朴な質問をするキャラクター。「〜のだ」「〜なのだ」語尾が特徴。"
+          "@value": "UTAU発のキャラクター。複数のフォーム（第二形態等）を持つ。"
         },
         {
           "@language": "en",
-          "@value": "A curious character who asks naive questions. Characterized by the '~noda' speech pattern."
+          "@value": "An UTAU-originated character with multiple forms."
         }
       ],
       "https://schema.org/image": [
         {
-          "@id": "https://voicevox.hiroshiba.jp/product/zundamon/"
-        }
-      ],
-      "https://schema.org/license": [
-        {
-          "@id": "https://zunko.jp/guideline.html"
+          "@id": "https://voicevox.hiroshiba.jp/product/ouka_miko/"
         }
       ],
       "https://schema.org/name": [
         {
           "@language": "ja",
-          "@value": "ずんだもん"
+          "@value": "櫻歌ミコ"
         },
         {
           "@language": "en",
-          "@value": "Zundamon"
-        }
-      ]
-    },
-    {
-      "@id": "https://twitter.com/sakamoto_ahr",
-      "@type": [
-        "http://xmlns.com/foaf/0.1/Person",
-        "https://schema.org/Person"
-      ],
-      "http://xmlns.com/foaf/0.1/homepage": [
-        {
-          "@id": "https://twitter.com/sakamoto_ahr"
-        }
-      ],
-      "http://xmlns.com/foaf/0.1/name": [
-        {
-          "@language": "ja",
-          "@value": "坂本アヒル"
-        }
-      ],
-      "https://schema.org/description": [
-        {
-          "@language": "ja",
-          "@value": "VOICEVOX公式キャラクターの立ち絵素材を制作"
-        },
-        {
-          "@language": "en",
-          "@value": "Creator of standing image illustrations for official VOICEVOX characters"
-        }
-      ],
-      "https://schema.org/name": [
-        {
-          "@language": "ja",
-          "@value": "坂本アヒル"
-        },
-        {
-          "@language": "en",
-          "@value": "Sakamoto Ahiru"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba",
-      "@type": [
-        "http://xmlns.com/foaf/0.1/Person",
-        "https://schema.org/Person"
-      ],
-      "http://www.w3.org/2002/07/owl#sameAs": [
-        {
-          "@id": "https://github.com/Hiroshiba"
-        }
-      ],
-      "http://xmlns.com/foaf/0.1/homepage": [
-        {
-          "@id": "https://hiroshiba.jp/"
-        }
-      ],
-      "http://xmlns.com/foaf/0.1/name": [
-        {
-          "@language": "ja",
-          "@value": "ヒホ"
-        }
-      ],
-      "https://schema.org/name": [
-        {
-          "@language": "ja",
-          "@value": "ヒホ（廣芝和之）"
-        },
-        {
-          "@language": "en",
-          "@value": "Hiho (Kazuyuki Hiroshiba)"
+          "@value": "Ouka Miko"
         }
       ]
     },
@@ -557,343 +2506,66 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan",
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba",
       "@type": [
-        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
-      ],
-      "http://purl.org/dc/terms/description": [
-        {
-          "@language": "ja",
-          "@value": "ギャル×クール。つむぎがカジュアルに質問し、きりたんが冷静に解説。"
-        },
-        {
-          "@language": "en",
-          "@value": "Gyaru x Cool. Tsumugi asks casually while Kiritan explains calmly."
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "ja",
-          "@value": "つむぎ × きりたん"
-        },
-        {
-          "@language": "en",
-          "@value": "Tsumugi x Kiritan"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi"
-        },
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau",
-      "@type": [
-        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
-      ],
-      "http://xmlns.com/foaf/0.1/homepage": [
-        {
-          "@id": "https://voicevox.hiroshiba.jp/product/amehare_hau/"
-        }
-      ],
-      "http://xmlns.com/foaf/0.1/nick": [
-        {
-          "@language": "ja",
-          "@value": "はう"
-        },
-        {
-          "@language": "en",
-          "@value": "Hau"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
-        {
-          "@value": "#4dd0e1"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
-        {
-          "@value": "#00acc1"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
-        {
-          "@id": "https://twitter.com/sakamoto_ahr"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
-        {
-          "@language": "ja",
-          "@value": "えっと、それって何？"
-        },
-        {
-          "@language": "ja",
-          "@value": "わぁ、すごいね！"
-        },
-        {
-          "@language": "ja",
-          "@value": "なるほど〜！"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
-        {
-          "@type": "http://www.w3.org/2001/XMLSchema#integer",
-          "@value": 10
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
-        {
-          "@language": "ja",
-          "@value": "元気でハキハキした口調。「〜だよ！」「えっと〜」「がんばろう！」を使う"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
-        {
-          "@id": "https://seiga.nicovideo.jp/seiga/im10913655"
-        }
-      ],
-      "https://schema.org/description": [
-        {
-          "@language": "ja",
-          "@value": "元気でハキハキした口調のキャラクター。看護学生。"
-        },
-        {
-          "@language": "en",
-          "@value": "An energetic character with a lively speaking style. A nursing student."
-        }
-      ],
-      "https://schema.org/image": [
-        {
-          "@id": "https://voicevox.hiroshiba.jp/product/amehare_hau/"
-        }
-      ],
-      "https://schema.org/name": [
-        {
-          "@language": "ja",
-          "@value": "雨晴はう"
-        },
-        {
-          "@language": "en",
-          "@value": "Amehare Hau"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora",
-      "@type": [
-        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
-      ],
-      "http://xmlns.com/foaf/0.1/homepage": [
-        {
-          "@id": "https://voicevox.hiroshiba.jp/product/kyushu_sora/"
-        }
-      ],
-      "http://xmlns.com/foaf/0.1/nick": [
-        {
-          "@language": "ja",
-          "@value": "そら"
-        },
-        {
-          "@language": "en",
-          "@value": "Sora"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
-        {
-          "@value": "#ea80fc"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
-        {
-          "@value": "#aa00ff"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
-        {
-          "@id": "https://twitter.com/sakamoto_ahr"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
-        {
-          "@language": "ja",
-          "@value": "そうですね"
-        },
-        {
-          "@language": "ja",
-          "@value": "〜ではないでしょうか"
-        },
-        {
-          "@language": "ja",
-          "@value": "素敵ですね"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
-        {
-          "@type": "http://www.w3.org/2001/XMLSchema#integer",
-          "@value": 16
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
-        {
-          "@language": "ja",
-          "@value": "おっとりした丁寧な口調。「〜ですね」「〜でしょう」「〜かしら」を使う"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
-        {
-          "@id": "https://seiga.nicovideo.jp/seiga/im10924061"
-        }
-      ],
-      "https://schema.org/description": [
-        {
-          "@language": "ja",
-          "@value": "おっとりした丁寧な口調のキャラクター。「〜ですね」「〜かしら」を使う。"
-        },
-        {
-          "@language": "en",
-          "@value": "A gentle character with a polite speaking style."
-        }
-      ],
-      "https://schema.org/image": [
-        {
-          "@id": "https://voicevox.hiroshiba.jp/product/kyushu_sora/"
-        }
-      ],
-      "https://schema.org/license": [
-        {
-          "@id": "https://zunko.jp/guideline.html"
-        }
-      ],
-      "https://schema.org/name": [
-        {
-          "@language": "ja",
-          "@value": "九州そら"
-        },
-        {
-          "@language": "en",
-          "@value": "Kyushu Sora"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox",
-      "@type": [
-        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine",
-        "https://schema.org/SoftwareApplication"
+        "http://xmlns.com/foaf/0.1/Person",
+        "https://schema.org/Person"
       ],
       "http://www.w3.org/2002/07/owl#sameAs": [
         {
-          "@id": "http://www.wikidata.org/entity/Q106428182"
+          "@id": "https://github.com/Hiroshiba"
         }
       ],
       "http://xmlns.com/foaf/0.1/homepage": [
         {
-          "@id": "https://voicevox.hiroshiba.jp/"
+          "@id": "https://hiroshiba.jp/"
         }
       ],
-      "https://schema.org/applicationCategory": [
-        {
-          "@language": "en",
-          "@value": "Multimedia"
-        },
+      "http://xmlns.com/foaf/0.1/name": [
         {
           "@language": "ja",
-          "@value": "マルチメディア"
-        }
-      ],
-      "https://schema.org/author": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba"
-        }
-      ],
-      "https://schema.org/description": [
-        {
-          "@language": "ja",
-          "@value": "無料で使えるテキスト読み上げ・歌声合成ソフトウェア。商用・非商用問わず利用可能。"
-        },
-        {
-          "@language": "en",
-          "@value": "Free text-to-speech and singing voice synthesis software. Available for both commercial and non-commercial use."
-        }
-      ],
-      "https://schema.org/license": [
-        {
-          "@id": "https://github.com/VOICEVOX/voicevox/blob/main/LICENSE"
+          "@value": "ヒホ"
         }
       ],
       "https://schema.org/name": [
         {
           "@language": "ja",
-          "@value": "VOICEVOX"
+          "@value": "ヒホ（廣芝和之）"
         },
         {
           "@language": "en",
-          "@value": "VOICEVOX"
-        }
-      ],
-      "https://schema.org/operatingSystem": [
-        {
-          "@value": "Windows, macOS, Linux"
-        }
-      ],
-      "https://schema.org/url": [
-        {
-          "@id": "https://voicevox.hiroshiba.jp/"
+          "@value": "Hiho (Kazuyuki Hiroshiba)"
         }
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul",
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#goki",
       "@type": [
         "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
       ],
       "http://xmlns.com/foaf/0.1/homepage": [
         {
-          "@id": "https://voicevox.hiroshiba.jp/product/whitecul/"
+          "@id": "https://voicevox.hiroshiba.jp/product/goki/"
         }
       ],
       "http://xmlns.com/foaf/0.1/nick": [
         {
           "@language": "ja",
-          "@value": "WhiteCUL"
+          "@value": "後鬼"
         },
         {
           "@language": "en",
-          "@value": "WhiteCUL"
+          "@value": "Goki"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
         {
-          "@value": "#90caf9"
+          "@value": "#ffcc80"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
         {
-          "@value": "#1e88e5"
+          "@value": "#ef6c00"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
@@ -901,242 +2573,86 @@
           "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
         }
       ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
-        {
-          "@id": "https://twitter.com/sakamoto_ahr"
-        }
-      ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
         {
           "@language": "ja",
-          "@value": "それはね"
+          "@value": "ふむ…"
         },
         {
           "@language": "ja",
-          "@value": "ポイントはここだよ"
+          "@value": "それで？"
         },
         {
           "@language": "ja",
-          "@value": "簡単に説明するね"
+          "@value": "わかった"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
         {
           "@type": "http://www.w3.org/2001/XMLSchema#integer",
-          "@value": 23
+          "@value": 27
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
         {
           "@language": "ja",
-          "@value": "知的で落ち着いた口調。「〜だよ」「〜だね」「〜かな」を使う"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
-        {
-          "@id": "https://seiga.nicovideo.jp/seiga/im10934660"
+          "@value": "落ち着いた口調と荒々しい口調を使い分ける"
         }
       ],
       "https://schema.org/description": [
         {
           "@language": "ja",
-          "@value": "知的で落ち着いた口調のキャラクター。「〜だよ」「〜だね」を使う。"
+          "@value": "鬼をモチーフにしたキャラクター。複数の人格スタイルを持つ。"
         },
         {
           "@language": "en",
-          "@value": "An intellectual character with a calm speaking style."
+          "@value": "An oni-themed character with multiple personality styles."
         }
       ],
       "https://schema.org/image": [
         {
-          "@id": "https://voicevox.hiroshiba.jp/product/whitecul/"
+          "@id": "https://voicevox.hiroshiba.jp/product/goki/"
         }
       ],
       "https://schema.org/name": [
         {
           "@language": "ja",
-          "@value": "WhiteCUL"
+          "@value": "後鬼"
         },
         {
           "@language": "en",
-          "@value": "WhiteCUL"
+          "@value": "Goki"
         }
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan",
-      "@type": [
-        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
-      ],
-      "http://purl.org/dc/terms/description": [
-        {
-          "@language": "ja",
-          "@value": "定番ペア。ずんだもんが素朴に質問し、めたんが丁寧に解説。"
-        },
-        {
-          "@language": "en",
-          "@value": "Classic pair. Zundamon asks naive questions while Metan explains politely."
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "ja",
-          "@value": "ずんだもん × めたん"
-        },
-        {
-          "@language": "en",
-          "@value": "Zundamon x Metan"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon"
-        },
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/lod/voicevox",
-      "@type": [
-        "https://schema.org/Dataset"
-      ],
-      "https://schema.org/creator": [
-        {
-          "@id": "https://github.com/nakamura196"
-        }
-      ],
-      "https://schema.org/dateCreated": [
-        {
-          "@type": "http://www.w3.org/2001/XMLSchema#date",
-          "@value": "2026-03-10"
-        }
-      ],
-      "https://schema.org/dateModified": [
-        {
-          "@type": "http://www.w3.org/2001/XMLSchema#date",
-          "@value": "2026-03-10"
-        }
-      ],
-      "https://schema.org/description": [
-        {
-          "@language": "en",
-          "@value": "Linked Open Data dataset describing characters, speech styles, and dialogue pairs of the VOICEVOX text-to-speech engine."
-        },
-        {
-          "@language": "ja",
-          "@value": "VOICEVOXテキスト音声合成エンジンのキャラクター・口調・対話ペアを記述するLinked Open Dataデータセット。"
-        }
-      ],
-      "https://schema.org/isBasedOn": [
-        {
-          "@id": "https://voicevox.hiroshiba.jp/"
-        }
-      ],
-      "https://schema.org/license": [
-        {
-          "@id": "https://creativecommons.org/licenses/by/4.0/"
-        }
-      ],
-      "https://schema.org/name": [
-        {
-          "@language": "en",
-          "@value": "VOICEVOX Character LOD"
-        },
-        {
-          "@language": "ja",
-          "@value": "VOICEVOX キャラクター LOD"
-        }
-      ],
-      "https://schema.org/url": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul",
-      "@type": [
-        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
-      ],
-      "http://purl.org/dc/terms/description": [
-        {
-          "@language": "ja",
-          "@value": "元気ナース×知的。はうがハキハキ質問し、WhiteCULが知的に解説。"
-        },
-        {
-          "@language": "en",
-          "@value": "Energetic x Intellectual. Hau asks briskly while WhiteCUL explains thoughtfully."
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "ja",
-          "@value": "はう × WhiteCUL"
-        },
-        {
-          "@language": "en",
-          "@value": "Hau x WhiteCUL"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau"
-        },
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi",
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kouzakura",
       "@type": [
         "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
       ],
       "http://xmlns.com/foaf/0.1/homepage": [
         {
-          "@id": "https://voicevox.hiroshiba.jp/product/chugoku_usagi/"
+          "@id": "https://voicevox.hiroshiba.jp/product/seikishi_kouzakura/"
         }
       ],
       "http://xmlns.com/foaf/0.1/nick": [
         {
           "@language": "ja",
-          "@value": "うさぎ"
+          "@value": "紅桜"
         },
         {
           "@language": "en",
-          "@value": "Usagi"
+          "@value": "Kouzakura"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
         {
-          "@value": "#ef9a9a"
+          "@value": "#ef5350"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
         {
-          "@value": "#e53935"
+          "@value": "#b71c1c"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
@@ -1144,70 +2660,354 @@
           "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
         }
       ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator": [
-        {
-          "@id": "https://twitter.com/sakamoto_ahr"
-        }
-      ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
         {
           "@language": "ja",
-          "@value": "えっと…それって何かな…？"
+          "@value": "我が力を見よ！"
         },
         {
           "@language": "ja",
-          "@value": "す、すごい…！"
+          "@value": "ふっ…面白い"
         },
         {
           "@language": "ja",
-          "@value": "な、なるほど…！"
+          "@value": "これぞ真理…！"
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
         {
           "@type": "http://www.w3.org/2001/XMLSchema#integer",
-          "@value": 61
+          "@value": 51
         }
       ],
       "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
         {
           "@language": "ja",
-          "@value": "おどおどした控えめな口調。「〜かな…」「えっと…」「すごい…！」を使う"
-        }
-      ],
-      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage": [
-        {
-          "@id": "https://seiga.nicovideo.jp/seiga/im11023586"
+          "@value": "中二病風の大げさな口調。「〜であるぞ」「〜なのだ！」を使う"
         }
       ],
       "https://schema.org/description": [
         {
           "@language": "ja",
-          "@value": "おどおどした控えめな口調のキャラクター。「〜かな…」「えっと…」を使う。"
+          "@value": "中二病風のキャラクター。大げさで芝居がかった口調。"
         },
         {
           "@language": "en",
-          "@value": "A shy, reserved character who uses hesitant speech patterns."
+          "@value": "A chuunibyou-style character with dramatic, theatrical speech."
         }
       ],
       "https://schema.org/image": [
         {
-          "@id": "https://voicevox.hiroshiba.jp/product/chugoku_usagi/"
-        }
-      ],
-      "https://schema.org/license": [
-        {
-          "@id": "https://zunko.jp/guideline.html"
+          "@id": "https://voicevox.hiroshiba.jp/product/seikishi_kouzakura/"
         }
       ],
       "https://schema.org/name": [
         {
           "@language": "ja",
-          "@value": "中国うさぎ"
+          "@value": "†聖騎士 紅桜†"
         },
         {
           "@language": "en",
-          "@value": "Chugoku Usagi"
+          "@value": "Holy Knight Kouzakura"
+        }
+      ]
+    },
+    {
+      "@id": "https://twitter.com/sakamoto_ahr",
+      "@type": [
+        "http://xmlns.com/foaf/0.1/Person",
+        "https://schema.org/Person"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://twitter.com/sakamoto_ahr"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/name": [
+        {
+          "@language": "ja",
+          "@value": "坂本アヒル"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "VOICEVOX公式キャラクターの立ち絵素材を制作"
+        },
+        {
+          "@language": "en",
+          "@value": "Creator of standing image illustrations for official VOICEVOX characters"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "坂本アヒル"
+        },
+        {
+          "@language": "en",
+          "@value": "Sakamoto Ahiru"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekobii",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/nekotsukai_bii/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "ビィ"
+        },
+        {
+          "@language": "en",
+          "@value": "Bii"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#c5e1a5"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#558b2f"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "うん…"
+        },
+        {
+          "@language": "ja",
+          "@value": "そうかも"
+        },
+        {
+          "@language": "ja",
+          "@value": "ちょっと気になる"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 58
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "おとなしく控えめな口調。「〜だよ」「〜かな」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "猫使アルと対をなすキャラクター。おとなしめの口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A companion character to Nekotsukai Aru with a quieter tone."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/nekotsukai_bii/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "猫使ビィ"
+        },
+        {
+          "@language": "en",
+          "@value": "Nekotsukai Bii"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#ryusei",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/aoyama_ryusei/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "龍星"
+        },
+        {
+          "@language": "en",
+          "@value": "Ryusei"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#90a4ae"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#546e7a"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "なるほどな"
+        },
+        {
+          "@language": "ja",
+          "@value": "そういうことだ"
+        },
+        {
+          "@language": "ja",
+          "@value": "興味深いな"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 13
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "低く落ち着いた男性口調。「〜だな」「〜だろう」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "低く渋い声のキャラクター。落ち着いた大人の男性の口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A deep, cool-voiced character with a mature masculine tone."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/aoyama_ryusei/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "青山龍星"
+        },
+        {
+          "@language": "en",
+          "@value": "Aoyama Ryusei"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nurserobot",
+      "@type": [
+        "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+      ],
+      "http://xmlns.com/foaf/0.1/homepage": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/nurse_robot_type_t/"
+        }
+      ],
+      "http://xmlns.com/foaf/0.1/nick": [
+        {
+          "@language": "ja",
+          "@value": "ナースロボ"
+        },
+        {
+          "@language": "en",
+          "@value": "Nurse Robot"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor": [
+        {
+          "@value": "#e6ee9c"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColorDark": [
+        {
+          "@value": "#9e9d24"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine": [
+        {
+          "@language": "ja",
+          "@value": "お体の調子はいかがですか"
+        },
+        {
+          "@language": "ja",
+          "@value": "了解しました"
+        },
+        {
+          "@language": "ja",
+          "@value": "ご説明いたします"
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId": [
+        {
+          "@type": "http://www.w3.org/2001/XMLSchema#integer",
+          "@value": 47
+        }
+      ],
+      "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle": [
+        {
+          "@language": "ja",
+          "@value": "丁寧で機械的な口調。「〜です」「〜ですね」を使う"
+        }
+      ],
+      "https://schema.org/description": [
+        {
+          "@language": "ja",
+          "@value": "ナースロボットのキャラクター。丁寧で機械的な口調。"
+        },
+        {
+          "@language": "en",
+          "@value": "A nurse robot character with a polite, mechanical speaking style."
+        }
+      ],
+      "https://schema.org/image": [
+        {
+          "@id": "https://voicevox.hiroshiba.jp/product/nurse_robot_type_t/"
+        }
+      ],
+      "https://schema.org/name": [
+        {
+          "@language": "ja",
+          "@value": "ナースロボ＿タイプT"
+        },
+        {
+          "@language": "en",
+          "@value": "Nurse Robot Type T"
         }
       ]
     }

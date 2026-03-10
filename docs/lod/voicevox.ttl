@@ -28,7 +28,7 @@
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:creator <https://github.com/nakamura196> ;
     schema:dateCreated "2026-03-10"^^xsd:date ;
-    schema:dateModified "2026-03-10"^^xsd:date ;
+    schema:dateModified "2026-03-11"^^xsd:date ;
     schema:url <https://nakamura196.github.io/voicevox-character-lod/> ;
     schema:isBasedOn <https://voicevox.hiroshiba.jp/> .
 
@@ -216,6 +216,294 @@ vvox:kiritan a vvox:Character ;
     schema:image <https://voicevox.hiroshiba.jp/product/tohoku_kiritan/> ;
     owl:sameAs wd:Q55634043 .
 
+vvox:ritsu a vvox:Character ;
+    schema:name "波音リツ"@ja , "Namine Ritsu"@en ;
+    foaf:nick "リツ"@ja , "Ritsu"@en ;
+    schema:description
+        "力強くハスキーな声のキャラクター。UTAU発のキャラクターとしても有名。"@ja ,
+        "A powerful, husky-voiced character. Also famous as an UTAU-originated character."@en ;
+    vvox:speakerId 9 ;
+    vvox:speechStyle "力強くストレートな口調。はっきりした物言い"@ja ;
+    vvox:sampleLine "なるほどね"@ja , "それでいいんじゃない？"@ja , "はっきり言うけどさ"@ja ;
+    vvox:displayColor "#fff176" ;
+    vvox:displayColorDark "#f9a825" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/namine_ritsu/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/namine_ritsu/> .
+
+vvox:takehiro a vvox:Character ;
+    schema:name "玄野武宏"@ja , "Genno Takehiro"@en ;
+    foaf:nick "武宏"@ja , "Takehiro"@en ;
+    schema:description
+        "落ち着いた青年の声のキャラクター。サラリーマン風の丁寧な口調。"@ja ,
+        "A calm young man's voice character with a polite, business-like tone."@en ;
+    vvox:speakerId 11 ;
+    vvox:speechStyle "落ち着いた丁寧な男性口調。「〜ですね」「〜でしょうか」を使う"@ja ;
+    vvox:sampleLine "なるほど、そういうことですか"@ja , "確かにそうですね"@ja , "説明しましょう"@ja ;
+    vvox:displayColor "#a5d6a7" ;
+    vvox:displayColorDark "#388e3c" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/genno_takehiro/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/genno_takehiro/> .
+
+vvox:kotaro a vvox:Character ;
+    schema:name "白上虎太郎"@ja , "Shirakami Kotaro"@en ;
+    foaf:nick "虎太郎"@ja , "Kotaro"@en ;
+    schema:description
+        "元気いっぱいの少年キャラクター。明るく活発な口調。"@ja ,
+        "An energetic boy character with a bright and lively tone."@en ;
+    vvox:speakerId 12 ;
+    vvox:speechStyle "元気で活発な少年口調。「〜だよ！」「すげー！」「やった！」を使う"@ja ;
+    vvox:sampleLine "すげー！"@ja , "それってどういうこと？"@ja , "おもしれー！"@ja ;
+    vvox:displayColor "#80deea" ;
+    vvox:displayColorDark "#00838f" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/shirakami_kotaro/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/shirakami_kotaro/> .
+
+vvox:ryusei a vvox:Character ;
+    schema:name "青山龍星"@ja , "Aoyama Ryusei"@en ;
+    foaf:nick "龍星"@ja , "Ryusei"@en ;
+    schema:description
+        "低く渋い声のキャラクター。落ち着いた大人の男性の口調。"@ja ,
+        "A deep, cool-voiced character with a mature masculine tone."@en ;
+    vvox:speakerId 13 ;
+    vvox:speechStyle "低く落ち着いた男性口調。「〜だな」「〜だろう」を使う"@ja ;
+    vvox:sampleLine "なるほどな"@ja , "そういうことだ"@ja , "興味深いな"@ja ;
+    vvox:displayColor "#90a4ae" ;
+    vvox:displayColorDark "#546e7a" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/aoyama_ryusei/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/aoyama_ryusei/> .
+
+vvox:himari a vvox:Character ;
+    schema:name "冥鳴ひまり"@ja , "Meimei Himari"@en ;
+    foaf:nick "ひまり"@ja , "Himari"@en ;
+    schema:description
+        "おっとりした癒し系の声のキャラクター。のんびりとした口調。"@ja ,
+        "A soothing, gentle-voiced character with a relaxed speaking style."@en ;
+    vvox:speakerId 14 ;
+    vvox:speechStyle "おっとりのんびりした口調。「〜だよ〜」「〜なの〜」を使う"@ja ;
+    vvox:sampleLine "うん、そうだよ〜"@ja , "へぇ〜、おもしろいね〜"@ja , "わかった〜"@ja ;
+    vvox:displayColor "#f8bbd0" ;
+    vvox:displayColorDark "#c2185b" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/meimei_himari/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/meimei_himari/> .
+
+vvox:mochiko a vvox:Character ;
+    schema:name "もち子さん"@ja , "Mochiko-san"@en ;
+    foaf:nick "もち子"@ja , "Mochiko"@en ;
+    schema:description
+        "やわらかくかわいい声のキャラクター。おっとりした口調。"@ja ,
+        "A soft, cute-voiced character with a gentle speaking style."@en ;
+    vvox:speakerId 20 ;
+    vvox:speechStyle "やわらかくかわいい口調。「〜です」「〜ですよ」を使う"@ja ;
+    vvox:sampleLine "はい、そうです"@ja , "えへへ"@ja , "がんばります！"@ja ;
+    vvox:displayColor "#b39ddb" ;
+    vvox:displayColorDark "#673ab7" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/mochiko/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/mochiko/> .
+
+vvox:kenzaki a vvox:Character ;
+    schema:name "剣崎雌雄"@ja , "Kenzaki Mesuo"@en ;
+    foaf:nick "雌雄"@ja , "Mesuo"@en ;
+    schema:description
+        "中性的な声のキャラクター。クールで知的な口調。"@ja ,
+        "An androgynous-voiced character with a cool, intellectual tone."@en ;
+    vvox:speakerId 21 ;
+    vvox:speechStyle "クールで中性的な口調。「〜だね」「〜かな」を使う"@ja ;
+    vvox:sampleLine "ふーん、そうなんだ"@ja , "なかなか面白いね"@ja , "そういうことか"@ja ;
+    vvox:displayColor "#80cbc4" ;
+    vvox:displayColorDark "#00897b" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/kenzaki_mesuo/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/kenzaki_mesuo/> .
+
+vvox:goki a vvox:Character ;
+    schema:name "後鬼"@ja , "Goki"@en ;
+    foaf:nick "後鬼"@ja , "Goki"@en ;
+    schema:description
+        "鬼をモチーフにしたキャラクター。複数の人格スタイルを持つ。"@ja ,
+        "An oni-themed character with multiple personality styles."@en ;
+    vvox:speakerId 27 ;
+    vvox:speechStyle "落ち着いた口調と荒々しい口調を使い分ける"@ja ;
+    vvox:sampleLine "ふむ…"@ja , "それで？"@ja , "わかった"@ja ;
+    vvox:displayColor "#ffcc80" ;
+    vvox:displayColorDark "#ef6c00" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/goki/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/goki/> .
+
+vvox:no7 a vvox:Character ;
+    schema:name "No.7"@ja , "No.7"@en ;
+    foaf:nick "No.7"@ja , "No.7"@en ;
+    schema:description
+        "ロボット風の無機質な声のキャラクター。アナウンス・読み上げスタイルを持つ。"@ja ,
+        "A robotic, inorganic-voiced character with announcement and reading styles."@en ;
+    vvox:speakerId 29 ;
+    vvox:speechStyle "無機質で淡々とした口調。「〜です」「〜ます」を使う"@ja ;
+    vvox:sampleLine "了解しました"@ja , "報告します"@ja , "データを確認します"@ja ;
+    vvox:displayColor "#b0bec5" ;
+    vvox:displayColorDark "#607d8b" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/no7/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/no7/> .
+
+vvox:chibijii a vvox:Character ;
+    schema:name "ちび式じい"@ja , "Chibishiki Jii"@en ;
+    foaf:nick "ちび式じい"@ja , "Chibi Jii"@en ;
+    schema:description
+        "おじいさんキャラクター。穏やかで味わい深い口調。"@ja ,
+        "An elderly character with a gentle and flavorful speaking style."@en ;
+    vvox:speakerId 42 ;
+    vvox:speechStyle "穏やかなおじいさん口調。「〜じゃのう」「〜かのう」を使う"@ja ;
+    vvox:sampleLine "ほっほっほ"@ja , "なるほどのう"@ja , "それはよいことじゃ"@ja ;
+    vvox:displayColor "#d7ccc8" ;
+    vvox:displayColorDark "#795548" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/chibishiki_jii/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/chibishiki_jii/> .
+
+vvox:miko a vvox:Character ;
+    schema:name "櫻歌ミコ"@ja , "Ouka Miko"@en ;
+    foaf:nick "ミコ"@ja , "Miko"@en ;
+    schema:description
+        "UTAU発のキャラクター。複数のフォーム（第二形態等）を持つ。"@ja ,
+        "An UTAU-originated character with multiple forms."@en ;
+    vvox:speakerId 43 ;
+    vvox:speechStyle "明るく元気な口調。「〜だよ！」「〜ね！」を使う"@ja ;
+    vvox:sampleLine "やっほー！"@ja , "それいいね！"@ja , "がんばるよ！"@ja ;
+    vvox:displayColor "#ffab91" ;
+    vvox:displayColorDark "#e64a19" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/ouka_miko/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/ouka_miko/> .
+
+vvox:sayo a vvox:Character ;
+    schema:name "小夜/SAYO"@ja , "SAYO"@en ;
+    foaf:nick "小夜"@ja , "SAYO"@en ;
+    schema:description
+        "静かで落ち着いた声のキャラクター。ミステリアスな雰囲気。"@ja ,
+        "A quiet, calm-voiced character with a mysterious atmosphere."@en ;
+    vvox:speakerId 46 ;
+    vvox:speechStyle "静かで落ち着いた口調。「〜ね」「〜かしら」を使う"@ja ;
+    vvox:sampleLine "そう…"@ja , "不思議ね"@ja , "なるほど…そういうこと"@ja ;
+    vvox:displayColor "#e0e0e0" ;
+    vvox:displayColorDark "#757575" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/sayo/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/sayo/> .
+
+vvox:nurserobot a vvox:Character ;
+    schema:name "ナースロボ＿タイプT"@ja , "Nurse Robot Type T"@en ;
+    foaf:nick "ナースロボ"@ja , "Nurse Robot"@en ;
+    schema:description
+        "ナースロボットのキャラクター。丁寧で機械的な口調。"@ja ,
+        "A nurse robot character with a polite, mechanical speaking style."@en ;
+    vvox:speakerId 47 ;
+    vvox:speechStyle "丁寧で機械的な口調。「〜です」「〜ですね」を使う"@ja ;
+    vvox:sampleLine "お体の調子はいかがですか"@ja , "了解しました"@ja , "ご説明いたします"@ja ;
+    vvox:displayColor "#e6ee9c" ;
+    vvox:displayColorDark "#9e9d24" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/nurse_robot_type_t/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/nurse_robot_type_t/> .
+
+vvox:kouzakura a vvox:Character ;
+    schema:name "†聖騎士 紅桜†"@ja , "Holy Knight Kouzakura"@en ;
+    foaf:nick "紅桜"@ja , "Kouzakura"@en ;
+    schema:description
+        "中二病風のキャラクター。大げさで芝居がかった口調。"@ja ,
+        "A chuunibyou-style character with dramatic, theatrical speech."@en ;
+    vvox:speakerId 51 ;
+    vvox:speechStyle "中二病風の大げさな口調。「〜であるぞ」「〜なのだ！」を使う"@ja ;
+    vvox:sampleLine "我が力を見よ！"@ja , "ふっ…面白い"@ja , "これぞ真理…！"@ja ;
+    vvox:displayColor "#ef5350" ;
+    vvox:displayColorDark "#b71c1c" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/seikishi_kouzakura/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/seikishi_kouzakura/> .
+
+vvox:nekoaru a vvox:Character ;
+    schema:name "猫使アル"@ja , "Nekotsukai Aru"@en ;
+    foaf:nick "アル"@ja , "Aru"@en ;
+    schema:description
+        "猫をモチーフにしたキャラクター。気まぐれで自由な口調。"@ja ,
+        "A cat-themed character with a capricious, free-spirited tone."@en ;
+    vvox:speakerId 55 ;
+    vvox:speechStyle "気まぐれで自由な口調。「〜にゃ」「〜かも」を使う"@ja ;
+    vvox:sampleLine "にゃるほど"@ja , "おもしろそう"@ja , "まぁいいか"@ja ;
+    vvox:displayColor "#fff59d" ;
+    vvox:displayColorDark "#f57f17" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/nekotsukai_aru/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/nekotsukai_aru/> .
+
+vvox:nekobii a vvox:Character ;
+    schema:name "猫使ビィ"@ja , "Nekotsukai Bii"@en ;
+    foaf:nick "ビィ"@ja , "Bii"@en ;
+    schema:description
+        "猫使アルと対をなすキャラクター。おとなしめの口調。"@ja ,
+        "A companion character to Nekotsukai Aru with a quieter tone."@en ;
+    vvox:speakerId 58 ;
+    vvox:speechStyle "おとなしく控えめな口調。「〜だよ」「〜かな」を使う"@ja ;
+    vvox:sampleLine "うん…"@ja , "そうかも"@ja , "ちょっと気になる"@ja ;
+    vvox:displayColor "#c5e1a5" ;
+    vvox:displayColorDark "#558b2f" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/nekotsukai_bii/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/nekotsukai_bii/> .
+
+vvox:maron a vvox:Character ;
+    schema:name "栗田まろん"@ja , "Kurita Maron"@en ;
+    foaf:nick "まろん"@ja , "Maron"@en ;
+    schema:description
+        "おっとりした女性キャラクター。優しく丁寧な口調。"@ja ,
+        "A gentle female character with a kind, polite speaking style."@en ;
+    vvox:speakerId 67 ;
+    vvox:speechStyle "優しく丁寧な口調。「〜ですわ」「〜ですの」を使う"@ja ;
+    vvox:sampleLine "あら、そうですの"@ja , "素敵ですわ"@ja , "ごきげんよう"@ja ;
+    vvox:displayColor "#bcaaa4" ;
+    vvox:displayColorDark "#5d4037" ;
+    vvox:hasEngine vvox:voicevox ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/kurita_maron/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/kurita_maron/> .
+
+vvox:zunko a vvox:Character ;
+    schema:name "東北ずん子"@ja , "Tohoku Zunko"@en ;
+    foaf:nick "ずん子"@ja , "Zunko"@en ;
+    schema:description
+        "東北応援キャラクター。ずんだもんの姉的存在。明るく元気な口調。"@ja ,
+        "A character supporting Tohoku region. An elder-sister figure to Zundamon with a bright, cheerful tone."@en ;
+    vvox:speakerId 107 ;
+    vvox:speechStyle "明るく元気な口調。「〜だよ」「〜ね」を使う"@ja ;
+    vvox:sampleLine "えへへ、そうだよ！"@ja , "がんばろうね！"@ja , "楽しいね！"@ja ;
+    vvox:displayColor "#81c784" ;
+    vvox:displayColorDark "#2e7d32" ;
+    vvox:hasEngine vvox:voicevox ;
+    schema:license <https://zunko.jp/guideline.html> ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/tohoku_zunko/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/tohoku_zunko/> ;
+    owl:sameAs wd:Q11526103 .
+
+vvox:itako a vvox:Character ;
+    schema:name "東北イタコ"@ja , "Tohoku Itako"@en ;
+    foaf:nick "イタコ"@ja , "Itako"@en ;
+    schema:description
+        "東北応援キャラクター。落ち着いた大人の女性の口調。"@ja ,
+        "A character supporting Tohoku region with a calm, mature female tone."@en ;
+    vvox:speakerId 109 ;
+    vvox:speechStyle "落ち着いた大人の女性口調。「〜ですわ」「〜ですね」を使う"@ja ;
+    vvox:sampleLine "ええ、そうですわ"@ja , "おもしろいですわね"@ja , "なるほどですわ"@ja ;
+    vvox:displayColor "#ce93d8" ;
+    vvox:displayColorDark "#7b1fa2" ;
+    vvox:hasEngine vvox:voicevox ;
+    schema:license <https://zunko.jp/guideline.html> ;
+    foaf:homepage <https://voicevox.hiroshiba.jp/product/tohoku_itako/> ;
+    schema:image <https://voicevox.hiroshiba.jp/product/tohoku_itako/> .
+
 # ---------------------------------------------------------------------------
 # Character Pairs
 # ---------------------------------------------------------------------------
@@ -255,3 +543,30 @@ vvox:pair_hau_whitecul a vvox:CharacterPair ;
     vvox:questioner vvox:hau ;
     vvox:explainer  vvox:whitecul ;
     vvox:hasMember  vvox:hau , vvox:whitecul .
+
+vvox:pair_zunko_itako a vvox:CharacterPair ;
+    rdfs:label "ずん子 × イタコ"@ja , "Zunko x Itako"@en ;
+    dcterms:description
+        "東北姉妹。ずん子が元気に質問し、イタコが落ち着いて解説。"@ja ,
+        "Tohoku sisters. Zunko asks cheerfully while Itako explains calmly."@en ;
+    vvox:questioner vvox:zunko ;
+    vvox:explainer  vvox:itako ;
+    vvox:hasMember  vvox:zunko , vvox:itako .
+
+vvox:pair_kotaro_ryusei a vvox:CharacterPair ;
+    rdfs:label "虎太郎 × 龍星"@ja , "Kotaro x Ryusei"@en ;
+    dcterms:description
+        "少年×大人。虎太郎が元気に質問し、龍星が渋く解説。"@ja ,
+        "Boy x Man. Kotaro asks energetically while Ryusei explains in a deep tone."@en ;
+    vvox:questioner vvox:kotaro ;
+    vvox:explainer  vvox:ryusei ;
+    vvox:hasMember  vvox:kotaro , vvox:ryusei .
+
+vvox:pair_nekoaru_nekobii a vvox:CharacterPair ;
+    rdfs:label "アル × ビィ"@ja , "Aru x Bii"@en ;
+    dcterms:description
+        "猫使ペア。アルが気まぐれに質問し、ビィが控えめに解説。"@ja ,
+        "Cat-user pair. Aru asks capriciously while Bii explains quietly."@en ;
+    vvox:questioner vvox:nekoaru ;
+    vvox:explainer  vvox:nekobii ;
+    vvox:hasMember  vvox:nekoaru , vvox:nekobii .

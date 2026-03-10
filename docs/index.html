@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VOICEVOX Character LOD</title>
   <meta name="description" content="VOICEVOXキャラクターのLinked Open Dataデータセット">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="VOICEVOX Character LOD">
+  <meta property="og:description" content="VOICEVOX キャラクターの Linked Open Data データセット — CC BY 4.0">
+  <meta property="og:url" content="https://nakamura196.github.io/voicevox-character-lod/">
+  <meta property="og:type" content="website">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,7 +95,7 @@
     .char-meta a { color: var(--accent); }
 
     /* Graph */
-    #graph-container { width: 100%; min-height: 500px; border: 1px solid var(--border); border-radius: 8px; background: var(--entry); overflow: hidden; }
+    #graph-container { width: 100%; min-height: 650px; border: 1px solid var(--border); border-radius: 8px; background: var(--entry); overflow: hidden; }
 
     /* YASGUI */
     #yasgui { margin-top: 1rem; border-radius: 8px; overflow: hidden; }
@@ -132,8 +137,8 @@
       <span data-lang="en">VOICEVOX Character LOD</span>
     </h1>
     <p>
-      <span data-lang="ja">VOICEVOXキャラクターのLinked Open Dataデータセット — 8キャラクター・4対話ペアの構造化データをCC BY 4.0で公開</span>
-      <span data-lang="en">Linked Open Data dataset for VOICEVOX characters — 8 characters and 4 dialogue pairs as structured data, published under CC BY 4.0</span>
+      <span data-lang="ja">VOICEVOXキャラクターのLinked Open Dataデータセット — 27キャラクター・7対話ペアの構造化データをCC BY 4.0で公開</span>
+      <span data-lang="en">Linked Open Data dataset for VOICEVOX characters — 27 characters and 7 dialogue pairs as structured data, published under CC BY 4.0</span>
     </p>
     <div class="badges">
       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="CC BY 4.0"></a>
@@ -149,10 +154,10 @@
       <span data-lang="en">Dataset Overview</span>
     </h2>
     <div class="stats">
-      <div class="stat-card"><span class="stat-number">8</span><span class="stat-label"><span data-lang="ja">キャラクター</span><span data-lang="en">Characters</span></span></div>
-      <div class="stat-card"><span class="stat-number">4</span><span class="stat-label"><span data-lang="ja">対話ペア</span><span data-lang="en">Dialogue Pairs</span></span></div>
+      <div class="stat-card"><span class="stat-number" id="char-count">27</span><span class="stat-label"><span data-lang="ja">キャラクター</span><span data-lang="en">Characters</span></span></div>
+      <div class="stat-card"><span class="stat-number" id="pair-count">7</span><span class="stat-label"><span data-lang="ja">対話ペア</span><span data-lang="en">Dialogue Pairs</span></span></div>
       <div class="stat-card"><span class="stat-number" id="triple-count">-</span><span class="stat-label"><span data-lang="ja">トリプル数</span><span data-lang="en">Triples</span></span></div>
-      <div class="stat-card"><span class="stat-number">5</span><span class="stat-label"><span data-lang="ja">Wikidata連携</span><span data-lang="en">Wikidata Links</span></span></div>
+      <div class="stat-card"><span class="stat-number" id="wd-count">7</span><span class="stat-label"><span data-lang="ja">Wikidata連携</span><span data-lang="en">Wikidata Links</span></span></div>
     </div>
   </section>
 
@@ -169,6 +174,8 @@
       <a class="dl-card" href="lod/voicevox.rdf"><strong>RDF/XML</strong><span>.rdf</span></a>
       <a class="dl-card" href="lod/void.ttl"><strong>VoID</strong><span><span data-lang="ja">メタデータ</span><span data-lang="en">Metadata</span></span></a>
       <a class="dl-card" href="ns/voicevox.ttl"><strong><span data-lang="ja">オントロジー</span><span data-lang="en">Ontology</span></strong><span>vvox:</span></a>
+      <a class="dl-card" href="lod/voicevox-shacl.ttl"><strong>SHACL</strong><span><span data-lang="ja">制約</span><span data-lang="en">Shapes</span></span></a>
+      <a class="dl-card" href="lod/dcat.ttl"><strong>DCAT</strong><span><span data-lang="ja">カタログ</span><span data-lang="en">Catalog</span></span></a>
     </div>
   </section>
 
@@ -321,8 +328,8 @@ SELECT ?name ?wikidataUri WHERE {
       <span data-lang="en">Please follow each character's official guidelines for usage terms.</span>
     </p>
     <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--secondary)">
-      <span data-lang="ja">立ち絵素材: 坂本アヒル氏 | VOICEVOX:ずんだもん, 四国めたん, 春日部つむぎ, 雨晴はう, 九州そら, WhiteCUL, 中国うさぎ, 東北きりたん</span>
-      <span data-lang="en">Standing illustrations: Sakamoto Ahiru | VOICEVOX: Zundamon, Shikoku Metan, Kasukabe Tsumugi, Amehare Hau, Kyushu Sora, WhiteCUL, Chugoku Usagi, Tohoku Kiritan</span>
+      <span data-lang="ja">立ち絵素材: 坂本アヒル氏 | データセットに含まれるキャラクターは各権利者に帰属します</span>
+      <span data-lang="en">Standing illustrations: Sakamoto Ahiru | Characters in this dataset belong to their respective rights holders</span>
     </p>
   </section>
 
@@ -352,26 +359,51 @@ function setLang(lang) {
 // --- Stats ---
 fetch("lod/stats.json")
   .then(r => r.json())
-  .then(s => { document.getElementById("triple-count").textContent = s.triples; })
+  .then(s => {
+    document.getElementById("triple-count").textContent = s.triples;
+    if (s.characters) document.getElementById("char-count").textContent = s.characters;
+    if (s.pairs) document.getElementById("pair-count").textContent = s.pairs;
+    if (s.wikidata_links) document.getElementById("wd-count").textContent = s.wikidata_links;
+  })
   .catch(() => {});
 
 // --- Characters ---
 const CHARS = [
-  { key: "zundamon", ja: "ずんだもん", en: "Zundamon", color: "#69f0ae", id: 3, wd: "Q113476219" },
-  { key: "metan", ja: "四国めたん", en: "Shikoku Metan", color: "#ff4081", id: 2, wd: "Q113476218" },
-  { key: "tsumugi", ja: "春日部つむぎ", en: "Kasukabe Tsumugi", color: "#ffab40", id: 8, wd: "Q113476220" },
-  { key: "hau", ja: "雨晴はう", en: "Amehare Hau", color: "#4dd0e1", id: 10, wd: "" },
-  { key: "sora", ja: "九州そら", en: "Kyushu Sora", color: "#ea80fc", id: 16, wd: "" },
-  { key: "whitecul", ja: "WhiteCUL", en: "WhiteCUL", color: "#90caf9", id: 23, wd: "" },
-  { key: "usagi", ja: "中国うさぎ", en: "Chugoku Usagi", color: "#ef9a9a", id: 61, wd: "" },
-  { key: "kiritan", ja: "東北きりたん", en: "Tohoku Kiritan", color: "#ce93d8", id: 108, wd: "Q55634043" },
+  { key: "metan", ja: "四国めたん", en: "Shikoku Metan", color: "#ff4081", id: 2, wd: "Q113476218", img: true },
+  { key: "zundamon", ja: "ずんだもん", en: "Zundamon", color: "#69f0ae", id: 3, wd: "Q113476219", img: true },
+  { key: "tsumugi", ja: "春日部つむぎ", en: "Kasukabe Tsumugi", color: "#ffab40", id: 8, wd: "Q113476220", img: true },
+  { key: "ritsu", ja: "波音リツ", en: "Namine Ritsu", color: "#fff176", id: 9, wd: "" },
+  { key: "hau", ja: "雨晴はう", en: "Amehare Hau", color: "#4dd0e1", id: 10, wd: "", img: true },
+  { key: "takehiro", ja: "玄野武宏", en: "Genno Takehiro", color: "#a5d6a7", id: 11, wd: "" },
+  { key: "kotaro", ja: "白上虎太郎", en: "Shirakami Kotaro", color: "#80deea", id: 12, wd: "" },
+  { key: "ryusei", ja: "青山龍星", en: "Aoyama Ryusei", color: "#90a4ae", id: 13, wd: "" },
+  { key: "himari", ja: "冥鳴ひまり", en: "Meimei Himari", color: "#f8bbd0", id: 14, wd: "" },
+  { key: "sora", ja: "九州そら", en: "Kyushu Sora", color: "#ea80fc", id: 16, wd: "", img: true },
+  { key: "mochiko", ja: "もち子さん", en: "Mochiko-san", color: "#b39ddb", id: 20, wd: "" },
+  { key: "kenzaki", ja: "剣崎雌雄", en: "Kenzaki Mesuo", color: "#80cbc4", id: 21, wd: "" },
+  { key: "whitecul", ja: "WhiteCUL", en: "WhiteCUL", color: "#90caf9", id: 23, wd: "", img: true },
+  { key: "goki", ja: "後鬼", en: "Goki", color: "#ffcc80", id: 27, wd: "" },
+  { key: "no7", ja: "No.7", en: "No.7", color: "#b0bec5", id: 29, wd: "" },
+  { key: "chibijii", ja: "ちび式じい", en: "Chibishiki Jii", color: "#d7ccc8", id: 42, wd: "" },
+  { key: "miko", ja: "櫻歌ミコ", en: "Ouka Miko", color: "#ffab91", id: 43, wd: "" },
+  { key: "sayo", ja: "小夜/SAYO", en: "SAYO", color: "#e0e0e0", id: 46, wd: "" },
+  { key: "nurserobot", ja: "ナースロボ＿タイプT", en: "Nurse Robot Type T", color: "#e6ee9c", id: 47, wd: "" },
+  { key: "kouzakura", ja: "†聖騎士 紅桜†", en: "Holy Knight Kouzakura", color: "#ef5350", id: 51, wd: "" },
+  { key: "nekoaru", ja: "猫使アル", en: "Nekotsukai Aru", color: "#fff59d", id: 55, wd: "" },
+  { key: "nekobii", ja: "猫使ビィ", en: "Nekotsukai Bii", color: "#c5e1a5", id: 58, wd: "" },
+  { key: "usagi", ja: "中国うさぎ", en: "Chugoku Usagi", color: "#ef9a9a", id: 61, wd: "", img: true },
+  { key: "maron", ja: "栗田まろん", en: "Kurita Maron", color: "#bcaaa4", id: 67, wd: "" },
+  { key: "zunko", ja: "東北ずん子", en: "Tohoku Zunko", color: "#81c784", id: 107, wd: "Q11526103" },
+  { key: "kiritan", ja: "東北きりたん", en: "Tohoku Kiritan", color: "#ce93d8", id: 108, wd: "Q55634043", img: true },
+  { key: "itako", ja: "東北イタコ", en: "Tohoku Itako", color: "#ce93d8", id: 109, wd: "" },
 ];
 
 function renderCharacters() {
   const el = document.getElementById("char-list");
   el.innerHTML = CHARS.map(c => `
     <div class="char-card" style="border-left:4px solid ${c.color}">
-      <img class="char-img" src="images/characters/${c.key}.png" alt="${c.ja}" loading="lazy">
+      ${c.img ? `<img class="char-img" src="images/characters/${c.key}.png" alt="${c.ja}" loading="lazy">` :
+        `<div class="char-img" style="display:flex;align-items:center;justify-content:center;background:${c.color}22;border-radius:4px;font-size:1.5rem;">${c.ja.charAt(0)}</div>`}
       <div class="char-info">
         <div class="char-header">
           <strong>${currentLang === "ja" ? c.ja : c.en}</strong>
@@ -410,33 +442,25 @@ renderCharacters();
   const container = document.getElementById("graph-container");
   if (!container) return;
   const width = container.clientWidth || 800;
-  const height = 500;
+  const height = 650;
 
+  // Build nodes from CHARS array
   const nodes = [
     { id: "voicevox", label: "VOICEVOX", type: "engine", color: "#ffd54f" },
-    { id: "zundamon", label: "ずんだもん", labelEn: "Zundamon", type: "char", color: "#69f0ae" },
-    { id: "metan", label: "四国めたん", labelEn: "Metan", type: "char", color: "#ff4081" },
-    { id: "tsumugi", label: "春日部つむぎ", labelEn: "Tsumugi", type: "char", color: "#ffab40" },
-    { id: "hau", label: "雨晴はう", labelEn: "Hau", type: "char", color: "#4dd0e1" },
-    { id: "sora", label: "九州そら", labelEn: "Sora", type: "char", color: "#ea80fc" },
-    { id: "whitecul", label: "WhiteCUL", labelEn: "WhiteCUL", type: "char", color: "#90caf9" },
-    { id: "usagi", label: "中国うさぎ", labelEn: "Usagi", type: "char", color: "#ef9a9a" },
-    { id: "kiritan", label: "東北きりたん", labelEn: "Kiritan", type: "char", color: "#ce93d8" },
-    { id: "pair1", label: "ペア1", labelEn: "Pair1", type: "pair", color: "#b0bec5" },
-    { id: "pair2", label: "ペア2", labelEn: "Pair2", type: "pair", color: "#b0bec5" },
-    { id: "pair3", label: "ペア3", labelEn: "Pair3", type: "pair", color: "#b0bec5" },
-    { id: "pair4", label: "ペア4", labelEn: "Pair4", type: "pair", color: "#b0bec5" },
+    ...CHARS.map(c => ({ id: c.key, label: c.ja, labelEn: c.en, type: "char", color: c.color })),
+    { id: "pair1", label: "ずんだもん×めたん", labelEn: "Zundamon×Metan", type: "pair", color: "#b0bec5" },
+    { id: "pair2", label: "つむぎ×きりたん", labelEn: "Tsumugi×Kiritan", type: "pair", color: "#b0bec5" },
+    { id: "pair3", label: "うさぎ×そら", labelEn: "Usagi×Sora", type: "pair", color: "#b0bec5" },
+    { id: "pair4", label: "はう×WhiteCUL", labelEn: "Hau×WhiteCUL", type: "pair", color: "#b0bec5" },
+    { id: "pair5", label: "ずん子×イタコ", labelEn: "Zunko×Itako", type: "pair", color: "#b0bec5" },
+    { id: "pair6", label: "虎太郎×龍星", labelEn: "Kotaro×Ryusei", type: "pair", color: "#b0bec5" },
+    { id: "pair7", label: "アル×ビィ", labelEn: "Aru×Bii", type: "pair", color: "#b0bec5" },
   ];
 
   const links = [
-    { source: "zundamon", target: "voicevox", label: "hasEngine" },
-    { source: "metan", target: "voicevox", label: "hasEngine" },
-    { source: "tsumugi", target: "voicevox", label: "hasEngine" },
-    { source: "hau", target: "voicevox", label: "hasEngine" },
-    { source: "sora", target: "voicevox", label: "hasEngine" },
-    { source: "whitecul", target: "voicevox", label: "hasEngine" },
-    { source: "usagi", target: "voicevox", label: "hasEngine" },
-    { source: "kiritan", target: "voicevox", label: "hasEngine" },
+    // hasEngine links for all characters
+    ...CHARS.map(c => ({ source: c.key, target: "voicevox", label: "hasEngine" })),
+    // Pair relationships
     { source: "pair1", target: "zundamon", label: "questioner", dashed: true },
     { source: "pair1", target: "metan", label: "explainer" },
     { source: "pair2", target: "tsumugi", label: "questioner", dashed: true },
@@ -445,6 +469,12 @@ renderCharacters();
     { source: "pair3", target: "sora", label: "explainer" },
     { source: "pair4", target: "hau", label: "questioner", dashed: true },
     { source: "pair4", target: "whitecul", label: "explainer" },
+    { source: "pair5", target: "zunko", label: "questioner", dashed: true },
+    { source: "pair5", target: "itako", label: "explainer" },
+    { source: "pair6", target: "kotaro", label: "questioner", dashed: true },
+    { source: "pair6", target: "ryusei", label: "explainer" },
+    { source: "pair7", target: "nekoaru", label: "questioner", dashed: true },
+    { source: "pair7", target: "nekobii", label: "explainer" },
   ];
 
   const svg = d3.select(container).append("svg")
@@ -456,10 +486,10 @@ renderCharacters();
     .append("path").attr("d", "M0,-5L10,0L0,5").attr("fill", "#999");
 
   const simulation = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(100))
-    .force("charge", d3.forceManyBody().strength(-400))
+    .force("link", d3.forceLink(links).id(d => d.id).distance(80))
+    .force("charge", d3.forceManyBody().strength(-250))
     .force("center", d3.forceCenter(width / 2, height / 2))
-    .force("collision", d3.forceCollide().radius(30));
+    .force("collision", d3.forceCollide().radius(25));
 
   const link = svg.append("g").selectAll("line").data(links).enter().append("line")
     .attr("stroke", "#999").attr("stroke-width", 1.5)
@@ -476,12 +506,12 @@ renderCharacters();
     );
 
   node.append("circle")
-    .attr("r", d => d.type === "engine" ? 18 : d.type === "pair" ? 10 : 14)
-    .attr("fill", d => d.color).attr("stroke", "#fff").attr("stroke-width", 2);
+    .attr("r", d => d.type === "engine" ? 18 : d.type === "pair" ? 8 : 11)
+    .attr("fill", d => d.color).attr("stroke", "#fff").attr("stroke-width", 1.5);
 
   node.append("text")
-    .text(d => d.label).attr("dy", d => d.type === "engine" ? 30 : 24)
-    .attr("text-anchor", "middle").attr("font-size", 11).attr("fill", "var(--fg)");
+    .text(d => d.label).attr("dy", d => d.type === "engine" ? 28 : 20)
+    .attr("text-anchor", "middle").attr("font-size", d => d.type === "pair" ? 8 : 9).attr("fill", "var(--fg)");
 
   simulation.on("tick", () => {
     link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);

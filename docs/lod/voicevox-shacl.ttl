@@ -1,0 +1,134 @@
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema:  <https://schema.org/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vvox:    <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#> .
+
+# =============================================================================
+# SHACL Shapes — VOICEVOX Character LOD data quality constraints
+# =============================================================================
+
+vvox:CharacterShape a sh:NodeShape ;
+    sh:targetClass vvox:Character ;
+    rdfs:label "Character Shape"@en , "キャラクターShape"@ja ;
+    rdfs:comment "Validates that each vvox:Character has required properties."@en ;
+
+    # 必須: 日本語名
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:languageIn ( "ja" "en" ) ;
+        sh:message "Character must have at least one schema:name with @ja or @en language tag."@en ;
+    ] ;
+
+    # 必須: speakerId (整数, 0以上)
+    sh:property [
+        sh:path vvox:speakerId ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:message "Character must have exactly one vvox:speakerId (non-negative integer)."@en ;
+    ] ;
+
+    # 必須: speechStyle
+    sh:property [
+        sh:path vvox:speechStyle ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:message "Character must have at least one vvox:speechStyle."@en ;
+    ] ;
+
+    # 必須: 対応エンジン
+    sh:property [
+        sh:path vvox:hasEngine ;
+        sh:minCount 1 ;
+        sh:class vvox:TTSEngine ;
+        sh:message "Character must be linked to a vvox:TTSEngine via vvox:hasEngine."@en ;
+    ] ;
+
+    # 推奨: ホームページ
+    sh:property [
+        sh:path foaf:homepage ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Character should have a foaf:homepage."@en ;
+    ] ;
+
+    # 推奨: displayColor
+    sh:property [
+        sh:path vvox:displayColor ;
+        sh:maxCount 1 ;
+        sh:pattern "^#[0-9a-fA-F]{6}$" ;
+        sh:severity sh:Warning ;
+        sh:message "vvox:displayColor should be a valid CSS hex color (#rrggbb)."@en ;
+    ] ;
+
+    # 推奨: sampleLine (1つ以上)
+    sh:property [
+        sh:path vvox:sampleLine ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Character should have at least one vvox:sampleLine."@en ;
+    ] .
+
+
+vvox:CharacterPairShape a sh:NodeShape ;
+    sh:targetClass vvox:CharacterPair ;
+    rdfs:label "Character Pair Shape"@en , "キャラクターペアShape"@ja ;
+    rdfs:comment "Validates that each vvox:CharacterPair has required role properties."@en ;
+
+    # 必須: questioner
+    sh:property [
+        sh:path vvox:questioner ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class vvox:Character ;
+        sh:message "CharacterPair must have exactly one vvox:questioner of type vvox:Character."@en ;
+    ] ;
+
+    # 必須: explainer
+    sh:property [
+        sh:path vvox:explainer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class vvox:Character ;
+        sh:message "CharacterPair must have exactly one vvox:explainer of type vvox:Character."@en ;
+    ] ;
+
+    # 必須: ラベル
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:message "CharacterPair must have at least one rdfs:label."@en ;
+    ] ;
+
+    # 必須: hasMember (2つ)
+    sh:property [
+        sh:path vvox:hasMember ;
+        sh:minCount 2 ;
+        sh:class vvox:Character ;
+        sh:message "CharacterPair must have at least 2 vvox:hasMember links."@en ;
+    ] .
+
+
+vvox:TTSEngineShape a sh:NodeShape ;
+    sh:targetClass vvox:TTSEngine ;
+    rdfs:label "TTS Engine Shape"@en , "TTSエンジンShape"@ja ;
+
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:message "TTSEngine must have a schema:name."@en ;
+    ] ;
+
+    sh:property [
+        sh:path schema:url ;
+        sh:minCount 1 ;
+        sh:message "TTSEngine must have a schema:url."@en ;
+    ] .

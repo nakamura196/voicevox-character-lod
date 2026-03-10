@@ -1,0 +1,125 @@
+name: Validate RDF & Deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**/*.ttl'
+      - 'docs/**/*.jsonld'
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install rdflib + pyshacl
+        run: pip install rdflib pyshacl
+
+      - name: Validate TTL syntax (dataset)
+        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/lod/voicevox.ttl', format='turtle'); print(f'Dataset OK: {len(g)} triples')"
+
+      - name: Validate TTL syntax (ontology)
+        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/ns/voicevox.ttl', format='turtle'); print(f'Ontology OK: {len(g)} triples')"
+
+      - name: Validate TTL syntax (VoID)
+        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/lod/void.ttl', format='turtle'); print(f'VoID OK: {len(g)} triples')"
+
+      - name: Validate TTL syntax (DCAT)
+        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/lod/dcat.ttl', format='turtle'); print(f'DCAT OK: {len(g)} triples')"
+
+      - name: Validate TTL syntax (SHACL)
+        run: python -c "from rdflib import Graph; g = Graph(); g.parse('docs/lod/voicevox-shacl.ttl', format='turtle'); print(f'SHACL OK: {len(g)} triples')"
+
+      - name: SHACL validation
+        run: |
+          python -c "
+          from pyshacl import validate
+          from rdflib import Graph
+
+          data = Graph()
+          data.parse('docs/lod/voicevox.ttl', format='turtle')
+
+          shapes = Graph()
+          shapes.parse('docs/lod/voicevox-shacl.ttl', format='turtle')
+
+          conforms, results_graph, results_text = validate(
+              data, shacl_graph=shapes, inference='rdfs'
+          )
+          print(results_text)
+          if not conforms:
+              # Warnings are OK, only fail on violations
+              from rdflib.namespace import SH
+              SH_NS = 'http://www.w3.org/ns/shacl#'
+              violations = [r for r in results_graph.subjects()
+                           if (r, None, None) in results_graph
+                           and any(str(o) == SH_NS + 'Violation'
+                                  for o in results_graph.objects(r))]
+              if violations:
+                  print(f'SHACL FAILED: {len(violations)} violations')
+                  exit(1)
+              else:
+                  print('SHACL: warnings only, passing')
+          else:
+              print('SHACL: all constraints satisfied')
+          "
+
+  deploy-dydra:
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload ontology to Dydra
+        run: |
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.DYDRA_API_KEY }}" \
+            -H "Content-Type: application/sparql-update" \
+            "https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql" \
+            -d "CLEAR ALL"
+
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.DYDRA_API_KEY }}" \
+            -H "Content-Type: text/turtle" \
+            --data-binary @docs/ns/voicevox.ttl \
+            "https://dydra.com/ut-digital-archives/voicevox-character-lod/service"
+
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.DYDRA_API_KEY }}" \
+            -H "Content-Type: text/turtle" \
+            --data-binary @docs/lod/voicevox.ttl \
+            "https://dydra.com/ut-digital-archives/voicevox-character-lod/service"
+
+      - name: Merge into default graph
+        run: |
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.DYDRA_API_KEY }}" \
+            -H "Content-Type: application/sparql-update" \
+            "https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql" \
+            -d "INSERT { ?s ?p ?o } WHERE { GRAPH ?g { ?s ?p ?o } }"
+
+      - name: Verify triple count
+        run: |
+          RESULT=$(curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.DYDRA_API_KEY }}" \
+            -H "Content-Type: application/sparql-query" \
+            -H "Accept: application/sparql-results+json" \
+            "https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql" \
+            -d "SELECT (COUNT(*) AS ?c) WHERE { ?s ?p ?o }")
+          echo "Dydra response: $RESULT"

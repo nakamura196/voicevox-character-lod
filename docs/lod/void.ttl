@@ -31,7 +31,7 @@
         foaf:homepage <https://github.com/nakamura196>
     ] ;
     dcterms:created  "2026-03-10"^^xsd:date ;
-    dcterms:modified "2026-03-10"^^xsd:date ;
+    dcterms:modified "2026-03-11"^^xsd:date ;
     dcterms:source   <https://voicevox.hiroshiba.jp/> ;
 
     # --- License ---
@@ -53,8 +53,8 @@
     void:sparqlEndpoint <https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql> ;
 
     # --- Statistics (auto-updated by generate_lod.py) ---
-    void:triples     "238"^^xsd:integer ;
-    void:entities    "16"^^xsd:integer ;
+    void:triples     "591"^^xsd:integer ;
+    void:entities    "38"^^xsd:integer ;
     void:classes     "3"^^xsd:integer ;
     void:properties  "30"^^xsd:integer ;
 
@@ -82,5 +82,5 @@
         void:subjectsTarget <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> ;
         void:objectsTarget  <https://www.wikidata.org/> ;
         void:linkPredicate  owl:sameAs ;
-        void:triples        "5"^^xsd:integer
+        void:triples        "7"^^xsd:integer
     ] .

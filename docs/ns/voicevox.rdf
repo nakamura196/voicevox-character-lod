@@ -5,6 +5,43 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Character Pair</rdfs:label>
+    <rdfs:label xml:lang="ja">キャラクターペア</rdfs:label>
+    <rdfs:comment xml:lang="en">A pair of characters assigned questioner/explainer roles for dialogue-style content.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">対話コンテンツにおいて質問役・解説役を担うキャラクターのペア。</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Text-to-Speech Engine</rdfs:label>
+    <rdfs:label xml:lang="ja">音声合成エンジン</rdfs:label>
+    <rdfs:comment xml:lang="en">A software application that converts text into synthesized speech.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">テキストを合成音声に変換するソフトウェア。</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/SoftwareApplication"/>
+    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">Image Creator</rdfs:label>
+    <rdfs:label xml:lang="ja">立ち絵作者</rdfs:label>
+    <rdfs:comment xml:lang="en">The person who created the standing image illustration.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">立ち絵イラストの制作者。</rdfs:comment>
+    <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">Sample Line</rdfs:label>
+    <rdfs:label xml:lang="ja">口調サンプル</rdfs:label>
+    <rdfs:comment xml:lang="en">An example line demonstrating the character's speech style.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">キャラクターの口調を示すサンプル台詞。</rdfs:comment>
+    <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionInfo>1.0.0</owl:versionInfo>
@@ -18,31 +55,23 @@
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-10</dcterms:modified>
     <rdfs:seeAlso rdf:resource="https://voicevox.hiroshiba.jp/"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Character Pair</rdfs:label>
-    <rdfs:label xml:lang="ja">キャラクターペア</rdfs:label>
-    <rdfs:comment xml:lang="en">A pair of characters assigned questioner/explainer roles for dialogue-style content.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">対話コンテンツにおいて質問役・解説役を担うキャラクターのペア。</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sampleLine">
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="en">Sample Line</rdfs:label>
-    <rdfs:label xml:lang="ja">口調サンプル</rdfs:label>
-    <rdfs:comment xml:lang="en">An example line demonstrating the character's speech style.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">キャラクターの口調を示すサンプル台詞。</rdfs:comment>
+    <rdfs:label xml:lang="en">VOICEVOX Speaker ID</rdfs:label>
+    <rdfs:label xml:lang="ja">VOICEVOX話者ID</rdfs:label>
+    <rdfs:comment xml:lang="en">The numeric speaker identifier used by the VOICEVOX API.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">VOICEVOX APIで使用される数値の話者識別子。</rdfs:comment>
     <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine">
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Text-to-Speech Engine</rdfs:label>
-    <rdfs:label xml:lang="ja">音声合成エンジン</rdfs:label>
-    <rdfs:comment xml:lang="en">A software application that converts text into synthesized speech.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">テキストを合成音声に変換するソフトウェア。</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://schema.org/SoftwareApplication"/>
+    <rdfs:label xml:lang="en">VOICEVOX Character</rdfs:label>
+    <rdfs:label xml:lang="ja">VOICEVOXキャラクター</rdfs:label>
+    <rdfs:comment xml:lang="en">A virtual character whose voice is synthesized by the VOICEVOX engine.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">VOICEVOXエンジンで音声合成されるバーチャルキャラクター。</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Person"/>
     <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember">
@@ -51,6 +80,16 @@
     <rdfs:label xml:lang="ja">メンバー</rdfs:label>
     <rdfs:comment xml:lang="en">A character belonging to this pair (regardless of role).</rdfs:comment>
     <rdfs:comment xml:lang="ja">このペアに属するキャラクター（役割問わず）。</rdfs:comment>
+    <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
+    <rdfs:range rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">Questioner</rdfs:label>
+    <rdfs:label xml:lang="ja">質問役</rdfs:label>
+    <rdfs:comment xml:lang="en">The character who plays the questioner role in a pair.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ペアにおいて質問役を担うキャラクター。</rdfs:comment>
     <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
     <rdfs:range rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
     <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
@@ -75,25 +114,6 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="en">Standing Image</rdfs:label>
-    <rdfs:label xml:lang="ja">立ち絵素材</rdfs:label>
-    <rdfs:comment xml:lang="en">URL of free-to-use standing image illustration for the character.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">キャラクターの立ち絵素材のURL。</rdfs:comment>
-    <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">Explainer</rdfs:label>
-    <rdfs:label xml:lang="ja">解説役</rdfs:label>
-    <rdfs:comment xml:lang="en">The character who plays the explainer role in a pair.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">ペアにおいて解説役を担うキャラクター。</rdfs:comment>
-    <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
-    <rdfs:range rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:label xml:lang="en">Speech Style</rdfs:label>
@@ -104,14 +124,13 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">Image Creator</rdfs:label>
-    <rdfs:label xml:lang="ja">立ち絵作者</rdfs:label>
-    <rdfs:comment xml:lang="en">The person who created the standing image illustration.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">立ち絵イラストの制作者。</rdfs:comment>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">Standing Image</rdfs:label>
+    <rdfs:label xml:lang="ja">立ち絵素材</rdfs:label>
+    <rdfs:comment xml:lang="en">URL of free-to-use standing image illustration for the character.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">キャラクターの立ち絵素材のURL。</rdfs:comment>
     <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine">
@@ -124,31 +143,12 @@
     <rdfs:range rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine"/>
     <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="en">VOICEVOX Speaker ID</rdfs:label>
-    <rdfs:label xml:lang="ja">VOICEVOX話者ID</rdfs:label>
-    <rdfs:comment xml:lang="en">The numeric speaker identifier used by the VOICEVOX API.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">VOICEVOX APIで使用される数値の話者識別子。</rdfs:comment>
-    <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">VOICEVOX Character</rdfs:label>
-    <rdfs:label xml:lang="ja">VOICEVOXキャラクター</rdfs:label>
-    <rdfs:comment xml:lang="en">A virtual character whose voice is synthesized by the VOICEVOX engine.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">VOICEVOXエンジンで音声合成されるバーチャルキャラクター。</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://schema.org/Person"/>
-    <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner">
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#explainer">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">Questioner</rdfs:label>
-    <rdfs:label xml:lang="ja">質問役</rdfs:label>
-    <rdfs:comment xml:lang="en">The character who plays the questioner role in a pair.</rdfs:comment>
-    <rdfs:comment xml:lang="ja">ペアにおいて質問役を担うキャラクター。</rdfs:comment>
+    <rdfs:label xml:lang="en">Explainer</rdfs:label>
+    <rdfs:label xml:lang="ja">解説役</rdfs:label>
+    <rdfs:comment xml:lang="en">The character who plays the explainer role in a pair.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ペアにおいて解説役を担うキャラクター。</rdfs:comment>
     <rdfs:domain rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
     <rdfs:range rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
     <rdfs:isDefinedBy rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"/>

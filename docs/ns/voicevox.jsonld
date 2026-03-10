@@ -55,6 +55,124 @@
       ]
     },
     {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@language": "en",
+          "@value": "The numeric speaker identifier used by the VOICEVOX API."
+        },
+        {
+          "@language": "ja",
+          "@value": "VOICEVOX APIで使用される数値の話者識別子。"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "en",
+          "@value": "VOICEVOX Speaker ID"
+        },
+        {
+          "@language": "ja",
+          "@value": "VOICEVOX話者ID"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@language": "en",
+          "@value": "A software application that converts text into synthesized speech."
+        },
+        {
+          "@language": "ja",
+          "@value": "テキストを合成音声に変換するソフトウェア。"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "en",
+          "@value": "Text-to-Speech Engine"
+        },
+        {
+          "@language": "ja",
+          "@value": "音声合成エンジン"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "https://schema.org/SoftwareApplication"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@language": "en",
+          "@value": "A description of the character's speech style and typical expressions."
+        },
+        {
+          "@language": "ja",
+          "@value": "キャラクターの口調と典型的な表現の説明。"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "en",
+          "@value": "Speech Style"
+        },
+        {
+          "@language": "ja",
+          "@value": "口調"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ]
+    },
+    {
       "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasEngine",
       "@type": [
         "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -96,23 +214,18 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember",
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair",
       "@type": [
-        "http://www.w3.org/2002/07/owl#ObjectProperty"
+        "http://www.w3.org/2002/07/owl#Class"
       ],
       "http://www.w3.org/2000/01/rdf-schema#comment": [
         {
           "@language": "en",
-          "@value": "A character belonging to this pair (regardless of role)."
+          "@value": "A pair of characters assigned questioner/explainer roles for dialogue-style content."
         },
         {
           "@language": "ja",
-          "@value": "このペアに属するキャラクター（役割問わず）。"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#domain": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+          "@value": "対話コンテンツにおいて質問役・解説役を担うキャラクターのペア。"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -123,16 +236,47 @@
       "http://www.w3.org/2000/01/rdf-schema#label": [
         {
           "@language": "en",
-          "@value": "has member"
+          "@value": "Character Pair"
         },
         {
           "@language": "ja",
-          "@value": "メンバー"
+          "@value": "キャラクターペア"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@language": "en",
+          "@value": "URL of free-to-use standing image illustration for the character."
+        },
+        {
+          "@language": "ja",
+          "@value": "キャラクターの立ち絵素材のURL。"
         }
       ],
-      "http://www.w3.org/2000/01/rdf-schema#range": [
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
         {
           "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "en",
+          "@value": "Standing Image"
+        },
+        {
+          "@language": "ja",
+          "@value": "立ち絵素材"
         }
       ]
     },
@@ -178,18 +322,95 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speakerId",
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#Class"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@language": "en",
+          "@value": "A virtual character whose voice is synthesized by the VOICEVOX engine."
+        },
+        {
+          "@language": "ja",
+          "@value": "VOICEVOXエンジンで音声合成されるバーチャルキャラクター。"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "en",
+          "@value": "VOICEVOX Character"
+        },
+        {
+          "@language": "ja",
+          "@value": "VOICEVOXキャラクター"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        {
+          "@id": "https://schema.org/Person"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hasMember",
+      "@type": [
+        "http://www.w3.org/2002/07/owl#ObjectProperty"
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#comment": [
+        {
+          "@language": "en",
+          "@value": "A character belonging to this pair (regardless of role)."
+        },
+        {
+          "@language": "ja",
+          "@value": "このペアに属するキャラクター（役割問わず）。"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#label": [
+        {
+          "@language": "en",
+          "@value": "has member"
+        },
+        {
+          "@language": "ja",
+          "@value": "メンバー"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+        }
+      ]
+    },
+    {
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor",
       "@type": [
         "http://www.w3.org/2002/07/owl#DatatypeProperty"
       ],
       "http://www.w3.org/2000/01/rdf-schema#comment": [
         {
           "@language": "en",
-          "@value": "The numeric speaker identifier used by the VOICEVOX API."
+          "@value": "The character's theme color as a CSS hex value."
         },
         {
           "@language": "ja",
-          "@value": "VOICEVOX APIで使用される数値の話者識別子。"
+          "@value": "キャラクターのテーマカラー（CSS hex値）。"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -205,16 +426,16 @@
       "http://www.w3.org/2000/01/rdf-schema#label": [
         {
           "@language": "en",
-          "@value": "VOICEVOX Speaker ID"
+          "@value": "Display Color"
         },
         {
           "@language": "ja",
-          "@value": "VOICEVOX話者ID"
+          "@value": "表示カラー"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#range": [
         {
-          "@id": "http://www.w3.org/2001/XMLSchema#integer"
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
         }
       ]
     },
@@ -277,23 +498,23 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner",
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator",
       "@type": [
         "http://www.w3.org/2002/07/owl#ObjectProperty"
       ],
       "http://www.w3.org/2000/01/rdf-schema#comment": [
         {
           "@language": "en",
-          "@value": "The character who plays the questioner role in a pair."
+          "@value": "The person who created the standing image illustration."
         },
         {
           "@language": "ja",
-          "@value": "ペアにおいて質問役を担うキャラクター。"
+          "@value": "立ち絵イラストの制作者。"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#domain": [
         {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -304,16 +525,16 @@
       "http://www.w3.org/2000/01/rdf-schema#label": [
         {
           "@language": "en",
-          "@value": "Questioner"
+          "@value": "Image Creator"
         },
         {
           "@language": "ja",
-          "@value": "質問役"
+          "@value": "立ち絵作者"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#range": [
         {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+          "@id": "http://xmlns.com/foaf/0.1/Person"
         }
       ]
     },
@@ -359,203 +580,23 @@
       ]
     },
     {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#standingImage",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#DatatypeProperty"
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#comment": [
-        {
-          "@language": "en",
-          "@value": "URL of free-to-use standing image illustration for the character."
-        },
-        {
-          "@language": "ja",
-          "@value": "キャラクターの立ち絵素材のURL。"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#domain": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "en",
-          "@value": "Standing Image"
-        },
-        {
-          "@language": "ja",
-          "@value": "立ち絵素材"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#Class"
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#comment": [
-        {
-          "@language": "en",
-          "@value": "A virtual character whose voice is synthesized by the VOICEVOX engine."
-        },
-        {
-          "@language": "ja",
-          "@value": "VOICEVOXエンジンで音声合成されるバーチャルキャラクター。"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "en",
-          "@value": "VOICEVOX Character"
-        },
-        {
-          "@language": "ja",
-          "@value": "VOICEVOXキャラクター"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-        {
-          "@id": "https://schema.org/Person"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#Class"
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#comment": [
-        {
-          "@language": "en",
-          "@value": "A software application that converts text into synthesized speech."
-        },
-        {
-          "@language": "ja",
-          "@value": "テキストを合成音声に変換するソフトウェア。"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "en",
-          "@value": "Text-to-Speech Engine"
-        },
-        {
-          "@language": "ja",
-          "@value": "音声合成エンジン"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-        {
-          "@id": "https://schema.org/SoftwareApplication"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#Class"
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#comment": [
-        {
-          "@language": "en",
-          "@value": "A pair of characters assigned questioner/explainer roles for dialogue-style content."
-        },
-        {
-          "@language": "ja",
-          "@value": "対話コンテンツにおいて質問役・解説役を担うキャラクターのペア。"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "en",
-          "@value": "Character Pair"
-        },
-        {
-          "@language": "ja",
-          "@value": "キャラクターペア"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#displayColor",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#DatatypeProperty"
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#comment": [
-        {
-          "@language": "en",
-          "@value": "The character's theme color as a CSS hex value."
-        },
-        {
-          "@language": "ja",
-          "@value": "キャラクターのテーマカラー（CSS hex値）。"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#domain": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "en",
-          "@value": "Display Color"
-        },
-        {
-          "@language": "ja",
-          "@value": "表示カラー"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#range": [
-        {
-          "@id": "http://www.w3.org/2001/XMLSchema#string"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#imageCreator",
+      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#questioner",
       "@type": [
         "http://www.w3.org/2002/07/owl#ObjectProperty"
       ],
       "http://www.w3.org/2000/01/rdf-schema#comment": [
         {
           "@language": "en",
-          "@value": "The person who created the standing image illustration."
+          "@value": "The character who plays the questioner role in a pair."
         },
         {
           "@language": "ja",
-          "@value": "立ち絵イラストの制作者。"
+          "@value": "ペアにおいて質問役を担うキャラクター。"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#domain": [
         {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
+          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -566,57 +607,16 @@
       "http://www.w3.org/2000/01/rdf-schema#label": [
         {
           "@language": "en",
-          "@value": "Image Creator"
+          "@value": "Questioner"
         },
         {
           "@language": "ja",
-          "@value": "立ち絵作者"
+          "@value": "質問役"
         }
       ],
       "http://www.w3.org/2000/01/rdf-schema#range": [
-        {
-          "@id": "http://xmlns.com/foaf/0.1/Person"
-        }
-      ]
-    },
-    {
-      "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#speechStyle",
-      "@type": [
-        "http://www.w3.org/2002/07/owl#DatatypeProperty"
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#comment": [
-        {
-          "@language": "en",
-          "@value": "A description of the character's speech style and typical expressions."
-        },
-        {
-          "@language": "ja",
-          "@value": "キャラクターの口調と典型的な表現の説明。"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#domain": [
         {
           "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-        {
-          "@id": "https://nakamura196.github.io/voicevox-character-lod/ns/voicevox"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#label": [
-        {
-          "@language": "en",
-          "@value": "Speech Style"
-        },
-        {
-          "@language": "ja",
-          "@value": "口調"
-        }
-      ],
-      "http://www.w3.org/2000/01/rdf-schema#range": [
-        {
-          "@id": "http://www.w3.org/2001/XMLSchema#string"
         }
       ]
     }

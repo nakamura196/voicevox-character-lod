@@ -1,9 +1,9 @@
 {
-  "triples": 238,
-  "entities": 16,
+  "triples": 591,
+  "entities": 38,
   "classes": 7,
   "properties": 30,
-  "characters": 8,
-  "pairs": 4,
-  "wikidata_links": 5
+  "characters": 27,
+  "pairs": 7,
+  "wikidata_links": 6
 }

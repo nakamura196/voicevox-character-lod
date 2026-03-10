@@ -8,177 +8,95 @@
    xmlns:schema="https://schema.org/"
    xmlns:vvox="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#"
 >
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi">
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#maron">
     <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <schema:name xml:lang="ja">中国うさぎ</schema:name>
-    <schema:name xml:lang="en">Chugoku Usagi</schema:name>
-    <foaf:nick xml:lang="ja">うさぎ</foaf:nick>
-    <foaf:nick xml:lang="en">Usagi</foaf:nick>
-    <schema:description xml:lang="ja">おどおどした控えめな口調のキャラクター。「〜かな…」「えっと…」を使う。</schema:description>
-    <schema:description xml:lang="en">A shy, reserved character who uses hesitant speech patterns.</schema:description>
-    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</vvox:speakerId>
-    <vvox:speechStyle xml:lang="ja">おどおどした控えめな口調。「〜かな…」「えっと…」「すごい…！」を使う</vvox:speechStyle>
-    <vvox:sampleLine xml:lang="ja">えっと…それって何かな…？</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">す、すごい…！</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">な、なるほど…！</vvox:sampleLine>
-    <vvox:displayColor>#ef9a9a</vvox:displayColor>
-    <vvox:displayColorDark>#e53935</vvox:displayColorDark>
-    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im11023586"/>
-    <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
+    <schema:name xml:lang="ja">栗田まろん</schema:name>
+    <schema:name xml:lang="en">Kurita Maron</schema:name>
+    <foaf:nick xml:lang="ja">まろん</foaf:nick>
+    <foaf:nick xml:lang="en">Maron</foaf:nick>
+    <schema:description xml:lang="ja">おっとりした女性キャラクター。優しく丁寧な口調。</schema:description>
+    <schema:description xml:lang="en">A gentle female character with a kind, polite speaking style.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">優しく丁寧な口調。「〜ですわ」「〜ですの」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">あら、そうですの</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">素敵ですわ</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">ごきげんよう</vvox:sampleLine>
+    <vvox:displayColor>#bcaaa4</vvox:displayColor>
+    <vvox:displayColorDark>#5d4037</vvox:displayColorDark>
     <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
-    <schema:license rdf:resource="https://zunko.jp/guideline.html"/>
-    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/chugoku_usagi/"/>
-    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/chugoku_usagi/"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/kurita_maron/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/kurita_maron/"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan">
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zunko_itako">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
+    <rdfs:label xml:lang="ja">ずん子 × イタコ</rdfs:label>
+    <rdfs:label xml:lang="en">Zunko x Itako</rdfs:label>
+    <dcterms:description xml:lang="ja">東北姉妹。ずん子が元気に質問し、イタコが落ち着いて解説。</dcterms:description>
+    <dcterms:description xml:lang="en">Tohoku sisters. Zunko asks cheerfully while Itako explains calmly.</dcterms:description>
+    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zunko"/>
+    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#itako"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zunko"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#itako"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#himari">
     <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <schema:name xml:lang="ja">東北きりたん</schema:name>
-    <schema:name xml:lang="en">Tohoku Kiritan</schema:name>
-    <foaf:nick xml:lang="ja">きりたん</foaf:nick>
-    <foaf:nick xml:lang="en">Kiritan</foaf:nick>
-    <schema:description xml:lang="ja">冷静でクールな口調のキャラクター。「つまり〜ということです」を使う。</schema:description>
-    <schema:description xml:lang="en">A calm, cool character with a composed speaking style.</schema:description>
-    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</vvox:speakerId>
-    <vvox:speechStyle xml:lang="ja">冷静でクールな口調。「〜です」「〜ですね」「つまり〜ということです」を使う</vvox:speechStyle>
+    <schema:name xml:lang="ja">冥鳴ひまり</schema:name>
+    <schema:name xml:lang="en">Meimei Himari</schema:name>
+    <foaf:nick xml:lang="ja">ひまり</foaf:nick>
+    <foaf:nick xml:lang="en">Himari</foaf:nick>
+    <schema:description xml:lang="ja">おっとりした癒し系の声のキャラクター。のんびりとした口調。</schema:description>
+    <schema:description xml:lang="en">A soothing, gentle-voiced character with a relaxed speaking style.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">おっとりのんびりした口調。「〜だよ〜」「〜なの〜」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">うん、そうだよ〜</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">へぇ〜、おもしろいね〜</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">わかった〜</vvox:sampleLine>
+    <vvox:displayColor>#f8bbd0</vvox:displayColor>
+    <vvox:displayColorDark>#c2185b</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/meimei_himari/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/meimei_himari/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#ritsu">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">波音リツ</schema:name>
+    <schema:name xml:lang="en">Namine Ritsu</schema:name>
+    <foaf:nick xml:lang="ja">リツ</foaf:nick>
+    <foaf:nick xml:lang="en">Ritsu</foaf:nick>
+    <schema:description xml:lang="ja">力強くハスキーな声のキャラクター。UTAU発のキャラクターとしても有名。</schema:description>
+    <schema:description xml:lang="en">A powerful, husky-voiced character. Also famous as an UTAU-originated character.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">力強くストレートな口調。はっきりした物言い</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">なるほどね</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">それでいいんじゃない？</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">はっきり言うけどさ</vvox:sampleLine>
+    <vvox:displayColor>#fff176</vvox:displayColor>
+    <vvox:displayColorDark>#f9a825</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/namine_ritsu/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/namine_ritsu/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">九州そら</schema:name>
+    <schema:name xml:lang="en">Kyushu Sora</schema:name>
+    <foaf:nick xml:lang="ja">そら</foaf:nick>
+    <foaf:nick xml:lang="en">Sora</foaf:nick>
+    <schema:description xml:lang="ja">おっとりした丁寧な口調のキャラクター。「〜ですね」「〜かしら」を使う。</schema:description>
+    <schema:description xml:lang="en">A gentle character with a polite speaking style.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">おっとりした丁寧な口調。「〜ですね」「〜でしょう」「〜かしら」を使う</vvox:speechStyle>
     <vvox:sampleLine xml:lang="ja">そうですね</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">つまり〜ということです</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">理解しました</vvox:sampleLine>
-    <vvox:displayColor>#ce93d8</vvox:displayColor>
-    <vvox:displayColorDark>#ab47bc</vvox:displayColorDark>
-    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10849149"/>
+    <vvox:sampleLine xml:lang="ja">〜ではないでしょうか</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">素敵ですね</vvox:sampleLine>
+    <vvox:displayColor>#ea80fc</vvox:displayColor>
+    <vvox:displayColorDark>#aa00ff</vvox:displayColorDark>
+    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10924061"/>
     <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
     <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
     <schema:license rdf:resource="https://zunko.jp/guideline.html"/>
-    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/tohoku_kiritan/"/>
-    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/tohoku_kiritan/"/>
-    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q55634043"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul">
-    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
-    <rdfs:label xml:lang="ja">はう × WhiteCUL</rdfs:label>
-    <rdfs:label xml:lang="en">Hau x WhiteCUL</rdfs:label>
-    <dcterms:description xml:lang="ja">元気ナース×知的。はうがハキハキ質問し、WhiteCULが知的に解説。</dcterms:description>
-    <dcterms:description xml:lang="en">Energetic x Intellectual. Hau asks briskly while WhiteCUL explains thoughtfully.</dcterms:description>
-    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau"/>
-    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul"/>
-    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau"/>
-    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora">
-    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
-    <rdfs:label xml:lang="ja">うさぎ × そら</rdfs:label>
-    <rdfs:label xml:lang="en">Usagi x Sora</rdfs:label>
-    <dcterms:description xml:lang="ja">控えめ×おっとり。うさぎがおどおど質問し、そらが優しく解説。</dcterms:description>
-    <dcterms:description xml:lang="en">Shy x Gentle. Usagi asks timidly while Sora explains kindly.</dcterms:description>
-    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi"/>
-    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora"/>
-    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi"/>
-    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan">
-    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
-    <rdfs:label xml:lang="ja">つむぎ × きりたん</rdfs:label>
-    <rdfs:label xml:lang="en">Tsumugi x Kiritan</rdfs:label>
-    <dcterms:description xml:lang="ja">ギャル×クール。つむぎがカジュアルに質問し、きりたんが冷静に解説。</dcterms:description>
-    <dcterms:description xml:lang="en">Gyaru x Cool. Tsumugi asks casually while Kiritan explains calmly.</dcterms:description>
-    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi"/>
-    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan"/>
-    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi"/>
-    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox">
-    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine"/>
-    <rdf:type rdf:resource="https://schema.org/SoftwareApplication"/>
-    <schema:name xml:lang="ja">VOICEVOX</schema:name>
-    <schema:name xml:lang="en">VOICEVOX</schema:name>
-    <schema:description xml:lang="ja">無料で使えるテキスト読み上げ・歌声合成ソフトウェア。商用・非商用問わず利用可能。</schema:description>
-    <schema:description xml:lang="en">Free text-to-speech and singing voice synthesis software. Available for both commercial and non-commercial use.</schema:description>
-    <schema:url rdf:resource="https://voicevox.hiroshiba.jp/"/>
-    <schema:license rdf:resource="https://github.com/VOICEVOX/voicevox/blob/main/LICENSE"/>
-    <schema:author rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba"/>
-    <schema:applicationCategory xml:lang="en">Multimedia</schema:applicationCategory>
-    <schema:applicationCategory xml:lang="ja">マルチメディア</schema:applicationCategory>
-    <schema:operatingSystem>Windows, macOS, Linux</schema:operatingSystem>
-    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q106428182"/>
-    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/lod/voicevox">
-    <rdf:type rdf:resource="https://schema.org/Dataset"/>
-    <schema:name xml:lang="en">VOICEVOX Character LOD</schema:name>
-    <schema:name xml:lang="ja">VOICEVOX キャラクター LOD</schema:name>
-    <schema:description xml:lang="en">Linked Open Data dataset describing characters, speech styles, and dialogue pairs of the VOICEVOX text-to-speech engine.</schema:description>
-    <schema:description xml:lang="ja">VOICEVOXテキスト音声合成エンジンのキャラクター・口調・対話ペアを記述するLinked Open Dataデータセット。</schema:description>
-    <schema:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-    <schema:creator rdf:resource="https://github.com/nakamura196"/>
-    <schema:dateCreated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-10</schema:dateCreated>
-    <schema:dateModified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-10</schema:dateModified>
-    <schema:url rdf:resource="https://nakamura196.github.io/voicevox-character-lod/"/>
-    <schema:isBasedOn rdf:resource="https://voicevox.hiroshiba.jp/"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau">
-    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <schema:name xml:lang="ja">雨晴はう</schema:name>
-    <schema:name xml:lang="en">Amehare Hau</schema:name>
-    <foaf:nick xml:lang="ja">はう</foaf:nick>
-    <foaf:nick xml:lang="en">Hau</foaf:nick>
-    <schema:description xml:lang="ja">元気でハキハキした口調のキャラクター。看護学生。</schema:description>
-    <schema:description xml:lang="en">An energetic character with a lively speaking style. A nursing student.</schema:description>
-    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</vvox:speakerId>
-    <vvox:speechStyle xml:lang="ja">元気でハキハキした口調。「〜だよ！」「えっと〜」「がんばろう！」を使う</vvox:speechStyle>
-    <vvox:sampleLine xml:lang="ja">えっと、それって何？</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">わぁ、すごいね！</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">なるほど〜！</vvox:sampleLine>
-    <vvox:displayColor>#4dd0e1</vvox:displayColor>
-    <vvox:displayColorDark>#00acc1</vvox:displayColorDark>
-    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10913655"/>
-    <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
-    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
-    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/amehare_hau/"/>
-    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/amehare_hau/"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi">
-    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <schema:name xml:lang="ja">春日部つむぎ</schema:name>
-    <schema:name xml:lang="en">Kasukabe Tsumugi</schema:name>
-    <foaf:nick xml:lang="ja">つむぎ</foaf:nick>
-    <foaf:nick xml:lang="en">Tsumugi</foaf:nick>
-    <schema:description xml:lang="ja">明るくギャルっぽい口調のキャラクター。「〜じゃん」「マジ？」を多用。</schema:description>
-    <schema:description xml:lang="en">A bright, gyaru-style character. Frequently uses casual expressions like 'Maji?' (Really?)</schema:description>
-    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</vvox:speakerId>
-    <vvox:speechStyle xml:lang="ja">明るくギャルっぽい口調。「〜じゃん」「マジ？」「やばくない？」を使う</vvox:speechStyle>
-    <vvox:sampleLine xml:lang="ja">えー、マジ？</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">それやばくない？</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">なるほどね〜！</vvox:sampleLine>
-    <vvox:displayColor>#ffab40</vvox:displayColor>
-    <vvox:displayColorDark>#ff6d00</vvox:displayColorDark>
-    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10849150"/>
-    <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
-    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
-    <schema:license rdf:resource="https://tsumugi-official.studio.site/rule"/>
-    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/kasukabe_tsumugi/"/>
-    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/kasukabe_tsumugi/"/>
-    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q113476220"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul">
-    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <schema:name xml:lang="ja">WhiteCUL</schema:name>
-    <schema:name xml:lang="en">WhiteCUL</schema:name>
-    <foaf:nick xml:lang="ja">WhiteCUL</foaf:nick>
-    <foaf:nick xml:lang="en">WhiteCUL</foaf:nick>
-    <schema:description xml:lang="ja">知的で落ち着いた口調のキャラクター。「〜だよ」「〜だね」を使う。</schema:description>
-    <schema:description xml:lang="en">An intellectual character with a calm speaking style.</schema:description>
-    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</vvox:speakerId>
-    <vvox:speechStyle xml:lang="ja">知的で落ち着いた口調。「〜だよ」「〜だね」「〜かな」を使う</vvox:speechStyle>
-    <vvox:sampleLine xml:lang="ja">それはね</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">ポイントはここだよ</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">簡単に説明するね</vvox:sampleLine>
-    <vvox:displayColor>#90caf9</vvox:displayColor>
-    <vvox:displayColorDark>#1e88e5</vvox:displayColorDark>
-    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10934660"/>
-    <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
-    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
-    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/whitecul/"/>
-    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/whitecul/"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/kyushu_sora/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/kyushu_sora/"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan">
     <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
@@ -203,6 +121,448 @@
     <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/shikoku_metan/"/>
     <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q113476218"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#chibijii">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">ちび式じい</schema:name>
+    <schema:name xml:lang="en">Chibishiki Jii</schema:name>
+    <foaf:nick xml:lang="ja">ちび式じい</foaf:nick>
+    <foaf:nick xml:lang="en">Chibi Jii</foaf:nick>
+    <schema:description xml:lang="ja">おじいさんキャラクター。穏やかで味わい深い口調。</schema:description>
+    <schema:description xml:lang="en">An elderly character with a gentle and flavorful speaking style.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">穏やかなおじいさん口調。「〜じゃのう」「〜かのう」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">ほっほっほ</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">なるほどのう</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">それはよいことじゃ</vvox:sampleLine>
+    <vvox:displayColor>#d7ccc8</vvox:displayColor>
+    <vvox:displayColorDark>#795548</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/chibishiki_jii/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/chibishiki_jii/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://twitter.com/sakamoto_ahr">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="https://schema.org/Person"/>
+    <schema:name xml:lang="ja">坂本アヒル</schema:name>
+    <schema:name xml:lang="en">Sakamoto Ahiru</schema:name>
+    <foaf:name xml:lang="ja">坂本アヒル</foaf:name>
+    <foaf:homepage rdf:resource="https://twitter.com/sakamoto_ahr"/>
+    <schema:description xml:lang="ja">VOICEVOX公式キャラクターの立ち絵素材を制作</schema:description>
+    <schema:description xml:lang="en">Creator of standing image illustrations for official VOICEVOX characters</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">春日部つむぎ</schema:name>
+    <schema:name xml:lang="en">Kasukabe Tsumugi</schema:name>
+    <foaf:nick xml:lang="ja">つむぎ</foaf:nick>
+    <foaf:nick xml:lang="en">Tsumugi</foaf:nick>
+    <schema:description xml:lang="ja">明るくギャルっぽい口調のキャラクター。「〜じゃん」「マジ？」を多用。</schema:description>
+    <schema:description xml:lang="en">A bright, gyaru-style character. Frequently uses casual expressions like 'Maji?' (Really?)</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">明るくギャルっぽい口調。「〜じゃん」「マジ？」「やばくない？」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">えー、マジ？</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">それやばくない？</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">なるほどね〜！</vvox:sampleLine>
+    <vvox:displayColor>#ffab40</vvox:displayColor>
+    <vvox:displayColorDark>#ff6d00</vvox:displayColorDark>
+    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10849150"/>
+    <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <schema:license rdf:resource="https://tsumugi-official.studio.site/rule"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/kasukabe_tsumugi/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/kasukabe_tsumugi/"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q113476220"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kouzakura">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">†聖騎士 紅桜†</schema:name>
+    <schema:name xml:lang="en">Holy Knight Kouzakura</schema:name>
+    <foaf:nick xml:lang="ja">紅桜</foaf:nick>
+    <foaf:nick xml:lang="en">Kouzakura</foaf:nick>
+    <schema:description xml:lang="ja">中二病風のキャラクター。大げさで芝居がかった口調。</schema:description>
+    <schema:description xml:lang="en">A chuunibyou-style character with dramatic, theatrical speech.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">中二病風の大げさな口調。「〜であるぞ」「〜なのだ！」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">我が力を見よ！</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">ふっ…面白い</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">これぞ真理…！</vvox:sampleLine>
+    <vvox:displayColor>#ef5350</vvox:displayColor>
+    <vvox:displayColorDark>#b71c1c</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/seikishi_kouzakura/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/seikishi_kouzakura/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_tsumugi_kiritan">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
+    <rdfs:label xml:lang="ja">つむぎ × きりたん</rdfs:label>
+    <rdfs:label xml:lang="en">Tsumugi x Kiritan</rdfs:label>
+    <dcterms:description xml:lang="ja">ギャル×クール。つむぎがカジュアルに質問し、きりたんが冷静に解説。</dcterms:description>
+    <dcterms:description xml:lang="en">Gyaru x Cool. Tsumugi asks casually while Kiritan explains calmly.</dcterms:description>
+    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi"/>
+    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#tsumugi"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_kotaro_ryusei">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
+    <rdfs:label xml:lang="ja">虎太郎 × 龍星</rdfs:label>
+    <rdfs:label xml:lang="en">Kotaro x Ryusei</rdfs:label>
+    <dcterms:description xml:lang="ja">少年×大人。虎太郎が元気に質問し、龍星が渋く解説。</dcterms:description>
+    <dcterms:description xml:lang="en">Boy x Man. Kotaro asks energetically while Ryusei explains in a deep tone.</dcterms:description>
+    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kotaro"/>
+    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#ryusei"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kotaro"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#ryusei"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kotaro">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">白上虎太郎</schema:name>
+    <schema:name xml:lang="en">Shirakami Kotaro</schema:name>
+    <foaf:nick xml:lang="ja">虎太郎</foaf:nick>
+    <foaf:nick xml:lang="en">Kotaro</foaf:nick>
+    <schema:description xml:lang="ja">元気いっぱいの少年キャラクター。明るく活発な口調。</schema:description>
+    <schema:description xml:lang="en">An energetic boy character with a bright and lively tone.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">元気で活発な少年口調。「〜だよ！」「すげー！」「やった！」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">すげー！</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">それってどういうこと？</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">おもしれー！</vvox:sampleLine>
+    <vvox:displayColor>#80deea</vvox:displayColor>
+    <vvox:displayColorDark>#00838f</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/shirakami_kotaro/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/shirakami_kotaro/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kiritan">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">東北きりたん</schema:name>
+    <schema:name xml:lang="en">Tohoku Kiritan</schema:name>
+    <foaf:nick xml:lang="ja">きりたん</foaf:nick>
+    <foaf:nick xml:lang="en">Kiritan</foaf:nick>
+    <schema:description xml:lang="ja">冷静でクールな口調のキャラクター。「つまり〜ということです」を使う。</schema:description>
+    <schema:description xml:lang="en">A calm, cool character with a composed speaking style.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">冷静でクールな口調。「〜です」「〜ですね」「つまり〜ということです」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">そうですね</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">つまり〜ということです</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">理解しました</vvox:sampleLine>
+    <vvox:displayColor>#ce93d8</vvox:displayColor>
+    <vvox:displayColorDark>#ab47bc</vvox:displayColorDark>
+    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10849149"/>
+    <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <schema:license rdf:resource="https://zunko.jp/guideline.html"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/tohoku_kiritan/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/tohoku_kiritan/"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q55634043"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zunko">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">東北ずん子</schema:name>
+    <schema:name xml:lang="en">Tohoku Zunko</schema:name>
+    <foaf:nick xml:lang="ja">ずん子</foaf:nick>
+    <foaf:nick xml:lang="en">Zunko</foaf:nick>
+    <schema:description xml:lang="ja">東北応援キャラクター。ずんだもんの姉的存在。明るく元気な口調。</schema:description>
+    <schema:description xml:lang="en">A character supporting Tohoku region. An elder-sister figure to Zundamon with a bright, cheerful tone.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">明るく元気な口調。「〜だよ」「〜ね」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">えへへ、そうだよ！</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">がんばろうね！</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">楽しいね！</vvox:sampleLine>
+    <vvox:displayColor>#81c784</vvox:displayColor>
+    <vvox:displayColorDark>#2e7d32</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <schema:license rdf:resource="https://zunko.jp/guideline.html"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/tohoku_zunko/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/tohoku_zunko/"/>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q11526103"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#TTSEngine"/>
+    <rdf:type rdf:resource="https://schema.org/SoftwareApplication"/>
+    <schema:name xml:lang="ja">VOICEVOX</schema:name>
+    <schema:name xml:lang="en">VOICEVOX</schema:name>
+    <schema:description xml:lang="ja">無料で使えるテキスト読み上げ・歌声合成ソフトウェア。商用・非商用問わず利用可能。</schema:description>
+    <schema:description xml:lang="en">Free text-to-speech and singing voice synthesis software. Available for both commercial and non-commercial use.</schema:description>
+    <schema:url rdf:resource="https://voicevox.hiroshiba.jp/"/>
+    <schema:license rdf:resource="https://github.com/VOICEVOX/voicevox/blob/main/LICENSE"/>
+    <schema:author rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba"/>
+    <schema:applicationCategory xml:lang="en">Multimedia</schema:applicationCategory>
+    <schema:applicationCategory xml:lang="ja">マルチメディア</schema:applicationCategory>
+    <schema:operatingSystem>Windows, macOS, Linux</schema:operatingSystem>
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q106428182"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#itako">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">東北イタコ</schema:name>
+    <schema:name xml:lang="en">Tohoku Itako</schema:name>
+    <foaf:nick xml:lang="ja">イタコ</foaf:nick>
+    <foaf:nick xml:lang="en">Itako</foaf:nick>
+    <schema:description xml:lang="ja">東北応援キャラクター。落ち着いた大人の女性の口調。</schema:description>
+    <schema:description xml:lang="en">A character supporting Tohoku region with a calm, mature female tone.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">落ち着いた大人の女性口調。「〜ですわ」「〜ですね」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">ええ、そうですわ</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">おもしろいですわね</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">なるほどですわ</vvox:sampleLine>
+    <vvox:displayColor>#ce93d8</vvox:displayColor>
+    <vvox:displayColorDark>#7b1fa2</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <schema:license rdf:resource="https://zunko.jp/guideline.html"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/tohoku_itako/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/tohoku_itako/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_hau_whitecul">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
+    <rdfs:label xml:lang="ja">はう × WhiteCUL</rdfs:label>
+    <rdfs:label xml:lang="en">Hau x WhiteCUL</rdfs:label>
+    <dcterms:description xml:lang="ja">元気ナース×知的。はうがハキハキ質問し、WhiteCULが知的に解説。</dcterms:description>
+    <dcterms:description xml:lang="en">Energetic x Intellectual. Hau asks briskly while WhiteCUL explains thoughtfully.</dcterms:description>
+    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau"/>
+    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#whitecul">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">WhiteCUL</schema:name>
+    <schema:name xml:lang="en">WhiteCUL</schema:name>
+    <foaf:nick xml:lang="ja">WhiteCUL</foaf:nick>
+    <foaf:nick xml:lang="en">WhiteCUL</foaf:nick>
+    <schema:description xml:lang="ja">知的で落ち着いた口調のキャラクター。「〜だよ」「〜だね」を使う。</schema:description>
+    <schema:description xml:lang="en">An intellectual character with a calm speaking style.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">知的で落ち着いた口調。「〜だよ」「〜だね」「〜かな」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">それはね</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">ポイントはここだよ</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">簡単に説明するね</vvox:sampleLine>
+    <vvox:displayColor>#90caf9</vvox:displayColor>
+    <vvox:displayColorDark>#1e88e5</vvox:displayColorDark>
+    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10934660"/>
+    <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/whitecul/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/whitecul/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sayo">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">小夜/SAYO</schema:name>
+    <schema:name xml:lang="en">SAYO</schema:name>
+    <foaf:nick xml:lang="ja">小夜</foaf:nick>
+    <foaf:nick xml:lang="en">SAYO</foaf:nick>
+    <schema:description xml:lang="ja">静かで落ち着いた声のキャラクター。ミステリアスな雰囲気。</schema:description>
+    <schema:description xml:lang="en">A quiet, calm-voiced character with a mysterious atmosphere.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">静かで落ち着いた口調。「〜ね」「〜かしら」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">そう…</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">不思議ね</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">なるほど…そういうこと</vvox:sampleLine>
+    <vvox:displayColor>#e0e0e0</vvox:displayColor>
+    <vvox:displayColorDark>#757575</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/sayo/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/sayo/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#kenzaki">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">剣崎雌雄</schema:name>
+    <schema:name xml:lang="en">Kenzaki Mesuo</schema:name>
+    <foaf:nick xml:lang="ja">雌雄</foaf:nick>
+    <foaf:nick xml:lang="en">Mesuo</foaf:nick>
+    <schema:description xml:lang="ja">中性的な声のキャラクター。クールで知的な口調。</schema:description>
+    <schema:description xml:lang="en">An androgynous-voiced character with a cool, intellectual tone.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">クールで中性的な口調。「〜だね」「〜かな」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">ふーん、そうなんだ</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">なかなか面白いね</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">そういうことか</vvox:sampleLine>
+    <vvox:displayColor>#80cbc4</vvox:displayColor>
+    <vvox:displayColorDark>#00897b</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/kenzaki_mesuo/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/kenzaki_mesuo/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#ryusei">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">青山龍星</schema:name>
+    <schema:name xml:lang="en">Aoyama Ryusei</schema:name>
+    <foaf:nick xml:lang="ja">龍星</foaf:nick>
+    <foaf:nick xml:lang="en">Ryusei</foaf:nick>
+    <schema:description xml:lang="ja">低く渋い声のキャラクター。落ち着いた大人の男性の口調。</schema:description>
+    <schema:description xml:lang="en">A deep, cool-voiced character with a mature masculine tone.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">低く落ち着いた男性口調。「〜だな」「〜だろう」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">なるほどな</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">そういうことだ</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">興味深いな</vvox:sampleLine>
+    <vvox:displayColor>#90a4ae</vvox:displayColor>
+    <vvox:displayColorDark>#546e7a</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/aoyama_ryusei/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/aoyama_ryusei/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekoaru">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">猫使アル</schema:name>
+    <schema:name xml:lang="en">Nekotsukai Aru</schema:name>
+    <foaf:nick xml:lang="ja">アル</foaf:nick>
+    <foaf:nick xml:lang="en">Aru</foaf:nick>
+    <schema:description xml:lang="ja">猫をモチーフにしたキャラクター。気まぐれで自由な口調。</schema:description>
+    <schema:description xml:lang="en">A cat-themed character with a capricious, free-spirited tone.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">気まぐれで自由な口調。「〜にゃ」「〜かも」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">にゃるほど</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">おもしろそう</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">まぁいいか</vvox:sampleLine>
+    <vvox:displayColor>#fff59d</vvox:displayColor>
+    <vvox:displayColorDark>#f57f17</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/nekotsukai_aru/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/nekotsukai_aru/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/lod/voicevox">
+    <rdf:type rdf:resource="https://schema.org/Dataset"/>
+    <schema:name xml:lang="en">VOICEVOX Character LOD</schema:name>
+    <schema:name xml:lang="ja">VOICEVOX キャラクター LOD</schema:name>
+    <schema:description xml:lang="en">Linked Open Data dataset describing characters, speech styles, and dialogue pairs of the VOICEVOX text-to-speech engine.</schema:description>
+    <schema:description xml:lang="ja">VOICEVOXテキスト音声合成エンジンのキャラクター・口調・対話ペアを記述するLinked Open Dataデータセット。</schema:description>
+    <schema:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <schema:creator rdf:resource="https://github.com/nakamura196"/>
+    <schema:dateCreated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-10</schema:dateCreated>
+    <schema:dateModified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-11</schema:dateModified>
+    <schema:url rdf:resource="https://nakamura196.github.io/voicevox-character-lod/"/>
+    <schema:isBasedOn rdf:resource="https://voicevox.hiroshiba.jp/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_usagi_sora">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
+    <rdfs:label xml:lang="ja">うさぎ × そら</rdfs:label>
+    <rdfs:label xml:lang="en">Usagi x Sora</rdfs:label>
+    <dcterms:description xml:lang="ja">控えめ×おっとり。うさぎがおどおど質問し、そらが優しく解説。</dcterms:description>
+    <dcterms:description xml:lang="en">Shy x Gentle. Usagi asks timidly while Sora explains kindly.</dcterms:description>
+    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi"/>
+    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
+    <rdfs:label xml:lang="ja">ずんだもん × めたん</rdfs:label>
+    <rdfs:label xml:lang="en">Zundamon x Metan</rdfs:label>
+    <dcterms:description xml:lang="ja">定番ペア。ずんだもんが素朴に質問し、めたんが丁寧に解説。</dcterms:description>
+    <dcterms:description xml:lang="en">Classic pair. Zundamon asks naive questions while Metan explains politely.</dcterms:description>
+    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon"/>
+    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#miko">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">櫻歌ミコ</schema:name>
+    <schema:name xml:lang="en">Ouka Miko</schema:name>
+    <foaf:nick xml:lang="ja">ミコ</foaf:nick>
+    <foaf:nick xml:lang="en">Miko</foaf:nick>
+    <schema:description xml:lang="ja">UTAU発のキャラクター。複数のフォーム（第二形態等）を持つ。</schema:description>
+    <schema:description xml:lang="en">An UTAU-originated character with multiple forms.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">明るく元気な口調。「〜だよ！」「〜ね！」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">やっほー！</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">それいいね！</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">がんばるよ！</vvox:sampleLine>
+    <vvox:displayColor>#ffab91</vvox:displayColor>
+    <vvox:displayColorDark>#e64a19</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/ouka_miko/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/ouka_miko/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekobii">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">猫使ビィ</schema:name>
+    <schema:name xml:lang="en">Nekotsukai Bii</schema:name>
+    <foaf:nick xml:lang="ja">ビィ</foaf:nick>
+    <foaf:nick xml:lang="en">Bii</foaf:nick>
+    <schema:description xml:lang="ja">猫使アルと対をなすキャラクター。おとなしめの口調。</schema:description>
+    <schema:description xml:lang="en">A companion character to Nekotsukai Aru with a quieter tone.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">おとなしく控えめな口調。「〜だよ」「〜かな」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">うん…</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">そうかも</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">ちょっと気になる</vvox:sampleLine>
+    <vvox:displayColor>#c5e1a5</vvox:displayColor>
+    <vvox:displayColorDark>#558b2f</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/nekotsukai_bii/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/nekotsukai_bii/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="https://schema.org/Person"/>
+    <schema:name xml:lang="ja">ヒホ（廣芝和之）</schema:name>
+    <schema:name xml:lang="en">Hiho (Kazuyuki Hiroshiba)</schema:name>
+    <foaf:name xml:lang="ja">ヒホ</foaf:name>
+    <foaf:homepage rdf:resource="https://hiroshiba.jp/"/>
+    <owl:sameAs rdf:resource="https://github.com/Hiroshiba"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#usagi">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">中国うさぎ</schema:name>
+    <schema:name xml:lang="en">Chugoku Usagi</schema:name>
+    <foaf:nick xml:lang="ja">うさぎ</foaf:nick>
+    <foaf:nick xml:lang="en">Usagi</foaf:nick>
+    <schema:description xml:lang="ja">おどおどした控えめな口調のキャラクター。「〜かな…」「えっと…」を使う。</schema:description>
+    <schema:description xml:lang="en">A shy, reserved character who uses hesitant speech patterns.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">おどおどした控えめな口調。「〜かな…」「えっと…」「すごい…！」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">えっと…それって何かな…？</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">す、すごい…！</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">な、なるほど…！</vvox:sampleLine>
+    <vvox:displayColor>#ef9a9a</vvox:displayColor>
+    <vvox:displayColorDark>#e53935</vvox:displayColorDark>
+    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im11023586"/>
+    <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <schema:license rdf:resource="https://zunko.jp/guideline.html"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/chugoku_usagi/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/chugoku_usagi/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#mochiko">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">もち子さん</schema:name>
+    <schema:name xml:lang="en">Mochiko-san</schema:name>
+    <foaf:nick xml:lang="ja">もち子</foaf:nick>
+    <foaf:nick xml:lang="en">Mochiko</foaf:nick>
+    <schema:description xml:lang="ja">やわらかくかわいい声のキャラクター。おっとりした口調。</schema:description>
+    <schema:description xml:lang="en">A soft, cute-voiced character with a gentle speaking style.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">やわらかくかわいい口調。「〜です」「〜ですよ」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">はい、そうです</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">えへへ</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">がんばります！</vvox:sampleLine>
+    <vvox:displayColor>#b39ddb</vvox:displayColor>
+    <vvox:displayColorDark>#673ab7</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/mochiko/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/mochiko/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#goki">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">後鬼</schema:name>
+    <schema:name xml:lang="en">Goki</schema:name>
+    <foaf:nick xml:lang="ja">後鬼</foaf:nick>
+    <foaf:nick xml:lang="en">Goki</foaf:nick>
+    <schema:description xml:lang="ja">鬼をモチーフにしたキャラクター。複数の人格スタイルを持つ。</schema:description>
+    <schema:description xml:lang="en">An oni-themed character with multiple personality styles.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">落ち着いた口調と荒々しい口調を使い分ける</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">ふむ…</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">それで？</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">わかった</vvox:sampleLine>
+    <vvox:displayColor>#ffcc80</vvox:displayColor>
+    <vvox:displayColorDark>#ef6c00</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/goki/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/goki/"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon">
     <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
     <schema:name xml:lang="ja">ずんだもん</schema:name>
@@ -226,56 +586,93 @@
     <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/zundamon/"/>
     <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q113476219"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://twitter.com/sakamoto_ahr">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdf:type rdf:resource="https://schema.org/Person"/>
-    <schema:name xml:lang="ja">坂本アヒル</schema:name>
-    <schema:name xml:lang="en">Sakamoto Ahiru</schema:name>
-    <foaf:name xml:lang="ja">坂本アヒル</foaf:name>
-    <foaf:homepage rdf:resource="https://twitter.com/sakamoto_ahr"/>
-    <schema:description xml:lang="ja">VOICEVOX公式キャラクターの立ち絵素材を制作</schema:description>
-    <schema:description xml:lang="en">Creator of standing image illustrations for official VOICEVOX characters</schema:description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_nekoaru_nekobii">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
+    <rdfs:label xml:lang="ja">アル × ビィ</rdfs:label>
+    <rdfs:label xml:lang="en">Aru x Bii</rdfs:label>
+    <dcterms:description xml:lang="ja">猫使ペア。アルが気まぐれに質問し、ビィが控えめに解説。</dcterms:description>
+    <dcterms:description xml:lang="en">Cat-user pair. Aru asks capriciously while Bii explains quietly.</dcterms:description>
+    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekoaru"/>
+    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekobii"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekoaru"/>
+    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nekobii"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#sora">
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#no7">
     <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
-    <schema:name xml:lang="ja">九州そら</schema:name>
-    <schema:name xml:lang="en">Kyushu Sora</schema:name>
-    <foaf:nick xml:lang="ja">そら</foaf:nick>
-    <foaf:nick xml:lang="en">Sora</foaf:nick>
-    <schema:description xml:lang="ja">おっとりした丁寧な口調のキャラクター。「〜ですね」「〜かしら」を使う。</schema:description>
-    <schema:description xml:lang="en">A gentle character with a polite speaking style.</schema:description>
-    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</vvox:speakerId>
-    <vvox:speechStyle xml:lang="ja">おっとりした丁寧な口調。「〜ですね」「〜でしょう」「〜かしら」を使う</vvox:speechStyle>
-    <vvox:sampleLine xml:lang="ja">そうですね</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">〜ではないでしょうか</vvox:sampleLine>
-    <vvox:sampleLine xml:lang="ja">素敵ですね</vvox:sampleLine>
-    <vvox:displayColor>#ea80fc</vvox:displayColor>
-    <vvox:displayColorDark>#aa00ff</vvox:displayColorDark>
-    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10924061"/>
+    <schema:name xml:lang="ja">No.7</schema:name>
+    <schema:name xml:lang="en">No.7</schema:name>
+    <foaf:nick xml:lang="ja">No.7</foaf:nick>
+    <foaf:nick xml:lang="en">No.7</foaf:nick>
+    <schema:description xml:lang="ja">ロボット風の無機質な声のキャラクター。アナウンス・読み上げスタイルを持つ。</schema:description>
+    <schema:description xml:lang="en">A robotic, inorganic-voiced character with announcement and reading styles.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">無機質で淡々とした口調。「〜です」「〜ます」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">了解しました</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">報告します</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">データを確認します</vvox:sampleLine>
+    <vvox:displayColor>#b0bec5</vvox:displayColor>
+    <vvox:displayColorDark>#607d8b</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/no7/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/no7/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hau">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">雨晴はう</schema:name>
+    <schema:name xml:lang="en">Amehare Hau</schema:name>
+    <foaf:nick xml:lang="ja">はう</foaf:nick>
+    <foaf:nick xml:lang="en">Hau</foaf:nick>
+    <schema:description xml:lang="ja">元気でハキハキした口調のキャラクター。看護学生。</schema:description>
+    <schema:description xml:lang="en">An energetic character with a lively speaking style. A nursing student.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">元気でハキハキした口調。「〜だよ！」「えっと〜」「がんばろう！」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">えっと、それって何？</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">わぁ、すごいね！</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">なるほど〜！</vvox:sampleLine>
+    <vvox:displayColor>#4dd0e1</vvox:displayColor>
+    <vvox:displayColorDark>#00acc1</vvox:displayColorDark>
+    <vvox:standingImage rdf:resource="https://seiga.nicovideo.jp/seiga/im10913655"/>
     <vvox:imageCreator rdf:resource="https://twitter.com/sakamoto_ahr"/>
     <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
-    <schema:license rdf:resource="https://zunko.jp/guideline.html"/>
-    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/kyushu_sora/"/>
-    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/kyushu_sora/"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/amehare_hau/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/amehare_hau/"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#pair_zundamon_metan">
-    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#CharacterPair"/>
-    <rdfs:label xml:lang="ja">ずんだもん × めたん</rdfs:label>
-    <rdfs:label xml:lang="en">Zundamon x Metan</rdfs:label>
-    <dcterms:description xml:lang="ja">定番ペア。ずんだもんが素朴に質問し、めたんが丁寧に解説。</dcterms:description>
-    <dcterms:description xml:lang="en">Classic pair. Zundamon asks naive questions while Metan explains politely.</dcterms:description>
-    <vvox:questioner rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon"/>
-    <vvox:explainer rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan"/>
-    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#zundamon"/>
-    <vvox:hasMember rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#metan"/>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#nurserobot">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">ナースロボ＿タイプT</schema:name>
+    <schema:name xml:lang="en">Nurse Robot Type T</schema:name>
+    <foaf:nick xml:lang="ja">ナースロボ</foaf:nick>
+    <foaf:nick xml:lang="en">Nurse Robot</foaf:nick>
+    <schema:description xml:lang="ja">ナースロボットのキャラクター。丁寧で機械的な口調。</schema:description>
+    <schema:description xml:lang="en">A nurse robot character with a polite, mechanical speaking style.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">丁寧で機械的な口調。「〜です」「〜ですね」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">お体の調子はいかがですか</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">了解しました</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">ご説明いたします</vvox:sampleLine>
+    <vvox:displayColor>#e6ee9c</vvox:displayColor>
+    <vvox:displayColorDark>#9e9d24</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/nurse_robot_type_t/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/nurse_robot_type_t/"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#hiroshiba">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdf:type rdf:resource="https://schema.org/Person"/>
-    <schema:name xml:lang="ja">ヒホ（廣芝和之）</schema:name>
-    <schema:name xml:lang="en">Hiho (Kazuyuki Hiroshiba)</schema:name>
-    <foaf:name xml:lang="ja">ヒホ</foaf:name>
-    <foaf:homepage rdf:resource="https://hiroshiba.jp/"/>
-    <owl:sameAs rdf:resource="https://github.com/Hiroshiba"/>
+  <rdf:Description rdf:about="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#takehiro">
+    <rdf:type rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#Character"/>
+    <schema:name xml:lang="ja">玄野武宏</schema:name>
+    <schema:name xml:lang="en">Genno Takehiro</schema:name>
+    <foaf:nick xml:lang="ja">武宏</foaf:nick>
+    <foaf:nick xml:lang="en">Takehiro</foaf:nick>
+    <schema:description xml:lang="ja">落ち着いた青年の声のキャラクター。サラリーマン風の丁寧な口調。</schema:description>
+    <schema:description xml:lang="en">A calm young man's voice character with a polite, business-like tone.</schema:description>
+    <vvox:speakerId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</vvox:speakerId>
+    <vvox:speechStyle xml:lang="ja">落ち着いた丁寧な男性口調。「〜ですね」「〜でしょうか」を使う</vvox:speechStyle>
+    <vvox:sampleLine xml:lang="ja">なるほど、そういうことですか</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">確かにそうですね</vvox:sampleLine>
+    <vvox:sampleLine xml:lang="ja">説明しましょう</vvox:sampleLine>
+    <vvox:displayColor>#a5d6a7</vvox:displayColor>
+    <vvox:displayColorDark>#388e3c</vvox:displayColorDark>
+    <vvox:hasEngine rdf:resource="https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#voicevox"/>
+    <foaf:homepage rdf:resource="https://voicevox.hiroshiba.jp/product/genno_takehiro/"/>
+    <schema:image rdf:resource="https://voicevox.hiroshiba.jp/product/genno_takehiro/"/>
   </rdf:Description>
 </rdf:RDF>

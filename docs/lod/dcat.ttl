@@ -1,0 +1,98 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
+@prefix schema:  <https://schema.org/> .
+@prefix vvox:    <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#> .
+
+# =============================================================================
+# DCAT — Data Catalog Vocabulary
+# VOICEVOX Character LOD Dataset
+# =============================================================================
+
+<https://nakamura196.github.io/voicevox-character-lod/>
+    a dcat:Catalog ;
+    dcterms:title "VOICEVOX Character LOD Catalog"@en ,
+                  "VOICEVOX キャラクター LOD カタログ"@ja ;
+    dcterms:description
+        "Data catalog for the VOICEVOX Character Linked Open Data."@en ,
+        "VOICEVOX キャラクター Linked Open Data のデータカタログ。"@ja ;
+    dcterms:publisher <https://github.com/nakamura196> ;
+    dcat:dataset <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> .
+
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox>
+    a dcat:Dataset ;
+    dcterms:title
+        "VOICEVOX Character Linked Open Data"@en ,
+        "VOICEVOX キャラクター Linked Open Data"@ja ;
+    dcterms:description
+        "Linked Open Data describing characters, speech styles, and dialogue pairs of the VOICEVOX text-to-speech engine. Includes OWL ontology, Wikidata links, and SHACL constraints."@en ,
+        "VOICEVOXテキスト音声合成エンジンのキャラクター・口調・対話ペアを記述するLinked Open Data。OWLオントロジー、Wikidataリンク、SHACL制約を含む。"@ja ;
+    dcterms:creator <https://github.com/nakamura196> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:issued "2026-03-10"^^xsd:date ;
+    dcterms:modified "2026-03-11"^^xsd:date ;
+    dcterms:language <http://id.loc.gov/vocabulary/iso639-1/ja> ,
+                     <http://id.loc.gov/vocabulary/iso639-1/en> ;
+    dcterms:source <https://voicevox.hiroshiba.jp/> ;
+    dcat:theme <http://dbpedia.org/resource/Text-to-speech> ,
+               <http://dbpedia.org/resource/Fictional_character> ;
+    dcat:keyword "VOICEVOX"@en , "TTS"@en , "キャラクター"@ja , "音声合成"@ja ,
+                 "Linked Open Data"@en , "LOD"@en ;
+    dcat:landingPage <https://nakamura196.github.io/voicevox-character-lod/> ;
+    dcat:contactPoint [
+        a vcard:Individual ;
+        vcard:fn "Nakamura" ;
+        vcard:hasURL <https://github.com/nakamura196>
+    ] ;
+
+    # --- Distributions ---
+    dcat:distribution
+        <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.ttl#dist> ,
+        <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.jsonld#dist> ,
+        <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.nt#dist> ,
+        <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.rdf#dist> ;
+
+    # --- SPARQL endpoint as DataService ---
+    dcat:endpointURL <https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql> .
+
+# --- Distributions ---
+
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.ttl#dist>
+    a dcat:Distribution ;
+    dcterms:title "Turtle"@en ;
+    dcat:downloadURL <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.ttl> ;
+    dcat:mediaType "text/turtle" ;
+    dcterms:format "Turtle" .
+
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.jsonld#dist>
+    a dcat:Distribution ;
+    dcterms:title "JSON-LD"@en ;
+    dcat:downloadURL <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.jsonld> ;
+    dcat:mediaType "application/ld+json" ;
+    dcterms:format "JSON-LD" .
+
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.nt#dist>
+    a dcat:Distribution ;
+    dcterms:title "N-Triples"@en ;
+    dcat:downloadURL <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.nt> ;
+    dcat:mediaType "application/n-triples" ;
+    dcterms:format "N-Triples" .
+
+<https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.rdf#dist>
+    a dcat:Distribution ;
+    dcterms:title "RDF/XML"@en ;
+    dcat:downloadURL <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox.rdf> ;
+    dcat:mediaType "application/rdf+xml" ;
+    dcterms:format "RDF/XML" .
+
+# --- SPARQL Data Service ---
+
+<https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql>
+    a dcat:DataService ;
+    dcterms:title "VOICEVOX Character LOD SPARQL Endpoint"@en ;
+    dcat:endpointURL <https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql> ;
+    dcat:servesDataset <https://nakamura196.github.io/voicevox-character-lod/lod/voicevox> .
