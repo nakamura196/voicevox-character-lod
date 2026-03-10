@@ -29,109 +29,354 @@
     "isBasedOn": "https://voicevox.hiroshiba.jp/"
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@triply/yasgui/build/yasgui.min.css">
   <style>
     :root {
-      --bg: #ffffff; --fg: #1a1a2e; --accent: #1976d2; --accent2: #7c4dff;
-      --border: #e0e0e0; --entry: #f5f7fa; --secondary: #666;
+      --bg: #fafbff;
+      --fg: #1e1e2e;
+      --accent: #6c5ce7;
+      --accent2: #00cec9;
+      --accent3: #fd79a8;
+      --accent4: #fdcb6e;
+      --border: rgba(108,92,231,0.12);
+      --entry: #ffffff;
+      --secondary: #636e7b;
+      --card-shadow: 0 4px 20px rgba(108,92,231,0.08);
+      --card-shadow-hover: 0 12px 40px rgba(108,92,231,0.18);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --gradient-hero: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 30%, #fd79a8 60%, #fdcb6e 100%);
+      --gradient-accent: linear-gradient(135deg, #6c5ce7, #a29bfe);
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #1a1a2e; --fg: #e0e0e0; --accent: #64b5f6; --accent2: #b388ff;
-        --border: #333; --entry: #252540; --secondary: #aaa;
+        --bg: #0f0f1a;
+        --fg: #e8e8f0;
+        --border: rgba(162,155,254,0.15);
+        --entry: #1a1a2e;
+        --secondary: #9ca3af;
+        --card-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        --card-shadow-hover: 0 12px 40px rgba(108,92,231,0.3);
       }
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans JP", sans-serif; background: var(--bg); color: var(--fg); line-height: 1.7; }
-    .container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
 
-    /* Lang toggle */
-    .lang-toggle { position: fixed; top: 1rem; right: 1.5rem; z-index: 100; }
-    .lang-toggle button { background: var(--entry); border: 1px solid var(--border); color: var(--fg); padding: 0.3rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
-    .lang-toggle button:hover { border-color: var(--accent); }
-    .lang-toggle button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    /* ===== Header / Nav ===== */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,251,255,0.75);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    @media (prefers-color-scheme: dark) {
+      .site-header { background: rgba(15,15,26,0.8); }
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0.75rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-weight: 800; font-size: 1.1rem;
+      background: var(--gradient-hero); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; gap: 0.5rem; align-items: center; }
+    .nav-links a {
+      font-size: 0.8rem; color: var(--secondary); text-decoration: none;
+      padding: 0.3rem 0.7rem; border-radius: 8px; transition: all 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); background: rgba(108,92,231,0.08); }
+    .lang-toggle { display: flex; gap: 2px; background: var(--border); border-radius: 8px; padding: 2px; }
+    .lang-toggle button {
+      background: transparent; border: none; color: var(--secondary);
+      padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer;
+      font-size: 0.75rem; font-weight: 600; transition: all 0.2s;
+    }
+    .lang-toggle button.active {
+      background: var(--entry); color: var(--accent);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
 
-    /* Hero */
-    .hero { text-align: center; padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
-    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-    .hero p { color: var(--secondary); font-size: 1.05rem; margin-bottom: 1rem; }
+    /* ===== Container ===== */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+    /* ===== Hero ===== */
+    .hero {
+      position: relative;
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: var(--gradient-hero);
+      opacity: 0.07;
+      z-index: -2;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(transparent, var(--bg));
+      z-index: -1;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--gradient-accent);
+      color: #fff;
+      font-size: 0.75rem; font-weight: 600;
+      padding: 0.3rem 1rem; border-radius: 50px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--fg) 0%, var(--accent) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      color: var(--secondary);
+      font-size: 1.1rem;
+      max-width: 640px;
+      margin: 0 auto 1.5rem;
+    }
     .badges { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
-    .badges img { height: 22px; }
+    .badges img { height: 24px; border-radius: 4px; }
 
-    /* Sections */
-    section { margin-bottom: 2.5rem; }
-    section h2 { font-size: 1.4rem; margin-bottom: 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--accent); }
-    section h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    /* ===== Sections ===== */
+    section {
+      margin-bottom: 4rem;
+      animation: fadeUp 0.6s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    section h2 {
+      font-size: 1.6rem; font-weight: 800;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 40px; height: 3px;
+      border-radius: 2px;
+      background: var(--gradient-accent);
+    }
+    section h3 { font-size: 1.05rem; margin: 1.8rem 0 0.5rem; font-weight: 600; }
 
-    /* Stats */
-    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
-    .stat-card { background: var(--entry); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem; text-align: center; }
-    .stat-number { display: block; font-size: 2rem; font-weight: 700; color: var(--accent); }
-    .stat-label { display: block; font-size: 0.85rem; color: var(--secondary); margin-top: 0.2rem; }
+    /* ===== Stats ===== */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; }
+    .stat-card {
+      background: var(--entry);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::before {
+      content: "";
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--gradient-hero);
+    }
+    .stat-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
+    .stat-number {
+      display: block; font-size: 2.4rem; font-weight: 800;
+      background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label { display: block; font-size: 0.82rem; color: var(--secondary); margin-top: 0.3rem; font-weight: 600; }
 
-    /* Downloads */
-    .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.8rem; }
-    .dl-card { display: flex; flex-direction: column; align-items: center; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--accent); background: var(--entry); transition: border-color 0.2s, box-shadow 0.2s; }
-    .dl-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .dl-card strong { font-size: 0.95rem; }
-    .dl-card span { font-size: 0.75rem; color: var(--secondary); margin-top: 0.2rem; }
+    /* ===== Downloads ===== */
+    .downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.8rem; }
+    .dl-card {
+      display: flex; flex-direction: column; align-items: center;
+      padding: 1.2rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--fg);
+      background: var(--entry);
+      box-shadow: var(--card-shadow);
+      transition: all 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .dl-card::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--gradient-accent); opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .dl-card:hover { transform: translateY(-3px); box-shadow: var(--card-shadow-hover); }
+    .dl-card:hover::before { opacity: 1; }
+    .dl-card strong { font-size: 0.9rem; font-weight: 700; }
+    .dl-card span { font-size: 0.72rem; color: var(--secondary); margin-top: 0.3rem; }
 
-    /* Table */
-    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 0.5rem 0; }
-    th, td { padding: 0.5rem 0.7rem; border: 1px solid var(--border); text-align: left; }
-    th { background: var(--entry); font-weight: 600; }
-    code { background: var(--entry); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85rem; }
-    pre { background: var(--entry); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; overflow-x: auto; font-size: 0.85rem; margin: 0.5rem 0; }
+    /* ===== Table ===== */
+    .table-wrapper { overflow-x: auto; border-radius: var(--radius-sm); box-shadow: var(--card-shadow); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th, td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: var(--entry); font-weight: 600; font-size: 0.82rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+    td { background: var(--entry); }
+    tr:last-child td { border-bottom: none; }
+    code {
+      background: linear-gradient(135deg, rgba(108,92,231,0.08), rgba(253,121,168,0.08));
+      padding: 0.15rem 0.45rem; border-radius: 6px; font-size: 0.82rem;
+      font-family: "SF Mono", "Fira Code", monospace;
+    }
+    pre {
+      background: var(--entry);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.2rem;
+      overflow-x: auto;
+      font-size: 0.82rem;
+      margin: 0.5rem 0;
+      box-shadow: var(--card-shadow);
+    }
     pre code { background: none; padding: 0; }
 
-    /* Character cards */
-    .characters { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem; }
-    .char-card { background: var(--entry); border-radius: 6px; padding: 0.8rem 1rem; border: 1px solid var(--border); display: flex; gap: 0.8rem; align-items: center; }
-    .char-img { width: 60px; height: 80px; object-fit: contain; flex-shrink: 0; }
+    /* ===== Character Cards ===== */
+    .characters { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    .char-card {
+      background: var(--entry);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      border: 1px solid var(--border);
+      display: flex; gap: 1rem; align-items: center;
+      box-shadow: var(--card-shadow);
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative; overflow: hidden;
+    }
+    .char-card::before {
+      content: "";
+      position: absolute; top: 0; left: 0; bottom: 0; width: 4px;
+      border-radius: 4px 0 0 4px;
+      transition: width 0.3s;
+    }
+    .char-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow-hover);
+    }
+    .char-card:hover::before { width: 6px; }
+    .char-img {
+      width: 56px; height: 72px; object-fit: contain; flex-shrink: 0;
+      border-radius: 8px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
     .char-info { flex: 1; min-width: 0; }
-    .char-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem; }
-    .char-header code { font-size: 0.8rem; color: var(--secondary); }
-    .char-meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--secondary); flex-wrap: wrap; }
-    .char-meta a { color: var(--accent); }
+    .char-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem; }
+    .char-header strong { font-weight: 700; font-size: 0.95rem; }
+    .char-header code { font-size: 0.72rem; color: var(--secondary); }
+    .char-meta { display: flex; gap: 0.8rem; font-size: 0.75rem; color: var(--secondary); flex-wrap: wrap; }
+    .char-meta a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .char-meta a:hover { text-decoration: underline; }
 
-    /* Graph */
-    #graph-container { width: 100%; min-height: 650px; border: 1px solid var(--border); border-radius: 8px; background: var(--entry); overflow: hidden; }
+    /* ===== Graph ===== */
+    #graph-container {
+      width: 100%; min-height: 650px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--entry);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+    }
 
-    /* YASGUI */
-    #yasgui { margin-top: 1rem; border-radius: 8px; overflow: hidden; }
+    /* ===== YASGUI ===== */
+    #yasgui {
+      margin-top: 1rem;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+    }
 
-    /* License */
-    .license-section { padding: 1.5rem; background: var(--entry); border-radius: 8px; border: 1px solid var(--border); }
+    /* ===== License ===== */
+    .license-section {
+      padding: 2rem;
+      background: var(--entry);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+    }
 
-    /* Footer */
-    footer { text-align: center; padding: 2rem 0; color: var(--secondary); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 2rem; }
-    footer a { color: var(--accent); }
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 3rem 0;
+      color: var(--secondary);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    footer a:hover { text-decoration: underline; }
 
-    /* i18n */
+    /* ===== i18n ===== */
     [data-lang="en"] { display: none; }
     body.lang-en [data-lang="en"] { display: unset; }
     body.lang-en [data-lang="ja"] { display: none; }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.5rem; }
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .hero { padding: 7rem 1.5rem 3rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .container { padding: 0 1.2rem; }
       .stats { grid-template-columns: repeat(2, 1fr); }
       .downloads { grid-template-columns: repeat(2, 1fr); }
       .characters { grid-template-columns: 1fr; }
-      #graph-container { min-height: 350px; }
+      #graph-container { min-height: 400px; }
+      .nav-links a { display: none; }
     }
   </style>
 </head>
 <body>
 
-<div class="lang-toggle">
-  <button id="btn-ja" class="active" onclick="setLang('ja')">JA</button>
-  <button id="btn-en" onclick="setLang('en')">EN</button>
-</div>
+<!-- Header -->
+<header class="site-header">
+  <div class="nav-inner">
+    <span class="nav-logo">VOICEVOX Character LOD</span>
+    <div class="nav-links">
+      <a href="#stats"><span data-lang="ja">データ</span><span data-lang="en">Data</span></a>
+      <a href="#downloads"><span data-lang="ja">ダウンロード</span><span data-lang="en">Downloads</span></a>
+      <a href="#characters"><span data-lang="ja">キャラクター</span><span data-lang="en">Characters</span></a>
+      <a href="#sparql">SPARQL</a>
+      <div class="lang-toggle">
+        <button id="btn-ja" class="active" onclick="setLang('ja')">JA</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-<div class="container">
-
-  <!-- Hero -->
-  <header class="hero">
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <span class="hero-badge">Linked Open Data / 5-Star</span>
     <h1>
       <span data-lang="ja">VOICEVOX キャラクター LOD</span>
       <span data-lang="en">VOICEVOX Character LOD</span>
@@ -144,11 +389,16 @@
       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="CC BY 4.0"></a>
       <img src="https://img.shields.io/badge/LOD-5%20Star-gold.svg" alt="5-Star LOD">
       <img src="https://img.shields.io/badge/Format-RDF%2FOWL-blue.svg" alt="RDF/OWL">
+      <img src="https://img.shields.io/badge/SHACL-validated-green.svg" alt="SHACL validated">
+      <img src="https://img.shields.io/badge/SPARQL-Dydra-blue.svg" alt="SPARQL Dydra">
     </div>
-  </header>
+  </div>
+</div>
+
+<div class="container">
 
   <!-- Stats -->
-  <section>
+  <section id="stats">
     <h2>
       <span data-lang="ja">データ概要</span>
       <span data-lang="en">Dataset Overview</span>
@@ -162,7 +412,7 @@
   </section>
 
   <!-- Downloads -->
-  <section>
+  <section id="downloads">
     <h2>
       <span data-lang="ja">ダウンロード</span>
       <span data-lang="en">Downloads</span>
@@ -185,15 +435,16 @@
       <span data-lang="ja">オントロジー設計</span>
       <span data-lang="en">Ontology Design</span>
     </h2>
-    <p>
+    <p style="margin-bottom:1rem;">
       <span data-lang="ja">名前空間</span><span data-lang="en">Namespace</span>:
       <code>https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#</code>
       &nbsp;|&nbsp;
-      <a href="ns/voicevox/">
+      <a href="ns/voicevox/" style="color:var(--accent);font-weight:600;text-decoration:none;">
         <span data-lang="ja">詳細ドキュメント</span>
         <span data-lang="en">Full documentation</span>
       </a>
     </p>
+    <div class="table-wrapper">
     <table>
       <thead><tr>
         <th><span data-lang="ja">クラス / プロパティ</span><span data-lang="en">Class / Property</span></th>
@@ -204,24 +455,25 @@
         <tr><td><code>vvox:Character</code></td><td>owl:Class</td><td><span data-lang="ja">VOICEVOXキャラクター</span><span data-lang="en">VOICEVOX character</span></td></tr>
         <tr><td><code>vvox:CharacterPair</code></td><td>owl:Class</td><td><span data-lang="ja">対話用キャラクターペア</span><span data-lang="en">Dialogue character pair</span></td></tr>
         <tr><td><code>vvox:TTSEngine</code></td><td>owl:Class</td><td><span data-lang="ja">音声合成エンジン</span><span data-lang="en">Text-to-speech engine</span></td></tr>
-        <tr><td><code>vvox:speakerId</code></td><td>owl:DatatypeProperty</td><td><span data-lang="ja">VOICEVOX話者ID</span><span data-lang="en">VOICEVOX speaker ID</span></td></tr>
-        <tr><td><code>vvox:speechStyle</code></td><td>owl:DatatypeProperty</td><td><span data-lang="ja">口調の説明</span><span data-lang="en">Speech style description</span></td></tr>
-        <tr><td><code>vvox:questioner</code></td><td>owl:ObjectProperty</td><td><span data-lang="ja">質問役</span><span data-lang="en">Questioner role</span></td></tr>
-        <tr><td><code>vvox:explainer</code></td><td>owl:ObjectProperty</td><td><span data-lang="ja">解説役</span><span data-lang="en">Explainer role</span></td></tr>
-        <tr><td><code>vvox:hasEngine</code></td><td>owl:ObjectProperty</td><td><span data-lang="ja">対応エンジン</span><span data-lang="en">Associated engine</span></td></tr>
-        <tr><td><code>vvox:hasMember</code></td><td>owl:ObjectProperty</td><td><span data-lang="ja">ペアのメンバー</span><span data-lang="en">Pair member</span></td></tr>
-        <tr><td><code>vvox:displayColor</code></td><td>owl:DatatypeProperty</td><td><span data-lang="ja">テーマカラー</span><span data-lang="en">Theme color</span></td></tr>
-        <tr><td><code>vvox:sampleLine</code></td><td>owl:DatatypeProperty</td><td><span data-lang="ja">口調サンプル</span><span data-lang="en">Sample dialogue line</span></td></tr>
+        <tr><td><code>vvox:speakerId</code></td><td>DatatypeProperty</td><td><span data-lang="ja">VOICEVOX話者ID</span><span data-lang="en">VOICEVOX speaker ID</span></td></tr>
+        <tr><td><code>vvox:speechStyle</code></td><td>DatatypeProperty</td><td><span data-lang="ja">口調の説明</span><span data-lang="en">Speech style description</span></td></tr>
+        <tr><td><code>vvox:questioner</code></td><td>ObjectProperty</td><td><span data-lang="ja">質問役</span><span data-lang="en">Questioner role</span></td></tr>
+        <tr><td><code>vvox:explainer</code></td><td>ObjectProperty</td><td><span data-lang="ja">解説役</span><span data-lang="en">Explainer role</span></td></tr>
+        <tr><td><code>vvox:hasEngine</code></td><td>ObjectProperty</td><td><span data-lang="ja">対応エンジン</span><span data-lang="en">Associated engine</span></td></tr>
+        <tr><td><code>vvox:hasMember</code></td><td>ObjectProperty</td><td><span data-lang="ja">ペアのメンバー</span><span data-lang="en">Pair member</span></td></tr>
+        <tr><td><code>vvox:displayColor</code></td><td>DatatypeProperty</td><td><span data-lang="ja">テーマカラー</span><span data-lang="en">Theme color</span></td></tr>
+        <tr><td><code>vvox:sampleLine</code></td><td>DatatypeProperty</td><td><span data-lang="ja">口調サンプル</span><span data-lang="en">Sample dialogue line</span></td></tr>
       </tbody>
     </table>
-    <p>
+    </div>
+    <p style="margin-top:1rem;">
       <span data-lang="ja">外部語彙</span><span data-lang="en">External vocabularies</span>:
       <code>schema:</code> <code>foaf:</code> <code>dcterms:</code> <code>owl:</code> <code>skos:</code>
     </p>
   </section>
 
   <!-- Characters -->
-  <section>
+  <section id="characters">
     <h2>
       <span data-lang="ja">キャラクター一覧</span>
       <span data-lang="en">Characters</span>
@@ -235,7 +487,7 @@
       <span data-lang="ja">関係グラフ</span>
       <span data-lang="en">Relationship Graph</span>
     </h2>
-    <p>
+    <p style="margin-bottom:1rem;">
       <span data-lang="ja">キャラクターとペアの関係をインタラクティブに可視化</span>
       <span data-lang="en">Interactive visualization of character and pair relationships</span>
     </p>
@@ -243,7 +495,7 @@
   </section>
 
   <!-- SPARQL Examples -->
-  <section>
+  <section id="sparql">
     <h2>
       <span data-lang="ja">SPARQLクエリ例</span>
       <span data-lang="en">SPARQL Query Examples</span>
@@ -302,11 +554,11 @@ SELECT ?name ?wikidataUri WHERE {
       <span data-lang="ja">SPARQLエンドポイント</span>
       <span data-lang="en">SPARQL Endpoint</span>
     </h2>
-    <p>
+    <p style="margin-bottom:0.5rem;">
       <span data-lang="ja">以下のDydra SPARQLエンドポイントでクエリを実行できます:</span>
       <span data-lang="en">You can execute queries via the Dydra SPARQL endpoint below:</span>
     </p>
-    <p><code>https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql</code></p>
+    <p style="margin-bottom:1rem;"><code>https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql</code></p>
     <div id="yasgui"></div>
   </section>
 
@@ -319,15 +571,15 @@ SELECT ?name ?wikidataUri WHERE {
     <p>
       <span data-lang="ja">本データセットは</span>
       <span data-lang="en">This dataset is licensed under</span>
-      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>
       <span data-lang="ja">ライセンスで提供されています。</span>
       <span data-lang="en">.</span>
     </p>
-    <p>
+    <p style="margin-top:0.5rem;">
       <span data-lang="ja">各キャラクターの利用規約は、それぞれの公式ガイドラインに従ってください。</span>
       <span data-lang="en">Please follow each character's official guidelines for usage terms.</span>
     </p>
-    <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--secondary)">
+    <p style="margin-top:0.5rem; font-size:0.82rem; color:var(--secondary)">
       <span data-lang="ja">立ち絵素材: 坂本アヒル氏 | データセットに含まれるキャラクターは各権利者に帰属します</span>
       <span data-lang="en">Standing illustrations: Sakamoto Ahiru | Characters in this dataset belong to their respective rights holders</span>
     </p>
@@ -337,8 +589,8 @@ SELECT ?name ?wikidataUri WHERE {
 
 <footer>
   <div class="container">
-    <a href="https://github.com/nakamura196/voicevox-character-lod">GitHub</a> |
-    <a href="https://voicevox.hiroshiba.jp/">VOICEVOX</a> |
+    <a href="https://github.com/nakamura196/voicevox-character-lod">GitHub</a> &nbsp;&middot;&nbsp;
+    <a href="https://voicevox.hiroshiba.jp/">VOICEVOX</a> &nbsp;&middot;&nbsp;
     <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
   </div>
 </footer>
@@ -366,6 +618,16 @@ fetch("lod/stats.json")
     if (s.wikidata_links) document.getElementById("wd-count").textContent = s.wikidata_links;
   })
   .catch(() => {});
+
+// --- Intersection Observer for fade-in ---
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.style.animationDelay = "0s"; e.target.style.animationPlayState = "running"; } });
+}, { threshold: 0.1 });
+document.querySelectorAll("section").forEach((s, i) => {
+  s.style.animationDelay = `${i * 0.08}s`;
+  s.style.animationPlayState = "paused";
+  observer.observe(s);
+});
 
 // --- Characters ---
 const CHARS = [
@@ -401,9 +663,10 @@ const CHARS = [
 function renderCharacters() {
   const el = document.getElementById("char-list");
   el.innerHTML = CHARS.map(c => `
-    <div class="char-card" style="border-left:4px solid ${c.color}">
+    <div class="char-card" style="--char-color:${c.color}">
+      <style>.char-card[style*="${c.color}"]::before { background: ${c.color}; }</style>
       ${c.img ? `<img class="char-img" src="images/characters/${c.key}.png" alt="${c.ja}" loading="lazy">` :
-        `<div class="char-img" style="display:flex;align-items:center;justify-content:center;background:${c.color}22;border-radius:4px;font-size:1.5rem;">${c.ja.charAt(0)}</div>`}
+        `<div class="char-img" style="display:flex;align-items:center;justify-content:center;background:${c.color}18;font-size:1.4rem;font-weight:700;color:${c.color};">${c.ja.charAt(0)}</div>`}
       <div class="char-info">
         <div class="char-header">
           <strong>${currentLang === "ja" ? c.ja : c.en}</strong>
@@ -422,11 +685,8 @@ renderCharacters();
 (function() {
   const el = document.getElementById("yasgui");
   if (!el || typeof Yasgui === "undefined") return;
-  // Clear stale YASGUI localStorage cache
   for (const key of Object.keys(localStorage)) {
-    if (key.startsWith("yagui_") || key.startsWith("yasgui_")) {
-      localStorage.removeItem(key);
-    }
+    if (key.startsWith("yagui_") || key.startsWith("yasgui_")) localStorage.removeItem(key);
   }
   new Yasgui(el, {
     requestConfig: { endpoint: "https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql" },
@@ -444,23 +704,20 @@ renderCharacters();
   const width = container.clientWidth || 800;
   const height = 650;
 
-  // Build nodes from CHARS array
   const nodes = [
-    { id: "voicevox", label: "VOICEVOX", type: "engine", color: "#ffd54f" },
+    { id: "voicevox", label: "VOICEVOX", type: "engine", color: "#6c5ce7" },
     ...CHARS.map(c => ({ id: c.key, label: c.ja, labelEn: c.en, type: "char", color: c.color })),
-    { id: "pair1", label: "ずんだもん×めたん", labelEn: "Zundamon×Metan", type: "pair", color: "#b0bec5" },
-    { id: "pair2", label: "つむぎ×きりたん", labelEn: "Tsumugi×Kiritan", type: "pair", color: "#b0bec5" },
-    { id: "pair3", label: "うさぎ×そら", labelEn: "Usagi×Sora", type: "pair", color: "#b0bec5" },
-    { id: "pair4", label: "はう×WhiteCUL", labelEn: "Hau×WhiteCUL", type: "pair", color: "#b0bec5" },
-    { id: "pair5", label: "ずん子×イタコ", labelEn: "Zunko×Itako", type: "pair", color: "#b0bec5" },
-    { id: "pair6", label: "虎太郎×龍星", labelEn: "Kotaro×Ryusei", type: "pair", color: "#b0bec5" },
-    { id: "pair7", label: "アル×ビィ", labelEn: "Aru×Bii", type: "pair", color: "#b0bec5" },
+    { id: "pair1", label: "ずんだもん×めたん", labelEn: "Zundamon×Metan", type: "pair", color: "#a29bfe" },
+    { id: "pair2", label: "つむぎ×きりたん", labelEn: "Tsumugi×Kiritan", type: "pair", color: "#a29bfe" },
+    { id: "pair3", label: "うさぎ×そら", labelEn: "Usagi×Sora", type: "pair", color: "#a29bfe" },
+    { id: "pair4", label: "はう×WhiteCUL", labelEn: "Hau×WhiteCUL", type: "pair", color: "#a29bfe" },
+    { id: "pair5", label: "ずん子×イタコ", labelEn: "Zunko×Itako", type: "pair", color: "#a29bfe" },
+    { id: "pair6", label: "虎太郎×龍星", labelEn: "Kotaro×Ryusei", type: "pair", color: "#a29bfe" },
+    { id: "pair7", label: "アル×ビィ", labelEn: "Aru×Bii", type: "pair", color: "#a29bfe" },
   ];
 
   const links = [
-    // hasEngine links for all characters
     ...CHARS.map(c => ({ source: c.key, target: "voicevox", label: "hasEngine" })),
-    // Pair relationships
     { source: "pair1", target: "zundamon", label: "questioner", dashed: true },
     { source: "pair1", target: "metan", label: "explainer" },
     { source: "pair2", target: "tsumugi", label: "questioner", dashed: true },
@@ -480,10 +737,16 @@ renderCharacters();
   const svg = d3.select(container).append("svg")
     .attr("viewBox", [0, 0, width, height]).attr("width", "100%").attr("height", height);
 
-  svg.append("defs").append("marker")
+  // Gradient def for engine node
+  const defs = svg.append("defs");
+  const grad = defs.append("linearGradient").attr("id", "engineGrad").attr("x1","0%").attr("y1","0%").attr("x2","100%").attr("y2","100%");
+  grad.append("stop").attr("offset","0%").attr("stop-color","#6c5ce7");
+  grad.append("stop").attr("offset","100%").attr("stop-color","#a29bfe");
+
+  defs.append("marker")
     .attr("id", "arrow").attr("viewBox", "0 -5 10 10")
-    .attr("refX", 22).attr("refY", 0).attr("markerWidth", 6).attr("markerHeight", 6).attr("orient", "auto")
-    .append("path").attr("d", "M0,-5L10,0L0,5").attr("fill", "#999");
+    .attr("refX", 20).attr("refY", 0).attr("markerWidth", 5).attr("markerHeight", 5).attr("orient", "auto")
+    .append("path").attr("d", "M0,-5L10,0L0,5").attr("fill", "#bbb");
 
   const simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id).distance(80))
@@ -492,11 +755,8 @@ renderCharacters();
     .force("collision", d3.forceCollide().radius(25));
 
   const link = svg.append("g").selectAll("line").data(links).enter().append("line")
-    .attr("stroke", "#999").attr("stroke-width", 1.5)
-    .attr("stroke-dasharray", d => d.dashed ? "5,5" : "").attr("marker-end", "url(#arrow)");
-
-  const linkLabel = svg.append("g").selectAll("text").data(links).enter().append("text")
-    .text(d => d.label).attr("font-size", 9).attr("fill", "#888").attr("text-anchor", "middle");
+    .attr("stroke", "#ddd").attr("stroke-width", 1.2)
+    .attr("stroke-dasharray", d => d.dashed ? "4,4" : "").attr("marker-end", "url(#arrow)");
 
   const node = svg.append("g").selectAll("g").data(nodes).enter().append("g")
     .call(d3.drag()
@@ -506,16 +766,21 @@ renderCharacters();
     );
 
   node.append("circle")
-    .attr("r", d => d.type === "engine" ? 18 : d.type === "pair" ? 8 : 11)
-    .attr("fill", d => d.color).attr("stroke", "#fff").attr("stroke-width", 1.5);
+    .attr("r", d => d.type === "engine" ? 20 : d.type === "pair" ? 7 : 10)
+    .attr("fill", d => d.type === "engine" ? "url(#engineGrad)" : d.color)
+    .attr("stroke", "white").attr("stroke-width", 2)
+    .style("filter", "drop-shadow(0 2px 4px rgba(0,0,0,0.15))");
 
   node.append("text")
-    .text(d => d.label).attr("dy", d => d.type === "engine" ? 28 : 20)
-    .attr("text-anchor", "middle").attr("font-size", d => d.type === "pair" ? 8 : 9).attr("fill", "var(--fg)");
+    .text(d => d.label)
+    .attr("dy", d => d.type === "engine" ? 30 : 18)
+    .attr("text-anchor", "middle")
+    .attr("font-size", d => d.type === "engine" ? 10 : d.type === "pair" ? 7 : 8)
+    .attr("font-weight", d => d.type === "engine" ? 700 : 500)
+    .attr("fill", "var(--fg)");
 
   simulation.on("tick", () => {
     link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
-    linkLabel.attr("x", d => (d.source.x + d.target.x) / 2).attr("y", d => (d.source.y + d.target.y) / 2);
     node.attr("transform", d => `translate(${d.x},${d.y})`);
   });
 })();
