@@ -390,8 +390,15 @@ renderCharacters();
 (function() {
   const el = document.getElementById("yasgui");
   if (!el || typeof Yasgui === "undefined") return;
+  // Clear stale YASGUI localStorage cache
+  for (const key of Object.keys(localStorage)) {
+    if (key.startsWith("yagui_") || key.startsWith("yasgui_")) {
+      localStorage.removeItem(key);
+    }
+  }
   new Yasgui(el, {
     requestConfig: { endpoint: "https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql" },
+    persistenceId: "yasgui-voicevox-dydra-v2",
     yasqe: {
       value: `PREFIX vvox: <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?char ?name ?speakerId WHERE {\n  ?char a vvox:Character ;\n        schema:name ?name ;\n        vvox:speakerId ?speakerId .\n  FILTER(lang(?name) = "ja")\n}\nORDER BY ?speakerId`
     }
