@@ -296,13 +296,10 @@ SELECT ?name ?wikidataUri WHERE {
       <span data-lang="en">SPARQL Endpoint</span>
     </h2>
     <p>
-      <span data-lang="ja">ローカルでFusekiを起動してクエリを実行できます:</span>
-      <span data-lang="en">Run Fuseki locally to execute queries:</span>
+      <span data-lang="ja">以下のDydra SPARQLエンドポイントでクエリを実行できます:</span>
+      <span data-lang="en">You can execute queries via the Dydra SPARQL endpoint below:</span>
     </p>
-    <pre><code>docker compose up -d
-curl -X POST 'http://localhost:3030/voicevox/data' \
-  -H 'Content-Type: text/turtle' \
-  -T docs/lod/voicevox.ttl</code></pre>
+    <p><code>https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql</code></p>
     <div id="yasgui"></div>
   </section>
 
