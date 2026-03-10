@@ -394,7 +394,7 @@ renderCharacters();
   const el = document.getElementById("yasgui");
   if (!el || typeof Yasgui === "undefined") return;
   new Yasgui(el, {
-    requestConfig: { endpoint: "http://localhost:3030/voicevox/sparql" },
+    requestConfig: { endpoint: "https://dydra.com/ut-digital-archives/voicevox-character-lod/sparql" },
     yasqe: {
       value: `PREFIX vvox: <https://nakamura196.github.io/voicevox-character-lod/ns/voicevox#>\nPREFIX schema: <https://schema.org/>\n\nSELECT ?char ?name ?speakerId WHERE {\n  ?char a vvox:Character ;\n        schema:name ?name ;\n        vvox:speakerId ?speakerId .\n  FILTER(lang(?name) = "ja")\n}\nORDER BY ?speakerId`
     }

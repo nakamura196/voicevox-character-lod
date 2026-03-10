@@ -1,0 +1,27 @@
+{
+  "name": "voicevox-character-lod",
+  "version": "1.0.0",
+  "description": "[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![LOD](https://img.shields.io/badge/LOD-5%20Star-gold.svg)](#) [![Format](https://img.shields.io/badge/Format-RDF%2FOWL-blue.svg)](#)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nakamura196/voicevox-character-lod.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nakamura196/voicevox-character-lod/issues"
+  },
+  "homepage": "https://github.com/nakamura196/voicevox-character-lod#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
