@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c5ce7"/>
+      <stop offset="30%" stop-color="#a29bfe"/>
+      <stop offset="60%" stop-color="#fd79a8"/>
+      <stop offset="100%" stop-color="#fdcb6e"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.06)"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Glass card -->
+  <rect x="80" y="80" width="1040" height="470" rx="32" fill="url(#card)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+  <!-- Badge -->
+  <rect x="440" y="130" width="320" height="36" rx="18" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <text x="600" y="155" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="white" letter-spacing="1.5">LINKED OPEN DATA / 5-STAR</text>
+  <!-- Title -->
+  <text x="600" y="260" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="72" font-weight="800" fill="white" letter-spacing="-2">VOICEVOX</text>
+  <text x="600" y="340" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="52" font-weight="800" fill="rgba(255,255,255,0.9)" letter-spacing="-1">Character LOD</text>
+  <!-- Subtitle -->
+  <text x="600" y="400" text-anchor="middle" font-family="'Noto Sans JP', Helvetica, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.75)">27 Characters / 7 Dialogue Pairs / 591 Triples</text>
+  <!-- Stats pills -->
+  <rect x="250" y="440" width="140" height="44" rx="22" fill="rgba(255,255,255,0.15)"/>
+  <text x="320" y="468" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white">RDF/OWL</text>
+  <rect x="420" y="440" width="140" height="44" rx="22" fill="rgba(255,255,255,0.15)"/>
+  <text x="490" y="468" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white">SHACL</text>
+  <rect x="590" y="440" width="140" height="44" rx="22" fill="rgba(255,255,255,0.15)"/>
+  <text x="660" y="468" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white">SPARQL</text>
+  <rect x="760" y="440" width="160" height="44" rx="22" fill="rgba(255,255,255,0.15)"/>
+  <text x="840" y="468" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="white">Wikidata</text>
+  <!-- CC BY 4.0 -->
+  <text x="600" y="530" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)">CC BY 4.0 — nakamura196.github.io/voicevox-character-lod</text>
+</svg>
