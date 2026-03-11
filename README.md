@@ -163,6 +163,34 @@ docker-compose.yml             # SPARQL エンドポイント (Fuseki, ローカ
 LICENSE                        # CC BY 4.0
 ```
 
+## LODチャレンジ2025 応募情報
+
+本データセットは [LODチャレンジ2025](https://2025.lodc.jp/) データ作成部門にエントリーしています。
+
+| 項目 | 内容 |
+|------|------|
+| **作品タイトル** | VOICEVOX Character LOD — 音声合成キャラクターのLinked Open Data |
+| **作品の概要説明** | 無料テキスト音声合成ソフトウェア「VOICEVOX」のキャラクター情報（27キャラクター・7対話ペア・591トリプル）をLinked Open Dataとして構造化・公開するデータセットです。独自OWLオントロジー（vvox:）でTTSキャラクターのドメイン知識を体系化し、キャラクター名・話者ID・口調・テーマカラー・対話ペアの役割関係などを記述しています。Wikidata（owl:sameAs）との外部リンクによる5-Star LOD、SHACL制約によるデータ品質保証、DCAT/VoIDメタデータ、Dydra SPARQLエンドポイント、4種類のRDFシリアライゼーション（Turtle/JSON-LD/N-Triples/RDF/XML）、GitHub ActionsによるCI/CD（TTL構文検証・SHACL検証・自動デプロイ）、D3.jsによる関係グラフ可視化、日英バイリンガルWebサイトを備えています。実際の活用事例として、本LODデータセットのキャラクター口調・役割情報をLLMプロンプトに組み込み、ブログ記事からVOICEVOXキャラクターによる掛け合い解説動画を自動生成するパイプライン（LOD→LLM対話生成→VOICEVOX TTS→動画→YouTube）で利用されています。 |
+| **応募者名** | Nakamura |
+| **応募者のご所属** | （所属を記入） |
+| **エントリー部門** | データ作成部門 |
+| **エントリー作品のURL** | https://nakamura196.github.io/voicevox-character-lod/ |
+| **エントリー作品の権利指定** | CC BY 4.0 |
+| **利用しているオープンデータ** | Wikidata（owl:sameAsによるキャラクター・ソフトウェアへのリンク）、VOICEVOX公式サイトのキャラクター情報（https://voicevox.hiroshiba.jp/） |
+| **利用しているパートナーリソース** | （該当なし） |
+
+### 審査基準への対応
+
+| 審査基準 | 対応内容 |
+|---------|---------|
+| **影響力** | VOICEVOXは100万DL超の人気ソフト。キャラクターのLOD化は音声合成・バーチャルキャラクター分野で先駆的 |
+| **創造力** | TTSキャラクターの口調・対話ペア関係をOWLで体系化する独自オントロジー設計 |
+| **有用性** | 動画自動生成パイプラインで実際に活用済み。LLMプロンプトへの口調情報組込みに利用 |
+| **機械可読性** | OWL/RDFによる完全な機械可読性。4種類のシリアライゼーション。SPARQLエンドポイント |
+| **開放性** | CC BY 4.0。GitHub上でソースコード・データ・CI/CDすべてオープン |
+| **つながる可能性** | Wikidata owl:sameAs（7件）。Schema.org/FOAF/Dublin Core等の標準語彙活用 |
+| **持続可能性** | GitHub Pages + Dydra SPARQLで安定公開。GitHub Actions CIで品質維持 |
+
 ## ライセンス
 
 データセット: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
